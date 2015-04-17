@@ -1,0 +1,87 @@
+<?php namespace DivideBV\Postnl\ComplexTypes;
+
+class GenerateBarcodeMessage
+{
+
+    /**
+     * @var Message $Message
+     */
+    protected $Message = null;
+
+    /**
+     * @var GenerateBarcodeCustomer $Customer
+     */
+    protected $Customer = null;
+
+    /**
+     * @var Barcode $Barcode
+     */
+    protected $Barcode = null;
+
+    /**
+     * @param Message $Message
+     * @param GenerateBarcodeCustomer $Customer
+     * @param Barcode $Barcode
+     */
+    public function __construct(Message $Message, GenerateBarcodeCustomer $Customer, Barcode $Barcode)
+    {
+        $this->setMessage($Message);
+        $this->setCustomer($Customer);
+        $this->setBarcode($Barcode);
+    }
+
+    /**
+     * @return Message
+     */
+    public function getMessage()
+    {
+        return $this->Message;
+    }
+
+    /**
+     * @param Message $Message
+     * @return GenerateBarcodeMessage
+     */
+    public function setMessage($Message)
+    {
+        $this->Message = $Message;
+        return $this;
+    }
+
+    /**
+     * @return GenerateBarcodeCustomer
+     */
+    public function getCustomer()
+    {
+        return $this->Customer;
+    }
+
+    /**
+     * @param GenerateBarcodeCustomer $Customer
+     * @return GenerateBarcodeMessage
+     */
+    public function setCustomer($Customer)
+    {
+        $this->Customer = $Customer;
+        return $this;
+    }
+
+    /**
+     * @return Barcode
+     */
+    public function getBarcode()
+    {
+        return $this->Barcode;
+    }
+
+    /**
+     * @param Barcode $Barcode
+     * @return GenerateBarcodeMessage
+     */
+    public function setBarcode($Barcode)
+    {
+        $this->Barcode = $Barcode;
+        return $this;
+    }
+
+}
