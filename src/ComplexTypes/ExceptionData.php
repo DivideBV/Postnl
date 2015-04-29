@@ -75,5 +75,4 @@ class ExceptionData
         $this->ErrorNumber = $ErrorNumber;
         return $this;
     }
-
 }

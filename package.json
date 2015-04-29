@@ -1,0 +1,10 @@
+{
+  "name": "Postnl",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-phpcs": "~0.4.0",
+    "grunt-phplint": "0.0.5",
+    "grunt-phpdocumentor": "~0.4.1"
+  }
+}

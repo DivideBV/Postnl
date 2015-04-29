@@ -1,5 +1,8 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
+/**
+ * XML namespace: http://postnl.nl/cif/domain/BarcodeWebService/
+ */
 class Message
 {
 
@@ -58,5 +61,4 @@ class Message
         $this->MessageTimeStamp = $MessageTimeStamp;
         return $this;
     }
-
 }

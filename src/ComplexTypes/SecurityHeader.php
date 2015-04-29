@@ -7,7 +7,7 @@ class SecurityHeader extends SoapHeader
 {
 
     /**
-     *
+     * The namespace of the SOAP header and its descendants.
      */
     const XMLNS = 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd';
 
@@ -25,5 +25,4 @@ class SecurityHeader extends SoapHeader
 
         parent::__construct(self::XMLNS, 'Security', $security);
     }
-
 }

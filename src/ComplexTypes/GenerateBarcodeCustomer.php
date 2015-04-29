@@ -1,5 +1,8 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
+/**
+ * XML namespace: http://postnl.nl/cif/domain/BarcodeWebService/
+ */
 class GenerateBarcodeCustomer
 {
 
@@ -58,5 +61,4 @@ class GenerateBarcodeCustomer
         $this->CustomerNumber = $CustomerNumber;
         return $this;
     }
-
 }

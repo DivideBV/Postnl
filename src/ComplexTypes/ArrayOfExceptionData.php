@@ -29,5 +29,4 @@ class ArrayOfExceptionData
         $this->ExceptionData = $ExceptionData;
         return $this;
     }
-
 }

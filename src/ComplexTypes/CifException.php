@@ -29,5 +29,4 @@ class CifException
         $this->Errors = $Errors;
         return $this;
     }
-
 }

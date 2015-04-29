@@ -1,5 +1,8 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
+/**
+ * XML namespace: http://postnl.nl/cif/domain/BarcodeWebService/
+ */
 class GenerateBarcodeMessage
 {
 
@@ -83,5 +86,4 @@ class GenerateBarcodeMessage
         $this->Barcode = $Barcode;
         return $this;
     }
-
 }

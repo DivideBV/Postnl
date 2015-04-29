@@ -4,11 +4,14 @@ use SoapClient;
 use SoapHeader;
 use DOMDocument;
 
+/**
+ * Client class for CIF's barcode service.
+ */
 class Barcodeclient extends SoapClient
 {
 
     /**
-     *
+     * The default URL of the WSDL.
      */
     const DEFAULT_WSDL = 'https://testservice.postnl.com/CIF_SB/BarcodeWebService/1_1/?wsdl';
 
@@ -28,7 +31,8 @@ class Barcodeclient extends SoapClient
     ];
 
     /**
-     *
+     * @param ComplexTypes\SecurityHeader $SecurityHeader
+     *     The authorization information.
      */
     public function __construct(ComplexTypes\SecurityHeader $SecurityHeader, $wsdl = self::DEFAULT_WSDL)
     {
@@ -41,7 +45,7 @@ class Barcodeclient extends SoapClient
      * @param ComplexTypes\GenerateBarcodeMessage $GenerateBarcode
      * @return ComplexTypes\GenerateBarcodeResponse
      */
-    public function GenerateBarcode(ComplexTypes\GenerateBarcodeMessage $GenerateBarcode)
+    public function generateBarcode(ComplexTypes\GenerateBarcodeMessage $GenerateBarcode)
     {
         return $this->__soapCall('GenerateBarcode', [$GenerateBarcode]);
     }
@@ -53,5 +57,4 @@ class Barcodeclient extends SoapClient
 
         return $requestXml->saveXML();
     }
-
 }

@@ -3,13 +3,22 @@
 use SoapClient;
 
 /**
- *
+ * This class is a high-level wrapper around the various CIF services.
  */
 class Postnl
 {
-    public function __construct()
+
+    /**
+     * @var BarcodeClient $barcodeClient
+     */
+    protected $barcodeClient = null;
+
+    /**
+     * @param BarcodeClient $barcodeClient
+     * @return Postnl
+     */
+    public function __construct(BarcodeClient $barcodeClient = null)
     {
-        $this->client = new \SoapClient('https://testservice.postnl.com/CIF_SB/BarcodeWebService/1_1/?wsdl');
-        $this->client
+        $this->barcodeClient = $barcodeClient ?: new BarcodeClient;
     }
 }

@@ -1,5 +1,8 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
+/**
+ * XML namespace: http://postnl.nl/cif/domain/BarcodeWebService/
+ */
 class Barcode
 {
 
@@ -83,5 +86,4 @@ class Barcode
         $this->Serie = $Serie;
         return $this;
     }
-
 }
