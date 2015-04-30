@@ -1,7 +1,6 @@
 <?php namespace DivideBV\Postnl;
 
 use SoapClient;
-use SoapHeader;
 use DOMDocument;
 
 /**

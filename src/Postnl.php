@@ -1,7 +1,5 @@
 <?php namespace DivideBV\Postnl;
 
-use SoapClient;
-
 /**
  * This class is a high-level wrapper around the various CIF services.
  */
@@ -15,7 +13,6 @@ class Postnl
 
     /**
      * @param BarcodeClient $barcodeClient
-     * @return Postnl
      */
     public function __construct(BarcodeClient $barcodeClient = null)
     {
