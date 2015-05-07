@@ -5,6 +5,10 @@ use DOMDocument;
 
 /**
  * Client class for CIF's barcode service.
+ *
+ * I'm sorry, but what moron concocted this service? Basically all it does is
+ * generate a random number and concatenate `type`, `range` and the generated
+ * number. And what use is it to ask for the same parameter twice?
  */
 class Barcodeclient extends SoapClient
 {
