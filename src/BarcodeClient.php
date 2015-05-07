@@ -10,9 +10,14 @@ class Barcodeclient extends SoapClient
 {
 
     /**
-     * The default URL of the WSDL.
+     * The URL of the production WSDL.
      */
-    const DEFAULT_WSDL = 'https://testservice.postnl.com/CIF_SB/BarcodeWebService/1_1/?wsdl';
+    const PRODUCTION_WSDL = 'https://service.postnl.com/CIF/BarcodeWebService/1_1/?wsdl';
+
+    /**
+     * The URL of the sandbox WSDL.
+     */
+    const SANDBOX_WSDL = 'https://testservice.postnl.com/CIF_SB/BarcodeWebService/1_1/?wsdl';
 
     /**
      * @var array $classmap
@@ -32,21 +37,31 @@ class Barcodeclient extends SoapClient
     /**
      * @param ComplexTypes\SecurityHeader $SecurityHeader
      *     The authorization information.
+     * @param bool $sandbox
+     *     Whether to use the production or sandbox environment. Defaults to
+     *     production.
+     * @param string $wsdl
+     *     The URL of the WSDL file to use, if not production or sandbox.
      */
-    public function __construct(ComplexTypes\SecurityHeader $SecurityHeader, $wsdl = self::DEFAULT_WSDL)
+    public function __construct(ComplexTypes\SecurityHeader $SecurityHeader, $sandbox = false, $wsdl = null)
     {
+        // If no WSDL is provided, use either the sandbox or production WSDL.
+        if (!$wsdl) {
+            $wsdl = $sandbox ? self::SANDBOX_WSDL : self::PRODUCTION_WSDL;
+        }
+
         parent::__construct($wsdl, ['classmap' => $this->classmap, 'trace' => true]);
 
         $this->__setSoapHeaders($SecurityHeader);
     }
 
     /**
-     * @param ComplexTypes\GenerateBarcodeMessage $GenerateBarcode
+     * @param ComplexTypes\GenerateBarcodeMessage $GenerateBarcodeMessage
      * @return ComplexTypes\GenerateBarcodeResponse
      */
-    public function generateBarcode(ComplexTypes\GenerateBarcodeMessage $GenerateBarcode)
+    public function generateBarcode(ComplexTypes\GenerateBarcodeMessage $GenerateBarcodeMessage)
     {
-        return $this->__soapCall('GenerateBarcode', [$GenerateBarcode]);
+        return $this->__soapCall('GenerateBarcode', [$GenerateBarcodeMessage]);
     }
 
     public function debug()
