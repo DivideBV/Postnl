@@ -81,12 +81,4 @@ class ConfirmingClient extends SoapClient
     {
         return $this->__soapCall('Confirming', [$Confirming]);
     }
-
-    public function debug()
-    {
-        $requestXml = DOMDocument::loadXML($this->__getLastRequest());
-        $requestXml->formatOutput = true;
-
-        return $requestXml->saveXML();
-    }
 }

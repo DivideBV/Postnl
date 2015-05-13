@@ -67,12 +67,4 @@ class Barcodeclient extends SoapClient
     {
         return $this->__soapCall('GenerateBarcode', [$GenerateBarcodeMessage]);
     }
-
-    public function debug()
-    {
-        $requestXml = DOMDocument::loadXML($this->__getLastRequest());
-        $requestXml->formatOutput = true;
-
-        return $requestXml->saveXML();
-    }
 }
