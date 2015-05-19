@@ -157,11 +157,11 @@ class Postnl
         $generateBarcodeMessage = new ComplexTypes\GenerateBarcodeMessage($message, $customer, $barcode);
 
         // Instantiate barcode client if not yet set.
-        $this->barcodeClient = $this->barcodeClient ?: new BarcodeClient($this->securityHeader, $this->sandbox);
-        $this->lastClient = 'barcodeClient';
+        $this->lastClient = $client = 'barcodeClient';
+        $this->{$client} = $this->{$client} ?: new BarcodeClient($this->securityHeader, $this->sandbox);
 
         // Query the webservice and return the result.
-        return $this->barcodeClient->generateBarcode($generateBarcodeMessage);
+        return $this->{$client}->generateBarcode($generateBarcodeMessage);
     }
 
     /**
@@ -175,13 +175,11 @@ class Postnl
         $confirmingMessage = new ComplexTypes\ConfirmingMessage($customer, $message, $shipments);
 
         // Instantiate confirming client if not yet set.
-        if (!$this->confirmingClient) {
-            $this->confirmingClient = new ConfirmingClient($this->securityHeader, $this->sandbox);
-        }
-        $this->lastClient = 'confirmingClient';
+        $this->lastClient = $client = 'confirmingClient';
+        $this->{$client} = $this->{$client} ?: new ConfirmingClient($this->securityHeader, $this->sandbox);
 
         // Query the webservice and return the result.
-        return $this->confirmingClient->confirming($confirmingMessage);
+        return $this->{$client}->confirming($confirmingMessage);
     }
 
     /**
