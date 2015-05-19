@@ -50,6 +50,16 @@ class Postnl
     protected $barcodeClient = null;
 
     /**
+     * @var ConfirmingClient $confirmingClient
+     */
+    protected $confirmingClient = null;
+
+    /**
+     * @var string $lastClient
+     */
+    private $lastClient = null;
+
+    /**
      * @param string $customerNumber
      * @param string $customerCode
      * @param string $customerName
@@ -84,6 +94,14 @@ class Postnl
     public function setBarcodeClient(BarcodeClient $barcodeClient)
     {
         $this->barcodeClient = $barcodeClient;
+    }
+
+    /**
+     * @param ConfirmingClient $confirmingClient
+     */
+    public function setConfirmingClient(ConfirmingClient $confirmingClient)
+    {
+        $this->confirmingClient = $confirmingClient;
     }
 
     /**
@@ -141,22 +159,35 @@ class Postnl
 
         // Instantiate barcode client if not yet set.
         $this->barcodeClient = $this->barcodeClient ?: new BarcodeClient($this->securityHeader, $this->sandbox);
+        $this->lastClient = 'barcodeClient';
 
         // Query the webservice and return the result.
         return $this->barcodeClient->generateBarcode($generateBarcodeMessage);
     }
 
     /**
-     * Get the raw XML of the last SOAP request and reponse.
-     *
-     * @param string $client
-     *     The name of the client (ex. `barcodeClient`).
+     * @param ComplexTypes\ConfirmingMessage $confirmingMessage
      */
-    public function debug($client)
+    public function confirming(ComplexTypes\ConfirmingMessage $confirmingMessage)
     {
-        $requestXml = DOMDocument::loadXML($this->{$client}->__getLastRequest());
+        // Instantiate confirming client if not yet set.
+        if (!$this->confirmingClient) {
+            $this->confirmingClient = new ConfirmingClient($this->securityHeader, $this->sandbox);
+        }
+        $this->lastClient = 'confirmingClient';
+
+        // Query the webservice and return the result.
+        return $this->barcodeClient->confirming($confirmingMessage);
+    }
+
+    /**
+     * Get the raw XML of the last SOAP request and reponse.
+     */
+    public function debug()
+    {
+        $requestXml = DOMDocument::loadXML($this->{$this->lastClient}->__getLastRequest());
         $requestXml->formatOutput = true;
-        $responseXml = DOMDocument::loadXML($this->{$client}->__getLastResponse());
+        $responseXml = DOMDocument::loadXML($this->{$this->lastClient}->__getLastResponse());
         $responseXml->formatOutput = true;
 
         return ['request' => $requestXml->saveXML(), 'response' => $responseXml->saveXML()];

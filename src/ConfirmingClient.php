@@ -74,8 +74,8 @@ class ConfirmingClient extends SoapClient
     }
 
     /**
-     * @param ConfirmingMessage $Confirming
-     * @return ArrayOfConfirmingResponseShipment
+     * @param ComplexTypes\ConfirmingMessage $Confirming
+     * @return ComplexTypes\ArrayOfConfirmingResponseShipment
      */
     public function confirming(ComplexTypes\ConfirmingMessage $Confirming)
     {
