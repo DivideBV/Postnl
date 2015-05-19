@@ -1,5 +1,7 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
+use DateTime;
+
 /**
  * XML namespace: http://postnl.nl/cif/domain/BarcodeWebService/
  */
@@ -18,12 +20,14 @@ class Message
 
     /**
      * @param string $MessageID
+     *     Defaults to 1.
      * @param string $MessageTimeStamp
+     *     Defaults to the current time.
      */
-    public function __construct($MessageID, $MessageTimeStamp)
+    public function __construct($MessageID = 1, $MessageTimeStamp = null)
     {
         $this->setMessageID($MessageID);
-        $this->setMessageTimeStamp($MessageTimeStamp);
+        $this->setMessageTimeStamp($MessageTimeStamp ?: (new DateTime)->format("d-m-Y H:i:s"));
     }
 
     /**

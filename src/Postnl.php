@@ -1,6 +1,5 @@
 <?php namespace DivideBV\Postnl;
 
-use DateTime;
 use DOMDocument;
 
 /**
@@ -152,7 +151,7 @@ class Postnl
         }
 
         // Prepare arguments.
-        $message = new ComplexTypes\Message(1, (new DateTime)->format("d-m-Y H:i:s"));
+        $message = new ComplexTypes\Message();
         $customer = new ComplexTypes\GenerateBarcodeCustomer($customerCode, $customerNumber);
         $barcode = new ComplexTypes\Barcode($type, $customerCode, $serie);
         $generateBarcodeMessage = new ComplexTypes\GenerateBarcodeMessage($message, $customer, $barcode);
