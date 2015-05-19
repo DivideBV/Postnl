@@ -9,14 +9,24 @@ class Shipment
     protected $Addresses = null;
 
     /**
-     * @var ArrayOfAmount $Amounts
-     */
-    protected $Amounts = null;
-
-    /**
      * @var string $Barcode
      */
     protected $Barcode = null;
+
+    /**
+     * @var Dimension $Dimension
+     */
+    protected $Dimension = null;
+
+    /**
+     * @var string $ProductCodeDelivery
+     */
+    protected $ProductCodeDelivery = null;
+
+    /**
+     * @var ArrayOfAmount $Amounts
+     */
+    protected $Amounts = null;
 
     /**
      * @var string $CollectionTimeStampEnd
@@ -64,11 +74,6 @@ class Shipment
     protected $DeliveryDate = null;
 
     /**
-     * @var Dimension $Dimension
-     */
-    protected $Dimension = null;
-
-    /**
      * @var string $DownPartnerBarcode
      */
     protected $DownPartnerBarcode = null;
@@ -109,11 +114,6 @@ class Shipment
     protected $ProductCodeCollect = null;
 
     /**
-     * @var string $ProductCodeDelivery
-     */
-    protected $ProductCodeDelivery = null;
-
-    /**
      * @var ArrayOfProductOption $ProductOptions
      */
     protected $ProductOptions = null;
@@ -150,69 +150,98 @@ class Shipment
 
     /**
      * @param ArrayOfAddress $Addresses
-     * @param ArrayOfAmount $Amounts
      * @param string $Barcode
-     * @param string $CollectionTimeStampEnd
-     * @param string $CollectionTimeStampStart
-     * @param ArrayOfContact $Contacts
-     * @param string $Content
-     * @param string $CostCenter
-     * @param string $CustomerOrderNumber
-     * @param Customs $Customs
-     * @param string $DeliveryAddress
-     * @param string $DeliveryDate
      * @param Dimension $Dimension
-     * @param string $DownPartnerBarcode
-     * @param string $DownPartnerID
-     * @param string $DownPartnerLocation
-     * @param ArrayOfGroup $Groups
-     * @param string $IDExpiration
-     * @param string $IDNumber
-     * @param string $IDType
-     * @param string $ProductCodeCollect
      * @param string $ProductCodeDelivery
+     * @param ArrayOfAmount $Amounts
+     *     Optional.
+     * @param string $CollectionTimeStampEnd
+     *     Optional.
+     * @param string $CollectionTimeStampStart
+     *     Optional.
+     * @param ArrayOfContact $Contacts
+     *     Optional.
+     * @param string $Content
+     *     Optional.
+     * @param string $CostCenter
+     *     Optional.
+     * @param string $CustomerOrderNumber
+     *     Optional.
+     * @param Customs $Customs
+     *     Optional.
+     * @param string $DeliveryAddress
+     *     Optional.
+     * @param string $DeliveryDate
+     *     Optional.
+     * @param string $DownPartnerBarcode
+     *     Optional.
+     * @param string $DownPartnerID
+     *     Optional.
+     * @param string $DownPartnerLocation
+     *     Optional.
+     * @param ArrayOfGroup $Groups
+     *     Optional.
+     * @param string $IDExpiration
+     *     Optional.
+     * @param string $IDNumber
+     *     Optional.
+     * @param string $IDType
+     *     Optional.
+     * @param string $ProductCodeCollect
+     *     Optional.
      * @param ArrayOfProductOption $ProductOptions
+     *     Optional.
      * @param string $ReceiverDateOfBirth
+     *     Optional.
      * @param string $Reference
+     *     Optional.
      * @param string $ReferenceCollect
+     *     Optional.
      * @param string $Remark
+     *     Optional.
      * @param string $ReturnBarcode
+     *     Optional.
      * @param string $ReturnReference
+     *     Optional.
      */
     public function __construct(
         ArrayOfAddress $Addresses,
-        ArrayOfAmount $Amounts,
         $Barcode,
-        $CollectionTimeStampEnd,
-        $CollectionTimeStampStart,
-        ArrayOfContact $Contacts,
-        $Content,
-        $CostCenter,
-        $CustomerOrderNumber,
-        Customs $Customs,
-        $DeliveryAddress,
-        $DeliveryDate,
         Dimension $Dimension,
-        $DownPartnerBarcode,
-        $DownPartnerID,
-        $DownPartnerLocation,
-        ArrayOfGroup $Groups,
-        $IDExpiration,
-        $IDNumber,
-        $IDType,
-        $ProductCodeCollect,
         $ProductCodeDelivery,
-        ArrayOfProductOption $ProductOptions,
-        $ReceiverDateOfBirth,
-        $Reference,
-        $ReferenceCollect,
-        $Remark,
-        $ReturnBarcode,
-        $ReturnReference
+        ArrayOfAmount $Amounts = null,
+        $CollectionTimeStampEnd = null,
+        $CollectionTimeStampStart = null,
+        ArrayOfContact $Contacts = null,
+        $Content = null,
+        $CostCenter = null,
+        $CustomerOrderNumber = null,
+        Customs $Customs = null,
+        $DeliveryAddress = null,
+        $DeliveryDate = null,
+        $DownPartnerBarcode = null,
+        $DownPartnerID = null,
+        $DownPartnerLocation = null,
+        ArrayOfGroup $Groups = null,
+        $IDExpiration = null,
+        $IDNumber = null,
+        $IDType = null,
+        $ProductCodeCollect = null,
+        ArrayOfProductOption $ProductOptions = null,
+        $ReceiverDateOfBirth = null,
+        $Reference = null,
+        $ReferenceCollect = null,
+        $Remark = null,
+        $ReturnBarcode = null,
+        $ReturnReference = null
     ) {
         $this->setAddresses($Addresses);
-        $this->setAmounts($Amounts);
         $this->setBarcode($Barcode);
+        $this->setDimension($Dimension);
+        $this->setProductCodeDelivery($ProductCodeDelivery);
+
+        // Optional parameters.
+        $this->setAmounts($Amounts);
         $this->setCollectionTimeStampEnd($CollectionTimeStampEnd);
         $this->setCollectionTimeStampStart($CollectionTimeStampStart);
         $this->setContacts($Contacts);
@@ -222,7 +251,6 @@ class Shipment
         $this->setCustoms($Customs);
         $this->setDeliveryAddress($DeliveryAddress);
         $this->setDeliveryDate($DeliveryDate);
-        $this->setDimension($Dimension);
         $this->setDownPartnerBarcode($DownPartnerBarcode);
         $this->setDownPartnerID($DownPartnerID);
         $this->setDownPartnerLocation($DownPartnerLocation);
@@ -231,7 +259,6 @@ class Shipment
         $this->setIDNumber($IDNumber);
         $this->setIDType($IDType);
         $this->setProductCodeCollect($ProductCodeCollect);
-        $this->setProductCodeDelivery($ProductCodeDelivery);
         $this->setProductOptions($ProductOptions);
         $this->setReceiverDateOfBirth($ReceiverDateOfBirth);
         $this->setReference($Reference);
@@ -260,24 +287,6 @@ class Shipment
     }
 
     /**
-     * @return ArrayOfAmount
-     */
-    public function getAmounts()
-    {
-        return $this->Amounts;
-    }
-
-    /**
-     * @param ArrayOfAmount $Amounts
-     * @return Shipment
-     */
-    public function setAmounts($Amounts)
-    {
-        $this->Amounts = $Amounts;
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getBarcode()
@@ -292,6 +301,60 @@ class Shipment
     public function setBarcode($Barcode)
     {
         $this->Barcode = $Barcode;
+        return $this;
+    }
+
+    /**
+     * @return Dimension
+     */
+    public function getDimension()
+    {
+        return $this->Dimension;
+    }
+
+    /**
+     * @param Dimension $Dimension
+     * @return Shipment
+     */
+    public function setDimension($Dimension)
+    {
+        $this->Dimension = $Dimension;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProductCodeDelivery()
+    {
+        return $this->ProductCodeDelivery;
+    }
+
+    /**
+     * @param string $ProductCodeDelivery
+     * @return Shipment
+     */
+    public function setProductCodeDelivery($ProductCodeDelivery)
+    {
+        $this->ProductCodeDelivery = $ProductCodeDelivery;
+        return $this;
+    }
+
+    /**
+     * @return ArrayOfAmount
+     */
+    public function getAmounts()
+    {
+        return $this->Amounts;
+    }
+
+    /**
+     * @param ArrayOfAmount $Amounts
+     * @return Shipment
+     */
+    public function setAmounts($Amounts)
+    {
+        $this->Amounts = $Amounts;
         return $this;
     }
 
@@ -458,24 +521,6 @@ class Shipment
     }
 
     /**
-     * @return Dimension
-     */
-    public function getDimension()
-    {
-        return $this->Dimension;
-    }
-
-    /**
-     * @param Dimension $Dimension
-     * @return Shipment
-     */
-    public function setDimension($Dimension)
-    {
-        $this->Dimension = $Dimension;
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getDownPartnerBarcode()
@@ -616,24 +661,6 @@ class Shipment
     public function setProductCodeCollect($ProductCodeCollect)
     {
         $this->ProductCodeCollect = $ProductCodeCollect;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getProductCodeDelivery()
-    {
-        return $this->ProductCodeDelivery;
-    }
-
-    /**
-     * @param string $ProductCodeDelivery
-     * @return Shipment
-     */
-    public function setProductCodeDelivery($ProductCodeDelivery)
-    {
-        $this->ProductCodeDelivery = $ProductCodeDelivery;
         return $this;
     }
 

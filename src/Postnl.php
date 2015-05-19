@@ -167,8 +167,13 @@ class Postnl
     /**
      * @param ComplexTypes\ConfirmingMessage $confirmingMessage
      */
-    public function confirming(ComplexTypes\ConfirmingMessage $confirmingMessage)
+    public function confirming(ComplexTypes\ArrayOfShipment $shipments)
     {
+        // Prepare arguments.
+        $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
+        $message = new ComplexTypes\Message;
+        $confirmingMessage = new ComplexTypes\ConfirmingMessage($customer, $message, $shipments);
+
         // Instantiate confirming client if not yet set.
         if (!$this->confirmingClient) {
             $this->confirmingClient = new ConfirmingClient($this->securityHeader, $this->sandbox);
@@ -176,7 +181,7 @@ class Postnl
         $this->lastClient = 'confirmingClient';
 
         // Query the webservice and return the result.
-        return $this->barcodeClient->confirming($confirmingMessage);
+        return $this->confirmingClient->confirming($confirmingMessage);
     }
 
     /**

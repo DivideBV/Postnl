@@ -85,6 +85,8 @@ class Address
 
     /**
      * @var string $StreetHouseNrExt
+     *     This is not used. Use separate street, house number and house number
+     *     extension parameters.
      */
     protected $StreetHouseNrExt = null;
 
@@ -95,62 +97,68 @@ class Address
 
     /**
      * @param string $AddressType
-     * @param string $Area
-     * @param string $Buildingname
-     * @param string $City
-     * @param string $CompanyName
-     * @param string $Countrycode
-     * @param string $Department
-     * @param string $Doorcode
      * @param string $FirstName
-     * @param string $Floor
+     * @param string $Name
+     * @param string $CompanyName
+     * @param string $Street
      * @param string $HouseNr
      * @param string $HouseNrExt
-     * @param string $Name
-     * @param string $Region
-     * @param string $Remark
-     * @param string $Street
-     * @param string $StreetHouseNrExt
      * @param string $Zipcode
+     * @param string $City
+     * @param string $Countrycode
+     * @param string $Area
+     *     Optional.
+     * @param string $Buildingname
+     *     Optional.
+     * @param string $Department
+     *     Optional.
+     * @param string $Doorcode
+     *     Optional.
+     * @param string $Floor
+     *     Optional.
+     * @param string $Region
+     *     Optional.
+     * @param string $Remark
+     *     Optional.
      */
     public function __construct(
         $AddressType,
-        $Area,
-        $Buildingname,
-        $City,
-        $CompanyName,
-        $Countrycode,
-        $Department,
-        $Doorcode,
         $FirstName,
-        $Floor,
+        $Name,
+        $CompanyName,
+        $Street,
         $HouseNr,
         $HouseNrExt,
-        $Name,
-        $Region,
-        $Remark,
-        $Street,
-        $StreetHouseNrExt,
-        $Zipcode
+        $Zipcode,
+        $City,
+        $Countrycode,
+        $Area = null,
+        $Buildingname = null,
+        $Department = null,
+        $Doorcode = null,
+        $Floor = null,
+        $Region = null,
+        $Remark = null
     ) {
         $this->setAddressType($AddressType);
-        $this->setArea($Area);
-        $this->setBuildingname($Buildingname);
-        $this->setCity($City);
-        $this->setCompanyName($CompanyName);
-        $this->setCountrycode($Countrycode);
-        $this->setDepartment($Department);
-        $this->setDoorcode($Doorcode);
         $this->setFirstName($FirstName);
-        $this->setFloor($Floor);
+        $this->setName($Name);
+        $this->setCompanyName($CompanyName);
+        $this->setStreet($Street);
         $this->setHouseNr($HouseNr);
         $this->setHouseNrExt($HouseNrExt);
-        $this->setName($Name);
+        $this->setZipcode($Zipcode);
+        $this->setCity($City);
+        $this->setCountrycode($Countrycode);
+
+        // Optional parameters.
+        $this->setArea($Area);
+        $this->setBuildingname($Buildingname);
+        $this->setDepartment($Department);
+        $this->setDoorcode($Doorcode);
+        $this->setFloor($Floor);
         $this->setRegion($Region);
         $this->setRemark($Remark);
-        $this->setStreet($Street);
-        $this->setStreetHouseNrExt($StreetHouseNrExt);
-        $this->setZipcode($Zipcode);
     }
 
     /**
@@ -168,132 +176,6 @@ class Address
     public function setAddressType($AddressType)
     {
         $this->AddressType = $AddressType;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getArea()
-    {
-        return $this->Area;
-    }
-
-    /**
-     * @param string $Area
-     * @return Address
-     */
-    public function setArea($Area)
-    {
-        $this->Area = $Area;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getBuildingname()
-    {
-        return $this->Buildingname;
-    }
-
-    /**
-     * @param string $Buildingname
-     * @return Address
-     */
-    public function setBuildingname($Buildingname)
-    {
-        $this->Buildingname = $Buildingname;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCity()
-    {
-        return $this->City;
-    }
-
-    /**
-     * @param string $City
-     * @return Address
-     */
-    public function setCity($City)
-    {
-        $this->City = $City;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCompanyName()
-    {
-        return $this->CompanyName;
-    }
-
-    /**
-     * @param string $CompanyName
-     * @return Address
-     */
-    public function setCompanyName($CompanyName)
-    {
-        $this->CompanyName = $CompanyName;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCountrycode()
-    {
-        return $this->Countrycode;
-    }
-
-    /**
-     * @param string $Countrycode
-     * @return Address
-     */
-    public function setCountrycode($Countrycode)
-    {
-        $this->Countrycode = $Countrycode;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDepartment()
-    {
-        return $this->Department;
-    }
-
-    /**
-     * @param string $Department
-     * @return Address
-     */
-    public function setDepartment($Department)
-    {
-        $this->Department = $Department;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDoorcode()
-    {
-        return $this->Doorcode;
-    }
-
-    /**
-     * @param string $Doorcode
-     * @return Address
-     */
-    public function setDoorcode($Doorcode)
-    {
-        $this->Doorcode = $Doorcode;
         return $this;
     }
 
@@ -318,18 +200,54 @@ class Address
     /**
      * @return string
      */
-    public function getFloor()
+    public function getName()
     {
-        return $this->Floor;
+        return $this->Name;
     }
 
     /**
-     * @param string $Floor
+     * @param string $Name
      * @return Address
      */
-    public function setFloor($Floor)
+    public function setName($Name)
     {
-        $this->Floor = $Floor;
+        $this->Name = $Name;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCompanyName()
+    {
+        return $this->CompanyName;
+    }
+
+    /**
+     * @param string $CompanyName
+     * @return Address
+     */
+    public function setCompanyName($CompanyName)
+    {
+        $this->CompanyName = $CompanyName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStreet()
+    {
+        return $this->Street;
+    }
+
+    /**
+     * @param string $Street
+     * @return Address
+     */
+    public function setStreet($Street)
+    {
+        $this->Street = $Street;
         return $this;
     }
 
@@ -372,18 +290,144 @@ class Address
     /**
      * @return string
      */
-    public function getName()
+    public function getZipcode()
     {
-        return $this->Name;
+        return $this->Zipcode;
     }
 
     /**
-     * @param string $Name
+     * @param string $Zipcode
      * @return Address
      */
-    public function setName($Name)
+    public function setZipcode($Zipcode)
     {
-        $this->Name = $Name;
+        $this->Zipcode = $Zipcode;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->City;
+    }
+
+    /**
+     * @param string $City
+     * @return Address
+     */
+    public function setCity($City)
+    {
+        $this->City = $City;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountrycode()
+    {
+        return $this->Countrycode;
+    }
+
+    /**
+     * @param string $Countrycode
+     * @return Address
+     */
+    public function setCountrycode($Countrycode)
+    {
+        $this->Countrycode = $Countrycode;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getArea()
+    {
+        return $this->Area;
+    }
+
+    /**
+     * @param string $Area
+     * @return Address
+     */
+    public function setArea($Area)
+    {
+        $this->Area = $Area;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBuildingname()
+    {
+        return $this->Buildingname;
+    }
+
+    /**
+     * @param string $Buildingname
+     * @return Address
+     */
+    public function setBuildingname($Buildingname)
+    {
+        $this->Buildingname = $Buildingname;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDepartment()
+    {
+        return $this->Department;
+    }
+
+    /**
+     * @param string $Department
+     * @return Address
+     */
+    public function setDepartment($Department)
+    {
+        $this->Department = $Department;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDoorcode()
+    {
+        return $this->Doorcode;
+    }
+
+    /**
+     * @param string $Doorcode
+     * @return Address
+     */
+    public function setDoorcode($Doorcode)
+    {
+        $this->Doorcode = $Doorcode;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFloor()
+    {
+        return $this->Floor;
+    }
+
+    /**
+     * @param string $Floor
+     * @return Address
+     */
+    public function setFloor($Floor)
+    {
+        $this->Floor = $Floor;
         return $this;
     }
 
@@ -420,60 +464,6 @@ class Address
     public function setRemark($Remark)
     {
         $this->Remark = $Remark;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getStreet()
-    {
-        return $this->Street;
-    }
-
-    /**
-     * @param string $Street
-     * @return Address
-     */
-    public function setStreet($Street)
-    {
-        $this->Street = $Street;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getStreetHouseNrExt()
-    {
-        return $this->StreetHouseNrExt;
-    }
-
-    /**
-     * @param string $StreetHouseNrExt
-     * @return Address
-     */
-    public function setStreetHouseNrExt($StreetHouseNrExt)
-    {
-        $this->StreetHouseNrExt = $StreetHouseNrExt;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getZipcode()
-    {
-        return $this->Zipcode;
-    }
-
-    /**
-     * @param string $Zipcode
-     * @return Address
-     */
-    public function setZipcode($Zipcode)
-    {
-        $this->Zipcode = $Zipcode;
         return $this;
     }
 }

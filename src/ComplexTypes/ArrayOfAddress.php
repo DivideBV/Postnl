@@ -9,9 +9,9 @@ class ArrayOfAddress
     protected $Address = null;
 
     /**
-     * @param Address $Address
+     * @param Address[] $Address
      */
-    public function __construct(Address $Address)
+    public function __construct(array $Address)
     {
         $this->setAddress($Address);
     }

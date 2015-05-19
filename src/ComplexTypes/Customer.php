@@ -4,9 +4,14 @@ class Customer
 {
 
     /**
-     * @var Address $Address
+     * @var string $CustomerNumber
      */
-    protected $Address = null;
+    protected $CustomerNumber = null;
+
+    /**
+     * @var string $CustomerCode
+     */
+    protected $CustomerCode = null;
 
     /**
      * @var string $CollectionLocation
@@ -19,16 +24,6 @@ class Customer
     protected $ContactPerson = null;
 
     /**
-     * @var string $CustomerCode
-     */
-    protected $CustomerCode = null;
-
-    /**
-     * @var string $CustomerNumber
-     */
-    protected $CustomerNumber = null;
-
-    /**
      * @var string $Email
      */
     protected $Email = null;
@@ -39,30 +34,35 @@ class Customer
     protected $Name = null;
 
     /**
-     * @param Address $Address
+     * @var Address $Address
+     */
+    protected $Address = null;
+
+    /**
+     * @param string $CustomerNumber
+     * @param string $CustomerCode
      * @param string $CollectionLocation
      * @param string $ContactPerson
-     * @param string $CustomerCode
-     * @param string $CustomerNumber
      * @param string $Email
      * @param string $Name
+     * @param Address $Address
      */
     public function __construct(
-        Address $Address,
-        $CollectionLocation,
-        $ContactPerson,
-        $CustomerCode,
         $CustomerNumber,
-        $Email,
-        $Name
+        $CustomerCode,
+        $CollectionLocation,
+        $ContactPerson = null,
+        $Email = null,
+        $Name = null,
+        Address $Address = null
     ) {
-        $this->setAddress($Address);
+        $this->setCustomerNumber($CustomerNumber);
+        $this->setCustomerCode($CustomerCode);
         $this->setCollectionLocation($CollectionLocation);
         $this->setContactPerson($ContactPerson);
-        $this->setCustomerCode($CustomerCode);
-        $this->setCustomerNumber($CustomerNumber);
         $this->setEmail($Email);
         $this->setName($Name);
+        $this->setAddress($Address);
     }
 
     /**

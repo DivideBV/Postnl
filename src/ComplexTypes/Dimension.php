@@ -29,19 +29,43 @@ class Dimension
     protected $Width = null;
 
     /**
-     * @param string $Height
-     * @param string $Length
-     * @param string $Volume
      * @param string $Weight
+     * @param string $Height
+     *     Optional.
+     * @param string $Length
+     *     Optional.
+     * @param string $Volume
+     *     Optional.
      * @param string $Width
+     *     Optional.
      */
-    public function __construct($Height, $Length, $Volume, $Weight, $Width)
+    public function __construct($Weight, $Height = null, $Length = null, $Volume = null, $Width = null)
     {
+        $this->setWeight($Weight);
+
+        // Optional parameters.
         $this->setHeight($Height);
         $this->setLength($Length);
         $this->setVolume($Volume);
-        $this->setWeight($Weight);
         $this->setWidth($Width);
+    }
+
+    /**
+     * @return string
+     */
+    public function getWeight()
+    {
+        return $this->Weight;
+    }
+
+    /**
+     * @param string $Weight
+     * @return Dimension
+     */
+    public function setWeight($Weight)
+    {
+        $this->Weight = $Weight;
+        return $this;
     }
 
     /**
@@ -95,24 +119,6 @@ class Dimension
     public function setVolume($Volume)
     {
         $this->Volume = $Volume;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getWeight()
-    {
-        return $this->Weight;
-    }
-
-    /**
-     * @param string $Weight
-     * @return Dimension
-     */
-    public function setWeight($Weight)
-    {
-        $this->Weight = $Weight;
         return $this;
     }
 
