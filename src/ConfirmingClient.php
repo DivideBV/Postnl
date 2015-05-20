@@ -1,7 +1,6 @@
 <?php namespace DivideBV\Postnl;
 
 use SoapClient;
-use DOMDocument;
 
 /**
  * Client class for CIF's confirming service.
@@ -23,7 +22,7 @@ class ConfirmingClient extends SoapClient
      * @var array $classmap
      *     The classes representing the complex types.
      */
-    protected $classmap = array (
+    protected $classmap = [
         'ConfirmingMessage' => 'DivideBV\\Postnl\\ComplexTypes\\ConfirmingMessage',
         'Customer' => 'DivideBV\\Postnl\\ComplexTypes\\Customer',
         'Address' => 'DivideBV\\Postnl\\ComplexTypes\\Address',
@@ -50,7 +49,7 @@ class ConfirmingClient extends SoapClient
         'CifException' => 'DivideBV\\Postnl\\ComplexTypes\\CifException',
         'ArrayOfExceptionData' => 'DivideBV\\Postnl\\ComplexTypes\\ArrayOfExceptionData',
         'ExceptionData' => 'DivideBV\\Postnl\\ComplexTypes\\ExceptionData',
-    );
+    ];
 
     /**
      * @param ComplexTypes\SecurityHeader $SecurityHeader

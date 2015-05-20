@@ -1,7 +1,6 @@
 <?php namespace DivideBV\Postnl;
 
 use SoapClient;
-use DOMDocument;
 
 /**
  * Client class for CIF's barcode service.
