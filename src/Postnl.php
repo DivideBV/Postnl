@@ -55,6 +55,7 @@ class Postnl
 
     /**
      * @var string $lastClient
+     *     Contains the property name of the last used SOAP client.
      */
     private $lastClient = null;
 
