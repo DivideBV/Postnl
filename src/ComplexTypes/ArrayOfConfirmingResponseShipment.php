@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfConfirmingResponseShipment
+class ArrayOfConfirmingResponseShipment extends BaseType
 {
 
     /**

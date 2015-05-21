@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class CifException
+class CifException extends BaseType
 {
 
     /**

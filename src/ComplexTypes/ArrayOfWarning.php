@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfWarning
+class ArrayOfWarning extends BaseType
 {
 
     /**

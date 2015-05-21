@@ -5,7 +5,7 @@ use DateTime;
 /**
  * XML namespace: http://postnl.nl/cif/domain/BarcodeWebService/
  */
-class Message
+class Message extends BaseType
 {
 
     /**

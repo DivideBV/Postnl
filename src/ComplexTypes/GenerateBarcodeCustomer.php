@@ -3,7 +3,7 @@
 /**
  * XML namespace: http://postnl.nl/cif/domain/BarcodeWebService/
  */
-class GenerateBarcodeCustomer
+class GenerateBarcodeCustomer extends BaseType
 {
 
     /**

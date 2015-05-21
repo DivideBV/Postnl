@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class Customer
+class Customer extends BaseType
 {
 
     /**

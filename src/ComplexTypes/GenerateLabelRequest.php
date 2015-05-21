@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class GenerateLabelRequest
+class GenerateLabelRequest extends BaseType
 {
 
     /**

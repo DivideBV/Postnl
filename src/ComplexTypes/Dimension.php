@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class Dimension
+class Dimension extends BaseType
 {
 
     /**

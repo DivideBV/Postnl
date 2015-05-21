@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class Amount
+class Amount extends BaseType
 {
 
     /**

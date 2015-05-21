@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfExceptionData
+class ArrayOfExceptionData extends BaseType
 {
 
     /**

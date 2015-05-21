@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class Content
+class Content extends BaseType
 {
 
     /**

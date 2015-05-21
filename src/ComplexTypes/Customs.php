@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class Customs
+class Customs extends BaseType
 {
 
     /**

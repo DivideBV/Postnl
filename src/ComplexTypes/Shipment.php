@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class Shipment
+class Shipment extends BaseType
 {
 
     /**

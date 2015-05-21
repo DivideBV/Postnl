@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfAddress
+class ArrayOfAddress extends BaseType
 {
 
     /**

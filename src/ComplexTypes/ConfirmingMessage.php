@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ConfirmingMessage
+class ConfirmingMessage extends BaseType
 {
 
     /**

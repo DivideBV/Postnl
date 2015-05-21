@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class Label
+class Label extends BaseType
 {
 
     /**

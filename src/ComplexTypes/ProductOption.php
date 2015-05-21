@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ProductOption
+class ProductOption extends BaseType
 {
 
     /**

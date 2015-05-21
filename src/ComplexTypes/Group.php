@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class Group
+class Group extends BaseType
 {
 
     /**
