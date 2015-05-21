@@ -9,7 +9,7 @@ use SoapClient;
  * generate a random number and concatenate `type`, `range` and the generated
  * number. And what use is it to ask for the same parameter twice?
  */
-class Barcodeclient extends SoapClient
+class BarcodeClient extends SoapClient
 {
 
     /**
