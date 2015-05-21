@@ -188,6 +188,11 @@ class Postnl
      */
     public function debug()
     {
+        // Prevent accessing empty property.
+        if (!$this->lastClient) {
+            return;
+        }
+
         $requestXml = DOMDocument::loadXML($this->{$this->lastClient}->__getLastRequest());
         $requestXml->formatOutput = true;
         $responseXml = DOMDocument::loadXML($this->{$this->lastClient}->__getLastResponse());
