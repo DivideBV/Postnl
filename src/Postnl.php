@@ -54,6 +54,11 @@ class Postnl
     protected $confirmingClient = null;
 
     /**
+     * @var LabellingClient $labellingClient
+     */
+    protected $labellingClient = null;
+
+    /**
      * @var string $lastClient
      *     Contains the property name of the last used SOAP client.
      */
@@ -181,6 +186,24 @@ class Postnl
 
         // Query the webservice and return the result.
         return $this->{$client}->confirming($confirmingMessage);
+    }
+
+    /**
+     * @param ComplexTypes\Shipment $shipment
+     */
+    public function generateLabel(ComplexTypes\Shipment $shipment)
+    {
+        // Prepare arguments.
+        $message = new ComplexTypes\LabellingMessage;
+        $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
+        $generateLabelRequest = new ComplexTypes\GenerateLabelRequest($message, $customer, $shipment);
+
+        // Instantiate labelling client if not yet set.
+        $this->lastClient = $client = 'labellingClient';
+        $this->{$client} = $this->{$client} ?: new LabellingClient($this->securityHeader, $this->sandbox);
+
+        // Query the webservice and return the result.
+        return $this->{$client}->generateLabel($generateLabelRequest);
     }
 
     /**

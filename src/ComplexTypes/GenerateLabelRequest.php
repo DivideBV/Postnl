@@ -4,7 +4,7 @@ class GenerateLabelRequest extends BaseType
 {
 
     /**
-     * @var Message $Message
+     * @var LabellingMessage $Message
      */
     protected $Message = null;
 
@@ -19,11 +19,11 @@ class GenerateLabelRequest extends BaseType
     protected $Shipment = null;
 
     /**
-     * @param Message $Message
+     * @param LabellingMessage $Message
      * @param Customer $Customer
      * @param Shipment $Shipment
      */
-    public function __construct(Message $Message, Customer $Customer, Shipment $Shipment)
+    public function __construct(LabellingMessage $Message, Customer $Customer, Shipment $Shipment)
     {
         $this->setMessage($Message);
         $this->setCustomer($Customer);
@@ -39,10 +39,10 @@ class GenerateLabelRequest extends BaseType
     }
 
     /**
-     * @param Message $Message
+     * @param LabellingMessage $Message
      * @return GenerateLabelRequest
      */
-    public function setMessage($Message)
+    public function setMessage(LabellingMessage $Message)
     {
         $this->Message = $Message;
         return $this;
@@ -60,7 +60,7 @@ class GenerateLabelRequest extends BaseType
      * @param Customer $Customer
      * @return GenerateLabelRequest
      */
-    public function setCustomer($Customer)
+    public function setCustomer(Customer $Customer)
     {
         $this->Customer = $Customer;
         return $this;
@@ -78,7 +78,7 @@ class GenerateLabelRequest extends BaseType
      * @param Shipment $Shipment
      * @return GenerateLabelRequest
      */
-    public function setShipment($Shipment)
+    public function setShipment(Shipment $Shipment)
     {
         $this->Shipment = $Shipment;
         return $this;
