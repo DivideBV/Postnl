@@ -117,6 +117,7 @@ class Postnl
      *     Defaults to the customer number used to instantiate this object.
      * @param string $serie
      *     Defaults to the widest possible range.
+     * @return ComplexTypes\GenerateBarcodeResponse
      *
      * @see BarcodeClient::generateBarcode()
      */
@@ -172,6 +173,9 @@ class Postnl
 
     /**
      * @param ComplexTypes\ConfirmingMessage $confirmingMessage
+     * @return ComplexTypes\ArrayOfConfirmingResponseShipment
+     *
+     * @see ConfirmingClient::confirming()
      */
     public function confirming(ComplexTypes\ArrayOfShipment $shipments)
     {
@@ -192,6 +196,9 @@ class Postnl
      * @param ComplexTypes\Shipment $shipment
      * @param bool $confirm
      *     Defaults to true.
+     * @return ComplexTypes\ResponseShipment
+     *
+     * @see LabellingClient::generateLabel()
      */
     public function generateLabel(ComplexTypes\Shipment $shipment, $confirm = true)
     {
@@ -214,6 +221,9 @@ class Postnl
 
     /**
      * @param ComplexTypes\Shipment $shipment
+     * @return ComplexTypes\ResponseShipment
+     *
+     * @see LabellingClient::generateLabelWithoutConfirm()
      */
     public function generateLabelWithoutConfirm(ComplexTypes\Shipment $shipment)
     {
