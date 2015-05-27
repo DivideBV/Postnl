@@ -190,8 +190,10 @@ class Postnl
 
     /**
      * @param ComplexTypes\Shipment $shipment
+     * @param bool $confirm
+     *     Defaults to true.
      */
-    public function generateLabel(ComplexTypes\Shipment $shipment)
+    public function generateLabel(ComplexTypes\Shipment $shipment, $confirm = true)
     {
         // Prepare arguments.
         $message = new ComplexTypes\LabellingMessage;
@@ -203,7 +205,19 @@ class Postnl
         $this->{$client} = $this->{$client} ?: new LabellingClient($this->securityHeader, $this->sandbox);
 
         // Query the webservice and return the result.
-        return $this->{$client}->generateLabel($generateLabelRequest);
+        if ($confirm) {
+            return $this->{$client}->generateLabel($generateLabelRequest);
+        } else {
+            return $this->{$client}->generateLabelWithoutConfirm($generateLabelRequest);
+        }
+    }
+
+    /**
+     * @param ComplexTypes\Shipment $shipment
+     */
+    public function generateLabelWithoutConfirm(ComplexTypes\Shipment $shipment)
+    {
+        return $this->generateLabel($shipment, false);
     }
 
     /**
