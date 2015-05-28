@@ -1,29 +1,50 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
+/**
+ * Describes a group of shipments.
+ *
+ * @see ArrayOfGroup
+ */
 class Group extends BaseType
 {
 
     /**
+     * Amount of shipments in the group.
+     *
      * @var string $GroupCount
      */
     protected $GroupCount = null;
 
     /**
+     * Sequence number.
+     *
      * @var string $GroupSequence
      */
     protected $GroupSequence = null;
 
     /**
+     * The type of group.
+     *
+     * Possible values:
+     *
+     * - `01`: Collection request
+     * - `03`: Multiple parcels in one shipment (multi-colli)
+     * - `04`: Single parcel in one shipment
+     *
      * @var string $GroupType
      */
     protected $GroupType = null;
 
     /**
+     * Main barcode for the shipment.
+     *
      * @var string $MainBarcode
      */
     protected $MainBarcode = null;
 
     /**
+     * Constructor.
+     *
      * @param string $GroupCount
      * @param string $GroupSequence
      * @param string $GroupType
@@ -38,6 +59,8 @@ class Group extends BaseType
     }
 
     /**
+     * Get self::$GroupCount.
+     *
      * @return string
      */
     public function getGroupCount()
@@ -46,6 +69,8 @@ class Group extends BaseType
     }
 
     /**
+     * Set self::$GroupCount.
+     *
      * @param string $GroupCount
      * @return Group
      */
@@ -56,6 +81,8 @@ class Group extends BaseType
     }
 
     /**
+     * Get self::$GroupSequence.
+     *
      * @return string
      */
     public function getGroupSequence()
@@ -64,6 +91,8 @@ class Group extends BaseType
     }
 
     /**
+     * Set self::$GroupSequence.
+     *
      * @param string $GroupSequence
      * @return Group
      */
@@ -74,6 +103,8 @@ class Group extends BaseType
     }
 
     /**
+     * Get self::$GroupType.
+     *
      * @return string
      */
     public function getGroupType()
@@ -82,6 +113,8 @@ class Group extends BaseType
     }
 
     /**
+     * Set self::$GroupType.
+     *
      * @param string $GroupType
      * @return Group
      */
@@ -92,6 +125,8 @@ class Group extends BaseType
     }
 
     /**
+     * Get self::$MainBarcode.
+     *
      * @return string
      */
     public function getMainBarcode()
@@ -100,6 +135,8 @@ class Group extends BaseType
     }
 
     /**
+     * Set self::$MainBarcode.
+     *
      * @param string $MainBarcode
      * @return Group
      */

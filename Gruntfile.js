@@ -23,6 +23,9 @@ module.exports = function(grunt) {
           target : 'docs'
         }
       }
+    },
+    exec: {
+      apigen: 'vendor/apigen/apigen/bin/apigen generate -s src/ -d docs/ --template-theme=bootstrap'
     }
   });
 
@@ -36,7 +39,11 @@ module.exports = function(grunt) {
 
   // PHP documentor.
   grunt.loadNpmTasks('grunt-phpdocumentor');
-  grunt.registerTask('doc', ['phpdocumentor']);
+  grunt.registerTask('phpdoc', ['phpdocumentor']);
+
+  // Apigen
+  grunt.loadNpmTasks('grunt-exec');
+  grunt.registerTask('doc', ['exec:apigen']);
 
   // Default task, running linter and codesniffer.
   grunt.registerTask('default', ['phplint:good', 'phpcs']);
