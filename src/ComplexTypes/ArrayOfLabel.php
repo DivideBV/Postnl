@@ -21,7 +21,8 @@ class ArrayOfLabel extends BaseType
      */
     public function getLabel()
     {
-        return $this->Label;
+        // When created by the SOAP stack, `$this->Label` may not be an array.
+        return is_array($this->Label) ? $this->Label : [$this->Label];
     }
 
     /**
