@@ -1,7 +1,5 @@
 <?php namespace DivideBV\Postnl;
 
-use SoapClient;
-
 /**
  * Client class for CIF's barcode service.
  *
@@ -9,7 +7,7 @@ use SoapClient;
  * generate a random number and concatenate `type`, `range` and the generated
  * number. And what use is it to ask for the same parameter twice?
  */
-class BarcodeClient extends SoapClient
+class BarcodeClient extends BaseClient
 {
 
     /**
@@ -23,40 +21,19 @@ class BarcodeClient extends SoapClient
     const SANDBOX_WSDL = 'https://testservice.postnl.com/CIF_SB/BarcodeWebService/1_1/?wsdl';
 
     /**
-     * @var array $classmap
-     *     The classes representing the complex types.
+     * @var array $classes
+     *     The complex types used by this client.
      */
-    protected $classmap = [
-        'GenerateBarcodeMessage' => 'DivideBV\\Postnl\\ComplexTypes\\GenerateBarcodeMessage',
-        'Message' => 'DivideBV\\Postnl\\ComplexTypes\\Message',
-        'GenerateBarcodeCustomer' => 'DivideBV\\Postnl\\ComplexTypes\\GenerateBarcodeCustomer',
-        'Barcode' => 'DivideBV\\Postnl\\ComplexTypes\\Barcode',
-        'GenerateBarcodeResponse' => 'DivideBV\\Postnl\\ComplexTypes\\GenerateBarcodeResponse',
-        'CifException' => 'DivideBV\\Postnl\\ComplexTypes\\CifException',
-        'ArrayOfExceptionData' => 'DivideBV\\Postnl\\ComplexTypes\\ArrayOfExceptionData',
-        'ExceptionData' => 'DivideBV\\Postnl\\ComplexTypes\\ExceptionData',
+    protected $classes = [
+        'GenerateBarcodeMessage',
+        'Message',
+        'GenerateBarcodeCustomer',
+        'Barcode',
+        'GenerateBarcodeResponse',
+        'CifException',
+        'ArrayOfExceptionData',
+        'ExceptionData',
     ];
-
-    /**
-     * @param ComplexTypes\SecurityHeader $SecurityHeader
-     *     The authorization information.
-     * @param bool $sandbox
-     *     Whether to use the production or sandbox environment. Defaults to
-     *     production.
-     * @param string $wsdl
-     *     The URL of the WSDL file to use, if not production or sandbox.
-     */
-    public function __construct(ComplexTypes\SecurityHeader $SecurityHeader, $sandbox = false, $wsdl = null)
-    {
-        // If no WSDL is provided, use either the sandbox or production WSDL.
-        if (!$wsdl) {
-            $wsdl = $sandbox ? self::SANDBOX_WSDL : self::PRODUCTION_WSDL;
-        }
-
-        parent::__construct($wsdl, ['classmap' => $this->classmap, 'trace' => true]);
-
-        $this->__setSoapHeaders($SecurityHeader);
-    }
 
     /**
      * @param ComplexTypes\GenerateBarcodeMessage $GenerateBarcodeMessage
