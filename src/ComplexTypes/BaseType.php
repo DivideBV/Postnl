@@ -2,7 +2,7 @@
 
 use ReflectionClass;
 
-class BaseType
+abstract class BaseType
 {
 
     /**
