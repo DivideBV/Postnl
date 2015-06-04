@@ -44,19 +44,10 @@ class Postnl
     protected $sandbox = false;
 
     /**
-     * @var BarcodeClient $barcodeClient
+     * @var array $clients
+     *     An array with instaintiated CIF clients.
      */
-    protected $barcodeClient = null;
-
-    /**
-     * @var ConfirmingClient $confirmingClient
-     */
-    protected $confirmingClient = null;
-
-    /**
-     * @var LabellingClient $labellingClient
-     */
-    protected $labellingClient = null;
+    protected $clients = [];
 
     /**
      * @var string $lastClient
@@ -98,7 +89,7 @@ class Postnl
      */
     public function setBarcodeClient(BarcodeClient $barcodeClient)
     {
-        $this->barcodeClient = $barcodeClient;
+        $this->clients['BarcodeClient'] = $barcodeClient;
     }
 
     /**
@@ -106,7 +97,15 @@ class Postnl
      */
     public function setConfirmingClient(ConfirmingClient $confirmingClient)
     {
-        $this->confirmingClient = $confirmingClient;
+        $this->clients['ConfirmingClient'] = $confirmingClient;
+    }
+
+    /**
+     * @param LabellingClient $labellingClient
+     */
+    public function setLabellingClient(LabellingClient $labellingClient)
+    {
+        $this->clients['LabellingClient'] = $labellingClient;
     }
 
     /**
@@ -163,12 +162,8 @@ class Postnl
         $barcode = new ComplexTypes\Barcode($type, $customerCode, $serie);
         $generateBarcodeMessage = new ComplexTypes\GenerateBarcodeMessage($message, $customer, $barcode);
 
-        // Instantiate barcode client if not yet set.
-        $this->lastClient = $client = 'barcodeClient';
-        $this->{$client} = $this->{$client} ?: new BarcodeClient($this->securityHeader, $this->sandbox);
-
         // Query the webservice and return the result.
-        return $this->{$client}->generateBarcode($generateBarcodeMessage);
+        return $this->getClient('BarcodeClient')->generateBarcode($generateBarcodeMessage);
     }
 
     /**
@@ -184,12 +179,8 @@ class Postnl
         $message = new ComplexTypes\Message;
         $confirmingMessage = new ComplexTypes\ConfirmingMessage($customer, $message, $shipments);
 
-        // Instantiate confirming client if not yet set.
-        $this->lastClient = $client = 'confirmingClient';
-        $this->{$client} = $this->{$client} ?: new ConfirmingClient($this->securityHeader, $this->sandbox);
-
         // Query the webservice and return the result.
-        return $this->{$client}->confirming($confirmingMessage);
+        return $this->getClient('ConfirmingClient')->confirming($confirmingMessage);
     }
 
     /**
@@ -207,15 +198,11 @@ class Postnl
         $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
         $generateLabelRequest = new ComplexTypes\GenerateLabelRequest($message, $customer, $shipment);
 
-        // Instantiate labelling client if not yet set.
-        $this->lastClient = $client = 'labellingClient';
-        $this->{$client} = $this->{$client} ?: new LabellingClient($this->securityHeader, $this->sandbox);
-
         // Query the webservice and return the result.
         if ($confirm) {
-            return $this->{$client}->generateLabel($generateLabelRequest);
+            return $this->getClient('LabellingClient')->generateLabel($generateLabelRequest);
         } else {
-            return $this->{$client}->generateLabelWithoutConfirm($generateLabelRequest);
+            return $this->getClient('LabellingClient')->generateLabelWithoutConfirm($generateLabelRequest);
         }
     }
 
@@ -240,11 +227,31 @@ class Postnl
             return;
         }
 
-        $requestXml = DOMDocument::loadXML($this->{$this->lastClient}->__getLastRequest());
+        $requestXml = DOMDocument::loadXML($this->getClient($this->lastClient)->__getLastRequest());
         $requestXml->formatOutput = true;
-        $responseXml = DOMDocument::loadXML($this->{$this->lastClient}->__getLastResponse());
+        $responseXml = DOMDocument::loadXML($this->getClient($this->lastClient)->__getLastResponse());
         $responseXml->formatOutput = true;
 
         return ['request' => $requestXml->saveXML(), 'response' => $responseXml->saveXML()];
+    }
+
+    /**
+     * Get CIF client by name. Takes care of instantiating clients if needed.
+     *
+     * @param $clientName
+     * @return mixed
+     */
+    protected function getClient($clientName)
+    {
+        // Instantiate the client if not set yet.
+        if (!isset($this->clients[$clientName])) {
+            $className = __NAMESPACE__ . "\\$clientName";
+            $this->clients[$clientName] = new $className($this->securityHeader, $this->sandbox);
+        }
+
+        // Keep track of last used client for debugging purposes.
+        $this->lastClient = $clientName;
+
+        return $this->clients[$clientName];
     }
 }
