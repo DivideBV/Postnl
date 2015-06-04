@@ -109,6 +109,14 @@ class Postnl
     }
 
     /**
+     * @param ShippingStatusClient $shippingStatusClient
+     */
+    public function setShippingStatusClient(ShippingStatusClient $shippingStatusClient)
+    {
+        $this->clients['ShippingStatusClient'] = $shippingStatusClient;
+    }
+
+    /**
      * @param string $type
      * @param string $customerCode
      *     Defaults to the customer code used to instantiate this object.
@@ -215,6 +223,18 @@ class Postnl
     public function generateLabelWithoutConfirm(ComplexTypes\Shipment $shipment)
     {
         return $this->generateLabel($shipment, false);
+    }
+
+    /**
+     * @param CurrentStatusRequest $CurrentStatus
+     * @return CurrentStatusResponse
+     *
+     * @see ShippingStatusClient::currentStatus()
+     */
+    public function currentStatus(CurrentStatusRequest $CurrentStatus)
+    {
+        // Query the webservice and return the result.
+        return $this->getClient('ShippingStatusClient')->currentStatus($CurrentStatus);
     }
 
     /**
