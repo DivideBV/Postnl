@@ -228,10 +228,10 @@ class Postnl
      *
      * @see ShippingStatusClient::currentStatus()
      */
-    public function currentStatus(CurrentStatusRequest $CurrentStatus)
+    public function currentStatus(ComplexTypes\CurrentStatusRequest $currentStatus)
     {
         // Query the webservice and return the result.
-        return $this->getClient('ShippingStatusClient')->currentStatus($CurrentStatus);
+        return $this->getClient('ShippingStatusClient')->currentStatus($currentStatus);
     }
 
     /**
