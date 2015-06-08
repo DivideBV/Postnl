@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfResponseAddress extends BaseType
+class ArrayOfResponseAddress extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'ResponseAddress';
 
     /**
      * @var ResponseAddress[] $ResponseAddress

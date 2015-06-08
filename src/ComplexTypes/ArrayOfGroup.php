@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfGroup extends BaseType
+class ArrayOfGroup extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'Group';
 
     /**
      * @var Group[] $Group

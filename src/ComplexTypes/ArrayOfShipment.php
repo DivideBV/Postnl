@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfShipment extends BaseType
+class ArrayOfShipment extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'Shipment';
 
     /**
      * @var Shipment[] $Shipment

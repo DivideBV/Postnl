@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfWarning extends BaseType
+class ArrayOfWarning extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'Warning';
 
     /**
      * @var Warning[] $Warning

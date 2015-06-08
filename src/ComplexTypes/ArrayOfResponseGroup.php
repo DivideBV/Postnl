@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfResponseGroup extends BaseType
+class ArrayOfResponseGroup extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'ResponseGroup';
 
     /**
      * @var ResponseGroup[] $ResponseGroup

@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfConfirmingResponseShipment extends BaseType
+class ArrayOfConfirmingResponseShipment extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'ConfirmingResponseShipment';
 
     /**
      * @var ConfirmingResponseShipment[] $ConfirmingResponseShipment

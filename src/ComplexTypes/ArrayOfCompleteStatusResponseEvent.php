@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfCompleteStatusResponseEvent extends BaseType
+class ArrayOfCompleteStatusResponseEvent extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'CompleteStatusResponseEvent';
 
     /**
      * @var CompleteStatusResponseEvent[] $CompleteStatusResponseEvent

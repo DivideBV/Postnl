@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfResponseProductOption extends BaseType
+class ArrayOfResponseProductOption extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'ResponseProductOption';
 
     /**
      * @var ResponseProductOption[] $ResponseProductOption

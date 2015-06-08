@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfResponseAmount extends BaseType
+class ArrayOfResponseAmount extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'ResponseAmount';
 
     /**
      * @var ResponseAmount[] $ResponseAmount

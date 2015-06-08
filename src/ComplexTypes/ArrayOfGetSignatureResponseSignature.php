@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfGetSignatureResponseSignature extends BaseType
+class ArrayOfGetSignatureResponseSignature extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'GetSignatureResponseSignature';
 
     /**
      * @var GetSignatureResponseSignature[] $GetSignatureResponseSignature
