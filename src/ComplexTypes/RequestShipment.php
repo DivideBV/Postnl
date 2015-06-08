@@ -10,11 +10,13 @@ class RequestShipment extends BaseType
 
     /**
      * @var string $Reference
+     *     Optional.
      */
     protected $Reference = null;
 
     /**
      * @var string $Zipcode
+     *     Optional.
      */
     protected $Zipcode = null;
 
@@ -23,7 +25,7 @@ class RequestShipment extends BaseType
      * @param string $Reference
      * @param string $Zipcode
      */
-    public function __construct($Barcode, $Reference, $Zipcode)
+    public function __construct($Barcode, $Reference = null, $Zipcode = null)
     {
         $this->setBarcode($Barcode);
         $this->setReference($Reference);

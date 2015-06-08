@@ -223,15 +223,21 @@ class Postnl
     }
 
     /**
-     * @param CurrentStatusRequest $CurrentStatus
+     * @param string $barcode
      * @return CurrentStatusResponse
      *
      * @see ShippingStatusClient::currentStatus()
      */
-    public function currentStatus(ComplexTypes\CurrentStatusRequest $currentStatus)
+    public function currentStatus($barcode)
     {
+        // Prepare arguments.
+        $message = new ComplexTypes\Message;
+        $customer = new ComplexTypes\RequestCustomer($this->customerCode, $this->customerNumber);
+        $shipment = new ComplexTypes\RequestShipment($barcode);
+        $request = new ComplexTypes\CurrentStatusRequest($message, $customer, $shipment);
+
         // Query the webservice and return the result.
-        return $this->getClient('ShippingStatusClient')->currentStatus($currentStatus);
+        return $this->getClient('ShippingStatusClient')->currentStatus($request);
     }
 
     /**

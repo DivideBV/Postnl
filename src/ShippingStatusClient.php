@@ -67,64 +67,64 @@ class ShippingStatusClient extends BaseClient
     ];
 
     /**
-     * @param CurrentStatusRequest $CurrentStatus
-     * @return CurrentStatusResponse
+     * @param ComplexTypes\CurrentStatusRequest $CurrentStatus
+     * @return ComplexTypes\CurrentStatusResponse
      */
-    public function currentStatus(CurrentStatusRequest $CurrentStatus)
+    public function currentStatus(ComplexTypes\CurrentStatusRequest $CurrentStatus)
     {
         return $this->__soapCall('CurrentStatus', [$CurrentStatus]);
     }
 
     /**
-     * @param CompleteStatusRequest $CompleteStatus
-     * @return CompleteStatusResponse
+     * @param ComplexTypes\CompleteStatusRequest $CompleteStatus
+     * @return ComplexTypes\CompleteStatusResponse
      */
-    public function completeStatus(CompleteStatusRequest $CompleteStatus)
+    public function completeStatus(ComplexTypes\CompleteStatusRequest $CompleteStatus)
     {
         return $this->__soapCall('CompleteStatus', [$CompleteStatus]);
     }
 
     /**
-     * @param CurrentStatusByReferenceRequest $CurrentStatusByReference
-     * @return CurrentStatusResponse
+     * @param ComplexTypes\CurrentStatusByReferenceRequest $CurrentStatusByReference
+     * @return ComplexTypes\CurrentStatusResponse
      */
-    public function currentStatusByReference(CurrentStatusByReferenceRequest $CurrentStatusByReference)
+    public function currentStatusByReference(ComplexTypes\CurrentStatusByReferenceRequest $CurrentStatusByReference)
     {
         return $this->__soapCall('CurrentStatusByReference', [$CurrentStatusByReference]);
     }
 
     /**
-     * @param CompleteStatusByReferenceRequest $CompleteStatusByReference
-     * @return CompleteStatusResponse
+     * @param ComplexTypes\CompleteStatusByReferenceRequest $CompleteStatusByReference
+     * @return ComplexTypes\CompleteStatusResponse
      */
-    public function completeStatusByReference(CompleteStatusByReferenceRequest $CompleteStatusByReference)
+    public function completeStatusByReference(ComplexTypes\CompleteStatusByReferenceRequest $CompleteStatusByReference)
     {
         return $this->__soapCall('CompleteStatusByReference', [$CompleteStatusByReference]);
     }
 
     /**
-     * @param CurrentStatusByStatusRequest $CurrentStatusByStatus
-     * @return CurrentStatusResponse
+     * @param ComplexTypes\CurrentStatusByStatusRequest $CurrentStatusByStatus
+     * @return ComplexTypes\CurrentStatusResponse
      */
-    public function currentStatusByStatus(CurrentStatusByStatusRequest $CurrentStatusByStatus)
+    public function currentStatusByStatus(ComplexTypes\CurrentStatusByStatusRequest $CurrentStatusByStatus)
     {
         return $this->__soapCall('CurrentStatusByStatus', [$CurrentStatusByStatus]);
     }
 
     /**
-     * @param CurrentStatusByPhaseRequest $CurrentStatusByPhase
-     * @return CurrentStatusResponse
+     * @param ComplexTypes\CurrentStatusByPhaseRequest $CurrentStatusByPhase
+     * @return ComplexTypes\CurrentStatusResponse
      */
-    public function currentStatusByPhase(CurrentStatusByPhaseRequest $CurrentStatusByPhase)
+    public function currentStatusByPhase(ComplexTypes\CurrentStatusByPhaseRequest $CurrentStatusByPhase)
     {
         return $this->__soapCall('CurrentStatusByPhase', [$CurrentStatusByPhase]);
     }
 
     /**
-     * @param GetSignatureRequest $GetSignature
-     * @return GetSignatureResponse
+     * @param ComplexTypes\GetSignatureRequest $GetSignature
+     * @return ComplexTypes\GetSignatureResponse
      */
-    public function getSignature(GetSignatureRequest $GetSignature)
+    public function getSignature(ComplexTypes\GetSignatureRequest $GetSignature)
     {
         return $this->__soapCall('GetSignature', [$GetSignature]);
     }
