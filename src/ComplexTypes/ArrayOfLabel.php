@@ -1,7 +1,12 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class ArrayOfLabel extends BaseType
+class ArrayOfLabel extends BaseArrayOfType
 {
+
+    /**
+     * The name of the array property this class is a wrapper of.
+     */
+    const WRAPPED_PROPERTY = 'Label';
 
     /**
      * @var Label[] $Label
@@ -21,8 +26,7 @@ class ArrayOfLabel extends BaseType
      */
     public function getLabel()
     {
-        // When created by the SOAP stack, `$this->Label` may not be an array.
-        return is_array($this->Label) ? $this->Label : [$this->Label];
+        return $this->Label;
     }
 
     /**
