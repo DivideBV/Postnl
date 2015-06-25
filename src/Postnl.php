@@ -45,7 +45,7 @@ class Postnl
 
     /**
      * @var array $clients
-     *     An array with instaintiated CIF clients.
+     *     An array with instantiated CIF clients.
      */
     protected $clients = [];
 
