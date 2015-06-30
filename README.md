@@ -82,7 +82,7 @@ $result = $client->generateLabel($shipment);
 $i = 0;
 foreach ($result->getLabels() as $label) {
     $i++;
-    $file = new \SplFileObject("label{$i}.pdf"', 'w');
+    $file = new \SplFileObject("label{$i}.pdf", 'w');
     $file->fwrite($label->getContent());
 }
 
