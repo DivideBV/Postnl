@@ -66,13 +66,12 @@ $shipment = ComplexTypes\Shipment::create()
         $senderAddress,
     ]))
     ->setBarcode('3SABCD000000001')
-    ->setDimension(new ComplexTypes\Dimension(
-        5000,   // Weight in grams
-        280,    // Height in mm
-        305,    // Length in mm
-        18361,  // Volume in mL
-        215     // Width in mm
-    ))
+    ->setDimension(ComplexTypes\Dimension::create()
+        ->setWeight(5000) // Weight in g
+        ->setWidth(215)   // Width in mm
+        ->setLength(305)  // Length in mm
+        ->setHeight(280)  // Height in mm
+    )
     ->setProductCodeDelivery('3085');
 
 // Generate label and confirm shipment.
