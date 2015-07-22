@@ -1,6 +1,9 @@
 # PostNL CIF
 
-[![Latest Stable Version](https://poser.pugx.org/dividebv/postnl/v/stable)](https://packagist.org/packages/dividebv/postnl) [![Total Downloads](https://poser.pugx.org/dividebv/postnl/downloads)](https://packagist.org/packages/dividebv/postnl) [![Latest Unstable Version](https://poser.pugx.org/dividebv/postnl/v/unstable)](https://packagist.org/packages/dividebv/postnl) [![License](https://poser.pugx.org/dividebv/postnl/license)](https://packagist.org/packages/dividebv/postnl)
+[![Latest Stable Version](https://poser.pugx.org/dividebv/postnl/v/stable)](https://packagist.org/packages/dividebv/postnl)
+[![Total Downloads](https://poser.pugx.org/dividebv/postnl/downloads)](https://packagist.org/packages/dividebv/postnl)
+[![Latest Unstable Version](https://poser.pugx.org/dividebv/postnl/v/unstable)](https://packagist.org/packages/dividebv/postnl)
+[![License](https://poser.pugx.org/dividebv/postnl/license)](https://packagist.org/packages/dividebv/postnl)
 
 This is a library to interface with the SOAP services offered by
 [PostNL](http://postnl.nl/), called CIF.
