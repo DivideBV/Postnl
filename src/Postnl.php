@@ -250,9 +250,12 @@ class Postnl
             return;
         }
 
-        $requestXml = DOMDocument::loadXML($this->getClient($this->lastClient)->__getLastRequest());
+        $requestXml = new DOMDocument;
+        $requestXml->loadXML($this->getClient($this->lastClient)->__getLastRequest());
         $requestXml->formatOutput = true;
-        $responseXml = DOMDocument::loadXML($this->getClient($this->lastClient)->__getLastResponse());
+
+        $responseXml = new DOMDocument;
+        $responseXml->loadXML($this->getClient($this->lastClient)->__getLastResponse());
         $responseXml->formatOutput = true;
 
         return ['request' => $requestXml->saveXML(), 'response' => $responseXml->saveXML()];
