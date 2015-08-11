@@ -62,13 +62,16 @@ $senderAddress = ComplexTypes\Address::create()
     ->setCity('Heikant')
     ->setCountrycode('NL');
 
+// Request a barcode from PostNL.
+$barcode = $client->generateBarcodeByDestination($receiverAddress->getCountryCode());
+
 // Create a shipment.
 $shipment = ComplexTypes\Shipment::create()
     ->setAddresses(new ComplexTypes\ArrayOfAddress([
         $receiverAddress,
         $senderAddress,
     ]))
-    ->setBarcode('3SABCD000000001')
+    ->setBarcode($barcode)
     ->setDimension(ComplexTypes\Dimension::create()
         ->setWeight(5000) // Weight in g
         ->setWidth(215)   // Width in mm
