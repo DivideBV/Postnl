@@ -34,6 +34,11 @@ class Postnl
     protected $collectionLocation = null;
 
     /**
+     * @var string $globalPackBarcodeType
+     */
+    protected $globalPackBarcodeType = null;
+
+    /**
      * @var string $globalPackCustomerCode
      */
     protected $globalPackCustomerCode = null;
@@ -54,6 +59,42 @@ class Postnl
      *     Contains the property name of the last used SOAP client.
      */
     private $lastClient = null;
+
+    /**
+     * @var string countryCodeMapping
+     *     Maps the country code to the required barcode type.
+     */
+    protected $countryCodeMapping = [
+        // Dutch domestic product.
+        'NL' => '3S',
+        // EPS products.
+        'AT' => '3S',
+        'BE' => '3S',
+        'BG' => '3S',
+        'CZ' => '3S',
+        'CY' => '3S',
+        'DK' => '3S',
+        'EE' => '3S',
+        'FI' => '3S',
+        'FR' => '3S',
+        'DE' => '3S',
+        'GB' => '3S',
+        'GR' => '3S',
+        'HU' => '3S',
+        'IE' => '3S',
+        'IT' => '3S',
+        'LV' => '3S',
+        'LT' => '3S',
+        'LU' => '3S',
+        'PL' => '3S',
+        'PT' => '3S',
+        'RO' => '3S',
+        'SK' => '3S',
+        'SI' => '3S',
+        'ES' => '3S',
+        'SE' => '3S',
+        // Everything else is GlobalPack.
+    ];
 
     /**
      * @param string $customerNumber
@@ -80,7 +121,8 @@ class Postnl
         $this->customerName = $customerName;
         $this->securityHeader = new ComplexTypes\SecurityHeader($username, $password);
         $this->collectionLocation = $collectionLocation;
-        $this->globalPackCustomerCode = preg_filter('/^.{2}(.{4})$/', '$1', $globalPack);
+        $this->globalPackBarcodeType = preg_filter('/^(.{2})(.{4})$/', '$1', $globalPack);
+        $this->globalPackCustomerCode = preg_filter('/^(.{2})(.{4})$/', '$2', $globalPack);
         $this->sandbox = $sandbox;
     }
 
@@ -172,6 +214,38 @@ class Postnl
 
         // Query the webservice and return the result.
         return $this->getClient('BarcodeClient')->generateBarcode($generateBarcodeMessage);
+    }
+
+    /**
+     * Generate the right type of barcode for the given country code.
+     *
+     * @param string $countryCode
+     *     The ISO country code of the receiver.
+     * @param string $customerCode
+     *     Defaults to the customer code used to instantiate this object.
+     * @param string $customerNumber
+     *     Defaults to the customer number used to instantiate this object.
+     * @param string $serie
+     *     Defaults to the widest possible range.
+     * @return ComplexTypes\GenerateBarcodeResponse
+     *
+     * @see BarcodeClient::generateBarcode()
+     */
+    public function generateBarcodeByDestination(
+        $countryCode,
+        $customerCode = null,
+        $customerNumber = null,
+        $serie = null
+    ) {
+        // If this country code has an explicit barcode type mapping, use it.
+        if (in_array($countryCode, array_keys($this->countryCodeMapping))) {
+            $type = $this->countryCodeMapping[$countryCode];
+        } else {
+            // Otherwise use GlobalPack.
+            $type = $this->globalPackBarcodeType;
+        }
+
+        return $this->generateBarcode($type, $customerCode, $customerNumber, $serie);
     }
 
     /**
