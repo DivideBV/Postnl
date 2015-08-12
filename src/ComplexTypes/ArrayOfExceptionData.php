@@ -8,8 +8,13 @@ class ArrayOfExceptionData extends BaseType
      */
     protected $ExceptionData = null;
 
-    public function __construct()
+    /**
+     * @param ExceptionData[] $ExceptionData
+     * @return ArrayOfExceptionData
+     */
+    public function __construct(array $ExceptionData)
     {
+        $this->setExceptionData($ExceptionData);
     }
 
     /**

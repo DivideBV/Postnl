@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class CifException extends BaseType
+class CifException extends \Exception
 {
 
     /**
@@ -8,8 +8,13 @@ class CifException extends BaseType
      */
     protected $Errors = null;
 
-    public function __construct()
+    /**
+     * @param ArrayOfExceptionData $Errors
+     * @return CifException
+     */
+    public function __construct(ArrayOfExceptionData $Errors)
     {
+        $this->setErrors($Errors);
     }
 
     /**
@@ -24,7 +29,7 @@ class CifException extends BaseType
      * @param ArrayOfExceptionData $Errors
      * @return CifException
      */
-    public function setErrors($Errors)
+    public function setErrors(ArrayOfExceptionData $Errors)
     {
         $this->Errors = $Errors;
         return $this;
