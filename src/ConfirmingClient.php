@@ -44,9 +44,6 @@ class ConfirmingClient extends BaseClient
         'ConfirmingResponseShipment',
         'ArrayOfWarning',
         'Warning',
-        'CifException',
-        'ArrayOfExceptionData',
-        'ExceptionData',
     ];
 
     /**

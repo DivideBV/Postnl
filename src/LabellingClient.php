@@ -44,9 +44,6 @@ class LabellingClient extends BaseClient
         'Label',
         'ArrayOfWarning',
         'Warning',
-        'CifException',
-        'ArrayOfExceptionData',
-        'ExceptionData',
     ];
 
     /**

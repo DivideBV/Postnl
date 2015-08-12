@@ -30,9 +30,6 @@ class BarcodeClient extends BaseClient
         'GenerateBarcodeCustomer',
         'Barcode',
         'GenerateBarcodeResponse',
-        'CifException',
-        'ArrayOfExceptionData',
-        'ExceptionData',
     ];
 
     /**

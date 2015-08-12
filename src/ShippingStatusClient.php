@@ -61,9 +61,6 @@ class ShippingStatusClient extends BaseClient
         'GetSignatureResponse',
         'ArrayOfGetSignatureResponseSignature',
         'GetSignatureResponseSignature',
-        'CifException',
-        'ArrayOfExceptionData',
-        'ExceptionData',
     ];
 
     /**
