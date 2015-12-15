@@ -8,7 +8,9 @@
             "email": "a.ross@amdev.eu"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^5.4"
+    },
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*",
         "apigen/apigen": "^4.1"
