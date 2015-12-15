@@ -19,6 +19,9 @@ $ composer require dividebv/postnl
 # Example
 
 ```php
+use DivideBV\Postnl\Postnl;
+use DivideBV\Postnl\ComplexTypes;
+
 // Create client class using credentials received from PostNL.
 $client = new Postnl(
     12345678,   // Customer number
