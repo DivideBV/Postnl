@@ -13,7 +13,7 @@ This is a library to interface with the SOAP services offered by
 Install the latest version with
 
 ```bash
-$ composer require dividebv/postnl
+composer require dividebv/postnl
 ```
 
 # Example
