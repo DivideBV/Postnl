@@ -8,6 +8,11 @@
 This is a library to interface with the SOAP services offered by
 [PostNL](http://postnl.nl/), called CIF.
 
+# Requirements
+
+ - PHP >= 5.4
+ - PHP SOAP extension
+
 # Installation
 
 Install the latest version with
