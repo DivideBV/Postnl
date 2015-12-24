@@ -9,7 +9,8 @@
         }
     ],
     "require": {
-        "php": "^5.4"
+        "php": "^5.4",
+        "ext-soap": "*"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*",
