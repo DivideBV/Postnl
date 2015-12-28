@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": "^5.4",
+        "php": "5.4 - 7",
         "ext-soap": "*",
         "ext-dom": "*"
     },
