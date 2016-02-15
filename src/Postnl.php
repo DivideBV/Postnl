@@ -178,7 +178,7 @@ class Postnl
         $serie = null
     ) {
         // Validate $type parameter.
-        if (!in_array($type, ['2S', '3S', 'CC', 'CP', 'CD', 'CF'])) {
+        if (!in_array($type, ['2S', '3S', 'CC', 'CP', 'CD', 'CF', 'CV'])) {
             throw new Exceptions\InvalidBarcodeTypeException($type);
         }
 
