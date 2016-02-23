@@ -18,7 +18,7 @@ class ArrayOfConfirmingResponseShipment extends BaseArrayOfType
      */
     public function __construct(array $ConfirmingResponseShipment)
     {
-        $this->setConfirmingResponseShipment($ConformingResponseShipment);
+        $this->setConfirmingResponseShipment($ConfirmingResponseShipment);
     }
 
     /**
