@@ -315,14 +315,16 @@ class Postnl
     }
 
     /**
-     * @param $PostcalCode
+     * @param $postalCode
+     * @param string $allowSundaySorting
+     * @param null $deliveryDate
      * @return mixed
      * @throws ComplexTypes\CifException
      * @throws SoapFault
      */
-    public function GetNearestLocation($PostcalCode, $AllowSundaySorting = "false", $DeliveryDate = null) {
+    public function getNearestLocation($postalCode, $allowSundaySorting = "false", $deliveryDate = null) {
         $message = new ComplexTypes\Message;
-        $location = new ComplexTypes\Location($PostcalCode, $AllowSundaySorting, $DeliveryDate);
+        $location = new ComplexTypes\Location($postalCode, $allowSundaySorting, $deliveryDate);
 
         $request = new ComplexTypes\GetNearestLocationsRequest($message, $location);
         return $this->call('LocationClient', __FUNCTION__, $request);

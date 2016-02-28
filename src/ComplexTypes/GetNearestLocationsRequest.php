@@ -9,17 +9,19 @@ class GetNearestLocationsRequest extends BaseType
     protected $Message = null;
 
     /**
-     * @var RequestCustomer $Customer
+     * @var Location $Location
      */
     protected $Location = null;
 
     /**
-     * @var RequestShipment $Shipment
+     * @var string $Countrycode
      */
     protected $Countrycode = 'NL';
 
     /**
+     * GetNearestLocationsRequest constructor.
      * @param Message $Message
+     * @param Location $Location
      */
     public function __construct(
         Message $Message,
@@ -46,7 +48,7 @@ class GetNearestLocationsRequest extends BaseType
     }
 
     /**
-     * @return RequestCustomer
+     * @return Location
      */
     public function getLocation()
     {
@@ -54,7 +56,7 @@ class GetNearestLocationsRequest extends BaseType
     }
 
     /**
-     * @param RequestCustomer $Location
+     * @param Location $Location
      */
     public function setLocation($Location)
     {
@@ -62,7 +64,7 @@ class GetNearestLocationsRequest extends BaseType
     }
 
     /**
-     * @return RequestShipment
+     * @return string
      */
     public function getCountrycode()
     {
@@ -70,12 +72,10 @@ class GetNearestLocationsRequest extends BaseType
     }
 
     /**
-     * @param RequestShipment $Countrycode
+     * @param string $Countrycode
      */
     public function setCountrycode($Countrycode)
     {
         $this->Countrycode = $Countrycode;
     }
-
-    
 }

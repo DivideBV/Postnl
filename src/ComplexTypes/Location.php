@@ -4,17 +4,17 @@ class Location extends BaseType
 {
 
     /**
-     * @var string $MessageID
+     * @var string $AllowSundaySorting
      */
     protected $AllowSundaySorting = null;
 
     /**
-     * @var string $MessageTimeStamp
+     * @var string $DeliveryDate
      */
     protected $DeliveryDate = null;
 
     /**
-     * @var strint $City
+     * @var string $City
      */
     protected $City = null;
 
@@ -36,16 +36,16 @@ class Location extends BaseType
 
     /**
      * Location constructor.
-     * @param $Postcalcode
+     * @param $Postalcode
      * @param string $AllowSundaySorting
-     * @param null $DeliveryDate
+     * @param date $DeliveryDate
      */
-    public function __construct($Postcalcode, $AllowSundaySorting = "false", $DeliveryDate = null)
+    public function __construct($Postalcode, $AllowSundaySorting = "false", $DeliveryDate = null)
     {
         $this->setAllowSundaySorting($AllowSundaySorting);
         $this->setDeliveryDate($DeliveryDate ?: date('d-m-Y',strtotime('next monday')));
 
-        $this->setPostalcode($Postcalcode);
+        $this->setPostalcode($Postalcode);
 
         $this->setDeliveryOptions(['PG']);
         $this->setOptions(['Daytime']);
