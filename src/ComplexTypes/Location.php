@@ -1,10 +1,5 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-use DateTime;
-
-/**
- * XML namespace: http://postnl.nl/cif/domain/BarcodeWebService/
- */
 class Location extends BaseType
 {
 
