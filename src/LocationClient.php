@@ -22,7 +22,6 @@ class LocationClient extends BaseClient
      */
     protected $classes = [
         'GetNearestLocation',
-        'GetLocationsInArea',
     ];
 
     public function GetNearestLocation(ComplexTypes\GetNearestLocationsRequest $getNearestLocations)
