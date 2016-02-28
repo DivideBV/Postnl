@@ -315,6 +315,20 @@ class Postnl
     }
 
     /**
+     * @param $PostcalCode
+     * @return mixed
+     * @throws ComplexTypes\CifException
+     * @throws SoapFault
+     */
+    public function GetNearestLocation($PostcalCode) {
+        $message = new ComplexTypes\Message;
+        $location = new ComplexTypes\Location($PostcalCode);
+
+        $request = new ComplexTypes\GetNearestLocationsRequest($message, $location);
+        return $this->call('LocationClient', __FUNCTION__, $request);
+    }
+
+    /**
      * Get the raw XML of the last SOAP request and reponse.
      */
     public function debug()
