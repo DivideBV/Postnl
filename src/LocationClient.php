@@ -1,7 +1,7 @@
 <?php namespace DivideBV\Postnl;
 
 /**
- * Client class for CIF's shipping status service.
+ * Client class for CIF's location service.
  */
 class LocationClient extends BaseClient
 {
