@@ -331,6 +331,20 @@ class Postnl
     }
 
     /**
+     * @param $postalCode
+     * @return mixed
+     * @throws ComplexTypes\CifException
+     * @throws SoapFault
+     */
+    public function getTimeframes($postalCode) {
+        $message = new ComplexTypes\Message;
+        $timeframeRequest = new ComplexTypes\Timeframe($postalCode);
+
+        $request = new ComplexTypes\GetTimeframesRequest($message, $timeframeRequest);
+        return $this->call('TimeframeClient', __FUNCTION__, $request);
+    }
+
+    /**
      * Get the raw XML of the last SOAP request and reponse.
      */
     public function debug()
