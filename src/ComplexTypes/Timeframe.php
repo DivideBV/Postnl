@@ -65,7 +65,8 @@ class Timeframe extends BaseType
         $this->setStartDate($StartDate ?: date('d-m-Y'));
         $this->setEndDate(date('d-m-Y',time()+60*60*24*7));
         $this->setPostalCode($Postalcode);
-        $this->setOptions(['Daytime','Evening','Morning','Noon','Sunday','Sameday','Afternoon']);
+        //$this->setOptions(['Daytime','Evening','Morning','Noon','Sunday','Sameday','Afternoon']);
+        $this->setOptions(['Daytime']);
         $this->setHouseNr($houseNr);
     }
 
