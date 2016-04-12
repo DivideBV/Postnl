@@ -59,15 +59,14 @@ class Timeframe extends BaseType
      * @param string $AllowSundaySorting
      * @param date $DeliveryDate
      */
-    public function __construct($Postalcode, $StartDate = null)
+    public function __construct($Postalcode, $houseNr, $StartDate = null)
     {
         $this->setSundaySorting("true");
         $this->setStartDate($StartDate ?: date('d-m-Y'));
         $this->setEndDate(date('d-m-Y',time()+60*60*24*7));
         $this->setPostalCode($Postalcode);
         $this->setOptions(['Daytime','Evening','Morning','Noon','Sunday','Sameday','Afternoon']);
-        //$this->setStreet('Eekschillersdreef');
-        $this->setHouseNr(542);
+        $this->setHouseNr($houseNr);
     }
 
     /**
