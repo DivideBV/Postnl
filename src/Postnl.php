@@ -336,9 +336,9 @@ class Postnl
      * @throws ComplexTypes\CifException
      * @throws SoapFault
      */
-    public function getTimeframes($postalCode) {
+    public function getTimeframes($postalCode, $houseNumber) {
         $message = new ComplexTypes\Message;
-        $timeframeRequest = new ComplexTypes\Timeframe($postalCode);
+        $timeframeRequest = new ComplexTypes\Timeframe($postalCode, $houseNumber);
 
         $request = new ComplexTypes\GetTimeframesRequest($message, $timeframeRequest);
         return $this->call('TimeframeClient', __FUNCTION__, $request);
