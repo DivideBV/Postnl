@@ -4,7 +4,7 @@ This project uses the [PSR-2](http://www.php-fig.org/psr/psr-2/) coding style.
 
 # Grunt
 
-To ease compliance to the coding standards, the Grunt task tunner is employed.
+To ease compliance to the coding standards, the Grunt task runner is employed.
 
 ## Installation
 
