@@ -8,7 +8,8 @@ To ease compliance to the coding standards, the Grunt task tunner is employed.
 
 ## Installation
 
-`npm install`
+ - `npm install`
+ - `composer install`
 
 ## Running
 
@@ -20,3 +21,11 @@ To ease compliance to the coding standards, the Grunt task tunner is employed.
 
 To prevent having to reconfigure your editor (line breaks, indenting) while
 switching between projects, Editorconfig is used.
+
+# API documentation
+
+API documentation can optionally be generated locally in HTML format. Note: this
+also uses Grunt. Documentation is placed in the `docs` folder.
+
+ - `grunt doc`
+ - `xdg-open docs/index.html`
