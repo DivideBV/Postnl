@@ -274,10 +274,10 @@ class Postnl
      *
      * @see LabellingClient::generateLabel()
      */
-    public function generateLabel(ComplexTypes\Shipment $shipment, $confirm = true)
+    public function generateLabel(ComplexTypes\Shipment $shipment, $confirm = true, $Printertype = 'GraphicFile|PDF')
     {
         // Prepare arguments.
-        $message = new ComplexTypes\LabellingMessage;
+        $message = new ComplexTypes\LabellingMessage($Printertype);
         $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
         $request = new ComplexTypes\GenerateLabelRequest($message, $customer, $shipment);
 
