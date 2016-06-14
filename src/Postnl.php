@@ -270,6 +270,8 @@ class Postnl
      * @param ComplexTypes\Shipment $shipment
      * @param bool $confirm
      *     Defaults to true.
+     * @param string $printerType
+     *     The file type used to generate the label. Defaults to PDF.
      * @return ComplexTypes\ResponseShipment
      *
      * @see LabellingClient::generateLabel()
