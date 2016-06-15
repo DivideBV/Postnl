@@ -289,13 +289,15 @@ class Postnl
 
     /**
      * @param ComplexTypes\Shipment $shipment
+     * @param string $printerType
+     *     The file type used to generate the label. Defaults to PDF.
      * @return ComplexTypes\ResponseShipment
      *
      * @see LabellingClient::generateLabelWithoutConfirm()
      */
-    public function generateLabelWithoutConfirm(ComplexTypes\Shipment $shipment)
+    public function generateLabelWithoutConfirm(ComplexTypes\Shipment $shipment, $printerType = 'GraphicFile|PDF')
     {
-        return $this->generateLabel($shipment, false);
+        return $this->generateLabel($shipment, $printerType, false);
     }
 
     /**
