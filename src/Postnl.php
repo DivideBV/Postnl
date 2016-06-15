@@ -270,14 +270,16 @@ class Postnl
      * @param ComplexTypes\Shipment $shipment
      * @param bool $confirm
      *     Defaults to true.
+     * @param string $printerType
+     *     The file type used to generate the label. Defaults to PDF.
      * @return ComplexTypes\ResponseShipment
      *
      * @see LabellingClient::generateLabel()
      */
-    public function generateLabel(ComplexTypes\Shipment $shipment, $confirm = true)
+    public function generateLabel(ComplexTypes\Shipment $shipment, $confirm = true, $printerType = 'GraphicFile|PDF')
     {
         // Prepare arguments.
-        $message = new ComplexTypes\LabellingMessage;
+        $message = new ComplexTypes\LabellingMessage($printerType);
         $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
         $request = new ComplexTypes\GenerateLabelRequest($message, $customer, $shipment);
 
