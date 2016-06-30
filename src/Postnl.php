@@ -173,6 +173,7 @@ class Postnl
      */
     public function generateBarcode(
         $type,
+        $eps = false,
         $customerCode = null,
         $customerNumber = null,
         $serie = null
@@ -199,6 +200,11 @@ class Postnl
                     // 3S barcodes are the only ones that may be 15 characters
                     // long.
                     $serie = '000000000-999999999';
+                    if ($eps) {
+                      // 3S barcodes for EPS parcels need to be 13 characters
+                      // long.
+                      $serie = '0000000-9999999';
+                    }
                     break;
                 default:
                     // Globalpack is 4 digits, because the barcode is suffixed
@@ -238,15 +244,18 @@ class Postnl
         $customerNumber = null,
         $serie = null
     ) {
+        $eps = false;
         // If this country code has an explicit barcode type mapping, use it.
         if (in_array($countryCode, array_keys($this->countryCodeMapping))) {
             $type = $this->countryCodeMapping[$countryCode];
+            if ($countryCode !== 'NL') {
+              $eps = true;
+            }
         } else {
             // Otherwise use GlobalPack.
             $type = $this->globalPackBarcodeType;
         }
-
-        return $this->generateBarcode($type, $customerCode, $customerNumber, $serie);
+        return $this->generateBarcode($type, $eps, $customerCode, $customerNumber, $serie);
     }
 
     /**
