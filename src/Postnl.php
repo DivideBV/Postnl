@@ -167,16 +167,18 @@ class Postnl
      *     Defaults to the customer number used to instantiate this object.
      * @param string $serie
      *     Defaults to the widest possible range.
+     * @param bool $eps
+     *     Defaults to false (NL shipment).
      * @return ComplexTypes\GenerateBarcodeResponse
      *
      * @see BarcodeClient::generateBarcode()
      */
     public function generateBarcode(
         $type,
-        $eps = false,
         $customerCode = null,
         $customerNumber = null,
-        $serie = null
+        $serie = null,
+        $eps = false
     ) {
         // Validate $type parameter.
         if (!in_array($type, ['2S', '3S', 'CC', 'CP', 'CD', 'CF', 'CV'])) {
@@ -255,7 +257,7 @@ class Postnl
             // Otherwise use GlobalPack.
             $type = $this->globalPackBarcodeType;
         }
-        return $this->generateBarcode($type, $eps, $customerCode, $customerNumber, $serie);
+        return $this->generateBarcode($type, $customerCode, $customerNumber, $serie, $eps);
     }
 
     /**
