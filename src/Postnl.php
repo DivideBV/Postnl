@@ -203,9 +203,9 @@ class Postnl
                     // long.
                     $serie = '000000000-999999999';
                     if ($eps) {
-                      // 3S barcodes for EPS parcels need to be 13 characters
-                      // long.
-                      $serie = '0000000-9999999';
+                        // 3S barcodes for EPS parcels need to be 13 characters
+                        // long.
+                        $serie = '0000000-9999999';
                     }
                     break;
                 default:
@@ -247,12 +247,11 @@ class Postnl
         $serie = null
     ) {
         $eps = false;
+
         // If this country code has an explicit barcode type mapping, use it.
         if (in_array($countryCode, array_keys($this->countryCodeMapping))) {
             $type = $this->countryCodeMapping[$countryCode];
-            if ($countryCode !== 'NL') {
-              $eps = true;
-            }
+            $eps = $countryCode != 'NL';
         } else {
             // Otherwise use GlobalPack.
             $type = $this->globalPackBarcodeType;
