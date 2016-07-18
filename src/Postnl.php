@@ -336,7 +336,8 @@ class Postnl
      * @throws ComplexTypes\CifException
      * @throws SoapFault
      */
-    public function getNearestLocation($postalCode, $allowSundaySorting = "false", $deliveryDate = null) {
+    public function getNearestLocation($postalCode, $allowSundaySorting = "false", $deliveryDate = null)
+    {
         $message = new ComplexTypes\Message;
         $location = new ComplexTypes\Location($postalCode, $allowSundaySorting, $deliveryDate);
 
@@ -350,7 +351,8 @@ class Postnl
      * @throws ComplexTypes\CifException
      * @throws SoapFault
      */
-    public function getTimeframes($postalCode, $houseNumber) {
+    public function getTimeframes($postalCode, $houseNumber)
+    {
         $message = new ComplexTypes\Message;
         $timeframeRequest = new ComplexTypes\Timeframe($postalCode, $houseNumber);
 

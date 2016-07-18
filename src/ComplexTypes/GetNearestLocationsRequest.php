@@ -23,10 +23,7 @@ class GetNearestLocationsRequest extends BaseType
      * @param Message $Message
      * @param Location $Location
      */
-    public function __construct(
-        Message $Message,
-        Location $Location
-    ) {
+    public function __construct(Message $Message, Location $Location) {
         $this->setMessage($Message);
         $this->setLocation($Location);
     }
@@ -40,11 +37,13 @@ class GetNearestLocationsRequest extends BaseType
     }
 
     /**
-     * @param Message $Message
+     * @param $Message
+     * @return $this
      */
     public function setMessage($Message)
     {
         $this->Message = $Message;
+        return $this;
     }
 
     /**
@@ -56,11 +55,13 @@ class GetNearestLocationsRequest extends BaseType
     }
 
     /**
-     * @param Location $Location
+     * @param $Location
+     * @return $this
      */
     public function setLocation($Location)
     {
         $this->Location = $Location;
+        return $this;
     }
 
     /**
@@ -72,10 +73,12 @@ class GetNearestLocationsRequest extends BaseType
     }
 
     /**
-     * @param string $Countrycode
+     * @param $Countrycode
+     * @return $this
      */
     public function setCountrycode($Countrycode)
     {
         $this->Countrycode = $Countrycode;
+        return $this;
     }
 }

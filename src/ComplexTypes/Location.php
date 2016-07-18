@@ -26,13 +26,12 @@ class Location extends BaseType
     /**
      * @var array $DeliveryOptions
      */
-    protected $DeliveryOptions = array();
+    protected $DeliveryOptions = [];
 
     /**
      * @var array $Options
      */
-    protected $Options = array();
-
+    protected $Options = [];
 
     /**
      * Location constructor.
@@ -43,7 +42,7 @@ class Location extends BaseType
     public function __construct($Postalcode, $AllowSundaySorting = "false", $DeliveryDate = null)
     {
         $this->setAllowSundaySorting($AllowSundaySorting);
-        $this->setDeliveryDate($DeliveryDate ?: date('d-m-Y',strtotime('next monday')));
+        $this->setDeliveryDate($DeliveryDate ?: (new DateTime('next monday'))->format('d-m-Y'));
 
         $this->setPostalcode($Postalcode);
 
