@@ -167,6 +167,8 @@ class Postnl
      *     Defaults to the customer number used to instantiate this object.
      * @param string $serie
      *     Defaults to the widest possible range.
+     * @param bool $eps
+     *     Defaults to false (NL shipment).
      * @return ComplexTypes\GenerateBarcodeResponse
      *
      * @see BarcodeClient::generateBarcode()
@@ -175,7 +177,8 @@ class Postnl
         $type,
         $customerCode = null,
         $customerNumber = null,
-        $serie = null
+        $serie = null,
+        $eps = false
     ) {
         // Validate $type parameter.
         if (!in_array($type, ['2S', '3S', 'CC', 'CP', 'CD', 'CF', 'CV'])) {
@@ -199,6 +202,11 @@ class Postnl
                     // 3S barcodes are the only ones that may be 15 characters
                     // long.
                     $serie = '000000000-999999999';
+                    if ($eps) {
+                        // 3S barcodes for EPS parcels need to be 13 characters
+                        // long.
+                        $serie = '0000000-9999999';
+                    }
                     break;
                 default:
                     // Globalpack is 4 digits, because the barcode is suffixed
@@ -238,15 +246,17 @@ class Postnl
         $customerNumber = null,
         $serie = null
     ) {
+        $eps = false;
+
         // If this country code has an explicit barcode type mapping, use it.
         if (in_array($countryCode, array_keys($this->countryCodeMapping))) {
             $type = $this->countryCodeMapping[$countryCode];
+            $eps = $countryCode != 'NL';
         } else {
             // Otherwise use GlobalPack.
             $type = $this->globalPackBarcodeType;
         }
-
-        return $this->generateBarcode($type, $customerCode, $customerNumber, $serie);
+        return $this->generateBarcode($type, $customerCode, $customerNumber, $serie, $eps);
     }
 
     /**
