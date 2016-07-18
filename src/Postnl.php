@@ -329,6 +329,36 @@ class Postnl
     }
 
     /**
+     * @param $postalCode
+     * @param string $allowSundaySorting
+     * @param null $deliveryDate
+     * @return mixed
+     * @throws ComplexTypes\CifException
+     * @throws SoapFault
+     */
+    public function getNearestLocation($postalCode, $allowSundaySorting = "false", $deliveryDate = null) {
+        $message = new ComplexTypes\Message;
+        $location = new ComplexTypes\Location($postalCode, $allowSundaySorting, $deliveryDate);
+
+        $request = new ComplexTypes\GetNearestLocationsRequest($message, $location);
+        return $this->call('LocationClient', __FUNCTION__, $request);
+    }
+
+    /**
+     * @param $postalCode
+     * @return mixed
+     * @throws ComplexTypes\CifException
+     * @throws SoapFault
+     */
+    public function getTimeframes($postalCode, $houseNumber) {
+        $message = new ComplexTypes\Message;
+        $timeframeRequest = new ComplexTypes\Timeframe($postalCode, $houseNumber);
+
+        $request = new ComplexTypes\GetTimeframesRequest($message, $timeframeRequest);
+        return $this->call('TimeframeClient', __FUNCTION__, $request);
+    }
+
+    /**
      * Get the raw XML of the last SOAP request and reponse.
      */
     public function debug()
