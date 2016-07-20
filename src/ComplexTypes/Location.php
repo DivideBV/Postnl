@@ -42,7 +42,7 @@ class Location extends BaseType
     public function __construct($Postalcode, $AllowSundaySorting = "false", $DeliveryDate = null)
     {
         $this->setAllowSundaySorting($AllowSundaySorting);
-        $this->setDeliveryDate($DeliveryDate ?: (new DateTime('next monday'))->format('d-m-Y'));
+        $this->setDeliveryDate($DeliveryDate ?: (new \DateTime('next monday'))->format('d-m-Y'));
 
         $this->setPostalcode($Postalcode);
 

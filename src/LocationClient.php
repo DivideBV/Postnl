@@ -21,12 +21,20 @@ class LocationClient extends BaseClient
      *     The complex types used by this client.
      */
     protected $classes = [
-        'GetNearestLocation',
+        'GetNearestLocationsRequest',
+        'Location',
+        'Message',
+        'Address',
+        'GetNearestLocationsResponse',
+        'ArrayOfGetLocationsResult',
+        'GetLocationsResult',
+        'ArrayOfResponseLocation',
+        'ResponseLocation'
     ];
 
     /**
      * @param ComplexTypes\GetNearestLocationsRequest $getNearestLocations
-     * @return mixed
+     * @return ComplexTypes\GetLocationsResult
      */
     public function getNearestLocation(ComplexTypes\GetNearestLocationsRequest $getNearestLocations)
     {

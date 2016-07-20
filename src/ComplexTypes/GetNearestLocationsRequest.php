@@ -23,9 +23,10 @@ class GetNearestLocationsRequest extends BaseType
      * @param Message $Message
      * @param Location $Location
      */
-    public function __construct(Message $Message, Location $Location) {
+    public function __construct(Message $Message, Location $Location, $countryCode) {
         $this->setMessage($Message);
         $this->setLocation($Location);
+        $this->setCountrycode($countryCode);
     }
 
     /**
