@@ -1,6 +1,6 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class GetNearestLocationsRequest extends BaseType
+class GetLocationsInAreaRequest extends BaseType
 {
 
     /**
@@ -9,7 +9,7 @@ class GetNearestLocationsRequest extends BaseType
     protected $Countrycode = null;
 
     /**
-     * @var Location $Location
+     * @var LocationArea $Location
      */
     protected $Location = null;
 
@@ -19,15 +19,15 @@ class GetNearestLocationsRequest extends BaseType
     protected $Message = null;
 
     /**
+     * @param $Countrycode
+     * @param LocationArea $Location
      * @param Message $Message
-     * @param Location $Location
-     * @param string $Countrycode
      */
-    public function __construct(Message $Message, Location $Location, $Countrycode)
+    public function __construct($Countrycode, LocationArea $Location, Message $Message)
     {
-        $this->setMessage($Message);
-        $this->setLocation($Location);
-        $this->setCountrycode($Countrycode);
+        $this->Countrycode = $Countrycode;
+        $this->Location = $Location;
+        $this->Message = $Message;
     }
 
     /**
@@ -35,35 +35,35 @@ class GetNearestLocationsRequest extends BaseType
      */
     public function getCountrycode()
     {
-      return $this->Countrycode;
+        return $this->Countrycode;
     }
 
     /**
      * @param string $Countrycode
-     * @return GetNearestLocationsRequest
+     * @return GetLocationsInAreaRequest
      */
     public function setCountrycode($Countrycode)
     {
-      $this->Countrycode = $Countrycode;
-      return $this;
+        $this->Countrycode = $Countrycode;
+        return $this;
     }
 
     /**
-     * @return Location
+     * @return LocationArea
      */
     public function getLocation()
     {
-      return $this->Location;
+        return $this->Location;
     }
 
     /**
-     * @param Location $Location
-     * @return GetNearestLocationsRequest
+     * @param LocationArea $Location
+     * @return GetLocationsInAreaRequest
      */
     public function setLocation($Location)
     {
-      $this->Location = $Location;
-      return $this;
+        $this->Location = $Location;
+        return $this;
     }
 
     /**
@@ -71,17 +71,17 @@ class GetNearestLocationsRequest extends BaseType
      */
     public function getMessage()
     {
-      return $this->Message;
+        return $this->Message;
     }
 
     /**
      * @param Message $Message
-     * @return GetNearestLocationsRequest
+     * @return GetLocationsInAreaRequest
      */
     public function setMessage($Message)
     {
-      $this->Message = $Message;
-      return $this;
+        $this->Message = $Message;
+        return $this;
     }
 
 }

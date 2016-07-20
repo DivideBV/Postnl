@@ -21,15 +21,24 @@ class LocationClient extends BaseClient
      *     The complex types used by this client.
      */
     protected $classes = [
+        'Address',
+        'ArrayOfExceptionData',
+        'ArrayOfResponseLocation',
+        'ArrayOfWarning',
+        'BaseLocation',
+        'CifException',
+        'Coordinate',
+        'ExceptionData',
+        'GetLocationRequest',
+        'GetLocationsInAreaRequest',
+        'GetLocationsResponse',
         'GetNearestLocationsRequest',
         'Location',
+        'LocationArea',
         'Message',
-        'Address',
-        'GetNearestLocationsResponse',
-        'ArrayOfGetLocationsResult',
-        'GetLocationsResult',
-        'ArrayOfResponseLocation',
-        'ResponseLocation'
+        'OpeningHours',
+        'ResponseLocation',
+        'Warning'
     ];
 
     /**

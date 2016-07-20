@@ -329,17 +329,14 @@ class Postnl
     }
 
     /**
-     * @param string $postalCode
+     * @param $postalCode
+     * @param bool $allowSundaySorting
+     * @param null|string $deliveryDate
      * @param string $countryCode
-     * @param string $allowSundaySorting
-     * @param null $deliveryDate
      * @return ComplexTypes\GetNearestLocationsResponse
-     * @throws ComplexTypes\CifException
-     * @throws SoapFault
-     * 
-     * @see LocationClient::getNearestLocation()
      */
-    public function getNearestLocation($postalCode, $countryCode = 'NL', $allowSundaySorting = "false", $deliveryDate = null)
+    public function getNearestLocation($postalCode, $allowSundaySorting = false,
+                                       $deliveryDate = null, $countryCode = 'NL')
     {
         $message = new ComplexTypes\Message;
         $location = new ComplexTypes\Location($postalCode, $allowSundaySorting, $deliveryDate);

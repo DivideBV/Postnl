@@ -20,7 +20,7 @@ class GetNearestLocationsResponse extends BaseType
      * @param ArrayOfGetLocationsResult $NearestLocationsResult
      * @param ArrayOfWarning $Warnings
      */
-    public function __construct($NearestLocationsResult, $Warnings)
+    public function __construct(ArrayOfGetLocationsResult $NearestLocationsResult, ArrayOfWarning $Warnings)
     {
         $this->setNearestLocationsResult($NearestLocationsResult);
         $this->setWarnings($Warnings);

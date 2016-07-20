@@ -1,17 +1,7 @@
 <?php namespace DivideBV\Postnl\ComplexTypes;
 
-class Location extends BaseType
+class Location extends BaseLocation
 {
-
-    /**
-     * @var string $AllowSundaySorting
-     */
-    protected $AllowSundaySorting = null;
-
-    /**
-     * @var string $DeliveryDate
-     */
-    protected $DeliveryDate = null;
 
     /**
      * @var string $City
@@ -19,71 +9,48 @@ class Location extends BaseType
     protected $City = null;
 
     /**
+     * @var Coordinate $Coordinates
+     */
+    protected $Coordinates = null;
+
+    /**
+     * @var string $HouseNr
+     */
+    protected $HouseNr = null;
+
+    /**
+     * @var string $HouseNrExt
+     */
+    protected $HouseNrExt = null;
+
+    /**
      * @var string $Postalcode
      */
     protected $Postalcode = null;
 
     /**
-     * @var array $DeliveryOptions
+     * @var string $Street
      */
-    protected $DeliveryOptions = [];
+    protected $Street = null;
 
     /**
-     * @var array $Options
+     * @param bool $PostalCode
+     * @param bool $AllowSundaySorting
+     * @param null $DeliveryDate
+     * @param null $Coordinates
+     * @param array $DeliveryOptions
+     * @param array $Options
      */
-    protected $Options = [];
-
-    /**
-     * Location constructor.
-     * @param $Postalcode
-     * @param string $AllowSundaySorting
-     * @param date $DeliveryDate
-     */
-    public function __construct($Postalcode, $AllowSundaySorting = "false", $DeliveryDate = null)
+    public function __construct($PostalCode, $AllowSundaySorting, $DeliveryDate = null,
+                                $DeliveryOptions = ['PG'], $Options = ['Daytime'], $Coordinates = null)
     {
-        $this->setAllowSundaySorting($AllowSundaySorting);
-        $this->setDeliveryDate($DeliveryDate ?: (new \DateTime('next monday'))->format('d-m-Y'));
-
-        $this->setPostalcode($Postalcode);
-
-        $this->setDeliveryOptions(['PG']);
-        $this->setOptions(['Daytime']);
+        parent::__construct($AllowSundaySorting, $DeliveryDate, $DeliveryOptions, $Options);
+        $this->setPostalcode($PostalCode);
+        $this->setCoordinates($Coordinates);
     }
 
     /**
      * @return string
-     */
-    public function getAllowSundaySorting()
-    {
-        return $this->AllowSundaySorting;
-    }
-
-    /**
-     * @param string $AllowSundaySorting
-     */
-    public function setAllowSundaySorting($AllowSundaySorting)
-    {
-        $this->AllowSundaySorting = $AllowSundaySorting;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDeliveryDate()
-    {
-        return $this->DeliveryDate;
-    }
-
-    /**
-     * @param string $DeliveryDate
-     */
-    public function setDeliveryDate($DeliveryDate)
-    {
-        $this->DeliveryDate = $DeliveryDate;
-    }
-
-    /**
-     * @return null
      */
     public function getCity()
     {
@@ -91,15 +58,71 @@ class Location extends BaseType
     }
 
     /**
-     * @param null $City
+     * @param string $City
+     * @return Location
      */
     public function setCity($City)
     {
         $this->City = $City;
+        return $this;
     }
 
     /**
-     * @return null
+     * @return Coordinate
+     */
+    public function getCoordinates()
+    {
+        return $this->Coordinates;
+    }
+
+    /**
+     * @param Coordinate $Coordinates
+     * @return Location
+     */
+    public function setCoordinates($Coordinates)
+    {
+        $this->Coordinates = $Coordinates;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHouseNr()
+    {
+        return $this->HouseNr;
+    }
+
+    /**
+     * @param string $HouseNr
+     * @return Location
+     */
+    public function setHouseNr($HouseNr)
+    {
+        $this->HouseNr = $HouseNr;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHouseNrExt()
+    {
+        return $this->HouseNrExt;
+    }
+
+    /**
+     * @param string $HouseNrExt
+     * @return Location
+     */
+    public function setHouseNrExt($HouseNrExt)
+    {
+        $this->HouseNrExt = $HouseNrExt;
+        return $this;
+    }
+
+    /**
+     * @return string
      */
     public function getPostalcode()
     {
@@ -107,42 +130,31 @@ class Location extends BaseType
     }
 
     /**
-     * @param null $Postalcode
+     * @param string $Postalcode
+     * @return Location
      */
     public function setPostalcode($Postalcode)
     {
         $this->Postalcode = $Postalcode;
+        return $this;
     }
 
     /**
-     * @return array
+     * @return string
      */
-    public function getDeliveryOptions()
+    public function getStreet()
     {
-        return $this->DeliveryOptions;
+        return $this->Street;
     }
 
     /**
-     * @param array $DeliveryOptions
+     * @param string $Street
+     * @return Location
      */
-    public function setDeliveryOptions($DeliveryOptions)
+    public function setStreet($Street)
     {
-        $this->DeliveryOptions = $DeliveryOptions;
+        $this->Street = $Street;
+        return $this;
     }
 
-    /**
-     * @return array
-     */
-    public function getOptions()
-    {
-        return $this->Options;
-    }
-
-    /**
-     * @param array $Options
-     */
-    public function setOptions($Options)
-    {
-        $this->Options = $Options;
-    }
 }
