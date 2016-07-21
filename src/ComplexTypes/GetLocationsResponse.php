@@ -58,5 +58,4 @@ class GetLocationsResponse extends BaseType
         $this->Warnings = $Warnings;
         return $this;
     }
-
 }

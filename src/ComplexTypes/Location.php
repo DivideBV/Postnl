@@ -41,9 +41,14 @@ class Location extends BaseLocation
      * @param array $DeliveryOptions
      * @param array $Options
      */
-    public function __construct($PostalCode, $AllowSundaySorting, $DeliveryDate = null,
-                                $DeliveryOptions = ['PG'], $Options = ['Daytime'], $Coordinates = null)
-    {
+    public function __construct(
+        $PostalCode,
+        $AllowSundaySorting,
+        $DeliveryDate = null,
+        $DeliveryOptions = ['PG'],
+        $Options = ['Daytime'],
+        $Coordinates = null
+    ) {
         parent::__construct($AllowSundaySorting, $DeliveryDate, $DeliveryOptions, $Options);
         $this->setPostalcode($PostalCode);
         $this->setCoordinates($Coordinates);
@@ -156,5 +161,4 @@ class Location extends BaseLocation
         $this->Street = $Street;
         return $this;
     }
-
 }

@@ -131,5 +131,4 @@ class BaseLocation extends BaseType
         $this->Options = $Options;
         return $this;
     }
-
 }

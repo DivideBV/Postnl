@@ -43,7 +43,7 @@ class OpeningHours extends BaseType
      */
     public function getMonday()
     {
-      return $this->Monday;
+        return $this->Monday;
     }
 
     /**
@@ -52,8 +52,8 @@ class OpeningHours extends BaseType
      */
     public function setMonday($Monday)
     {
-      $this->Monday = (string)$Monday;
-      return $this;
+        $this->Monday = (string)$Monday;
+        return $this;
     }
 
     /**
@@ -133,7 +133,7 @@ class OpeningHours extends BaseType
      */
     public function getSaturday()
     {
-      return $this->Saturday;
+        return $this->Saturday;
     }
 
     /**
@@ -142,8 +142,8 @@ class OpeningHours extends BaseType
      */
     public function setSaturday($Saturday)
     {
-      $this->Saturday = (string)$Saturday;
-      return $this;
+        $this->Saturday = (string)$Saturday;
+        return $this;
     }
 
     /**
@@ -151,7 +151,7 @@ class OpeningHours extends BaseType
      */
     public function getSunday()
     {
-      return $this->Sunday;
+        return $this->Sunday;
     }
 
     /**
@@ -160,8 +160,7 @@ class OpeningHours extends BaseType
      */
     public function setSunday($Sunday)
     {
-      $this->Sunday = (string)$Sunday;
-      return $this;
+        $this->Sunday = (string)$Sunday;
+        return $this;
     }
-
 }

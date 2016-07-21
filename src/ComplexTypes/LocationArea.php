@@ -48,5 +48,4 @@ class LocationArea extends BaseLocation
         $this->CoordinatesSouthEast = $CoordinatesSouthEast;
         return $this;
     }
-
 }

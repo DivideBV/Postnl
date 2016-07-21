@@ -89,10 +89,22 @@ class ResponseLocation extends BaseType
      * @param $Saleschannel
      * @param $TerminalType
      */
-    public function __construct(Address $Address, array $DeliveryOptions, $Distance, $Latitude, $LocationCode,
-                                $Longtitude, $Name, OpeningHours $OpeningHours, $PartnerName, $PhoneNumber,
-                                $RetailFormulaName, $RetailNetworkID, $Saleschannel, $TerminalType)
-    {
+    public function __construct(
+        Address $Address,
+        array $DeliveryOptions,
+        $Distance,
+        $Latitude,
+        $LocationCode,
+        $Longtitude,
+        $Name,
+        OpeningHours $OpeningHours,
+        $PartnerName,
+        $PhoneNumber,
+        $RetailFormulaName,
+        $RetailNetworkID,
+        $Saleschannel,
+        $TerminalType
+    ) {
         $this->setAddress($Address);
         $this->setDeliveryOptions($DeliveryOptions);
         $this->setDistance($Distance);
@@ -360,5 +372,4 @@ class ResponseLocation extends BaseType
         $this->TerminalType = $TerminalType;
         return $this;
     }
-
 }

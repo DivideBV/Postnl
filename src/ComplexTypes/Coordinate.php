@@ -58,5 +58,4 @@ class Coordinate extends BaseType
         $this->Longitude = $Longitude;
         return $this;
     }
-
 }

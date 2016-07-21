@@ -35,7 +35,7 @@ class GetNearestLocationsRequest extends BaseType
      */
     public function getCountrycode()
     {
-      return $this->Countrycode;
+        return $this->Countrycode;
     }
 
     /**
@@ -44,8 +44,8 @@ class GetNearestLocationsRequest extends BaseType
      */
     public function setCountrycode($Countrycode)
     {
-      $this->Countrycode = $Countrycode;
-      return $this;
+        $this->Countrycode = $Countrycode;
+        return $this;
     }
 
     /**
@@ -53,7 +53,7 @@ class GetNearestLocationsRequest extends BaseType
      */
     public function getLocation()
     {
-      return $this->Location;
+        return $this->Location;
     }
 
     /**
@@ -62,8 +62,8 @@ class GetNearestLocationsRequest extends BaseType
      */
     public function setLocation($Location)
     {
-      $this->Location = $Location;
-      return $this;
+        $this->Location = $Location;
+        return $this;
     }
 
     /**
@@ -71,7 +71,7 @@ class GetNearestLocationsRequest extends BaseType
      */
     public function getMessage()
     {
-      return $this->Message;
+        return $this->Message;
     }
 
     /**
@@ -80,8 +80,7 @@ class GetNearestLocationsRequest extends BaseType
      */
     public function setMessage($Message)
     {
-      $this->Message = $Message;
-      return $this;
+        $this->Message = $Message;
+        return $this;
     }
-
 }

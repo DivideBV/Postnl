@@ -83,5 +83,4 @@ class GetLocationRequest extends BaseType
         $this->RetailNetworkID = $RetailNetworkID;
         return $this;
     }
-
 }

@@ -335,9 +335,12 @@ class Postnl
      * @param string $countryCode
      * @return ComplexTypes\GetNearestLocationsResponse
      */
-    public function getNearestLocation($postalCode, $allowSundaySorting = false,
-                                       $deliveryDate = null, $countryCode = 'NL')
-    {
+    public function getNearestLocation(
+        $postalCode,
+        $allowSundaySorting = false,
+        $deliveryDate = null,
+        $countryCode = 'NL'
+    ) {
         $message = new ComplexTypes\Message;
         $location = new ComplexTypes\Location($postalCode, $allowSundaySorting, $deliveryDate);
 

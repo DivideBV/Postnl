@@ -83,5 +83,4 @@ class GetLocationsInAreaRequest extends BaseType
         $this->Message = $Message;
         return $this;
     }
-
 }
