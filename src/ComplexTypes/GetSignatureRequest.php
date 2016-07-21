@@ -30,7 +30,7 @@ class GetSignatureRequest extends BaseType
     ) {
         $this->setMessage($Message);
         $this->setCustomer($Customer);
-        $this->setSignature($Signature);
+        $this->setSignature($Shipment);
     }
 
     /**
