@@ -1,6 +1,5 @@
 <?php namespace DivideBV\Postnl;
 
-use DivideBV\Postnl\ComplexTypes\GetTimeframesResponse;
 use DOMDocument;
 use SoapFault;
 
