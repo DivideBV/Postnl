@@ -55,19 +55,29 @@ class TimeframeRequest extends BaseType
 
     /**
      * @param string $Postalcode
-     * @param string $houseNr
+     * @param string $HouseNr
      * @param string[] $Options
-     * @param date $StartDate
+     * @param string $StartDate
+     * @param string $EndDate
+     * @param string $CountryCode
+     * @param bool $SundaySorting
      */
-    public function __construct($Postalcode, $houseNr, $Options = ['Daytime'], $StartDate = null, $EndDate = null)
+    public function __construct(
+        $Postalcode,
+        $HouseNr,
+        $Options,
+        $StartDate,
+        $EndDate,
+        $CountryCode,
+        $SundaySorting)
     {
-        $this->setSundaySorting('true');
         $this->setStartDate($StartDate ?: date('d-m-Y'));
         $this->setEndDate($EndDate ?: date('d-m-Y', time() + 60 * 60 * 24 * 7));
         $this->setPostalCode($Postalcode);
         $this->setOptions($Options);
-        $this->setHouseNr($houseNr);
-        $this->setCountryCode('NL');
+        $this->setHouseNr($HouseNr);
+        $this->setCountryCode($CountryCode);
+        $this->setSundaySorting($SundaySorting);
     }
 
     /**

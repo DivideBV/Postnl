@@ -1,5 +1,6 @@
 <?php namespace DivideBV\Postnl;
 
+use DivideBV\Postnl\ComplexTypes\GetTimeframesResponse;
 use DOMDocument;
 use SoapFault;
 
@@ -349,16 +350,36 @@ class Postnl
     }
 
     /**
-     * @param $postalCode
-     * @return mixed
+     * @param string $postalCode
+     * @param string $houseNumber
+     * @param array $options
+     * @param string $startDate
+     * @param string $endDate
+     * @param string $countryCode
+     * @param bool $allowSundaySorting
+     * @return ComplexTypes\GetTimeframesResponse
      * @throws ComplexTypes\CifException
      * @throws SoapFault
      */
-    public function getTimeframes($postalCode, $houseNumber)
-    {
+    public function getTimeframes(
+        $postalCode,
+        $houseNumber,
+        $options = ['Daytime'],
+        $startDate = null,
+        $endDate = null,
+        $countryCode = 'NL',
+        $allowSundaySorting = false
+    ) {
         $message = new ComplexTypes\Message;
-
-        $timeframeRequest = new ComplexTypes\TimeframeRequest($postalCode, $houseNumber);
+        $timeframeRequest = new ComplexTypes\TimeframeRequest(
+            $postalCode,
+            $houseNumber,
+            $options,
+            $startDate,
+            $endDate,
+            $countryCode,
+            $allowSundaySorting
+        );
         $request = new ComplexTypes\GetTimeframesRequest($message, $timeframeRequest);
         return $this->call('TimeframeClient', __FUNCTION__, $request);
     }
