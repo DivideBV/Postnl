@@ -42,7 +42,7 @@ class ReasonNoTimeframe extends BaseType
      */
     public function getCode()
     {
-      return $this->Code;
+        return $this->Code;
     }
 
     /**
@@ -51,8 +51,8 @@ class ReasonNoTimeframe extends BaseType
      */
     public function setCode($Code)
     {
-      $this->Code = $Code;
-      return $this;
+        $this->Code = $Code;
+        return $this;
     }
 
     /**
@@ -60,7 +60,7 @@ class ReasonNoTimeframe extends BaseType
      */
     public function getDate()
     {
-      return $this->Date;
+        return $this->Date;
     }
 
     /**
@@ -69,8 +69,8 @@ class ReasonNoTimeframe extends BaseType
      */
     public function setDate($Date)
     {
-      $this->Date = $Date;
-      return $this;
+        $this->Date = $Date;
+        return $this;
     }
 
     /**
@@ -78,7 +78,7 @@ class ReasonNoTimeframe extends BaseType
      */
     public function getDescription()
     {
-      return $this->Description;
+        return $this->Description;
     }
 
     /**
@@ -87,8 +87,8 @@ class ReasonNoTimeframe extends BaseType
      */
     public function setDescription($Description)
     {
-      $this->Description = $Description;
-      return $this;
+        $this->Description = $Description;
+        return $this;
     }
 
     /**
@@ -96,7 +96,7 @@ class ReasonNoTimeframe extends BaseType
      */
     public function getOptions()
     {
-      return $this->Options;
+        return $this->Options;
     }
 
     /**
@@ -105,8 +105,7 @@ class ReasonNoTimeframe extends BaseType
      */
     public function setOptions($Options)
     {
-      $this->Options = $Options;
-      return $this;
+        $this->Options = $Options;
+        return $this;
     }
-
 }

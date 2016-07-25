@@ -26,7 +26,7 @@ class ArrayOfTimeframeTimeFrame extends BaseArrayOfType
      */
     public function getTimeframeTimeFrame()
     {
-      return $this->TimeframeTimeFrame;
+        return $this->TimeframeTimeFrame;
     }
 
     /**
@@ -35,8 +35,7 @@ class ArrayOfTimeframeTimeFrame extends BaseArrayOfType
      */
     public function setTimeframeTimeFrame(array $TimeframeTimeFrame)
     {
-      $this->TimeframeTimeFrame = $TimeframeTimeFrame;
-      return $this;
+        $this->TimeframeTimeFrame = $TimeframeTimeFrame;
+        return $this;
     }
-
 }

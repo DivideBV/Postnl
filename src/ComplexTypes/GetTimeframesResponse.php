@@ -28,7 +28,7 @@ class GetTimeframesResponse extends BaseType
      */
     public function getReasonNoTimeframes()
     {
-      return $this->ReasonNoTimeframes;
+        return $this->ReasonNoTimeframes;
     }
 
     /**
@@ -37,8 +37,8 @@ class GetTimeframesResponse extends BaseType
      */
     public function setReasonNoTimeframes($ReasonNoTimeframes)
     {
-      $this->ReasonNoTimeframes = $ReasonNoTimeframes;
-      return $this;
+        $this->ReasonNoTimeframes = $ReasonNoTimeframes;
+        return $this;
     }
 
     /**
@@ -46,7 +46,7 @@ class GetTimeframesResponse extends BaseType
      */
     public function getTimeframes()
     {
-      return $this->Timeframes;
+        return $this->Timeframes;
     }
 
     /**
@@ -55,8 +55,7 @@ class GetTimeframesResponse extends BaseType
      */
     public function setTimeframes($Timeframes)
     {
-      $this->Timeframes = $Timeframes;
-      return $this;
+        $this->Timeframes = $Timeframes;
+        return $this;
     }
-
 }

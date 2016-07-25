@@ -26,7 +26,7 @@ class ArrayOfReasonNoTimeframe extends BaseArrayOfType
      */
     public function getReasonNoTimeframe()
     {
-      return $this->ReasonNoTimeframe;
+        return $this->ReasonNoTimeframe;
     }
 
     /**
@@ -35,8 +35,7 @@ class ArrayOfReasonNoTimeframe extends BaseArrayOfType
      */
     public function setReasonNoTimeframe(array $ReasonNoTimeframe)
     {
-      $this->ReasonNoTimeframe = $ReasonNoTimeframe;
-      return $this;
+        $this->ReasonNoTimeframe = $ReasonNoTimeframe;
+        return $this;
     }
-
 }

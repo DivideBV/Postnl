@@ -75,7 +75,7 @@ class TimeframeRequest extends BaseType
      */
     public function getCity()
     {
-      return $this->City;
+        return $this->City;
     }
 
     /**
@@ -84,8 +84,8 @@ class TimeframeRequest extends BaseType
      */
     public function setCity($City)
     {
-      $this->City = $City;
-      return $this;
+        $this->City = $City;
+        return $this;
     }
 
     /**
@@ -93,7 +93,7 @@ class TimeframeRequest extends BaseType
      */
     public function getCountryCode()
     {
-      return $this->CountryCode;
+        return $this->CountryCode;
     }
 
     /**
@@ -102,8 +102,8 @@ class TimeframeRequest extends BaseType
      */
     public function setCountryCode($CountryCode)
     {
-      $this->CountryCode = $CountryCode;
-      return $this;
+        $this->CountryCode = $CountryCode;
+        return $this;
     }
 
     /**
@@ -111,7 +111,7 @@ class TimeframeRequest extends BaseType
      */
     public function getEndDate()
     {
-      return $this->EndDate;
+        return $this->EndDate;
     }
 
     /**
@@ -120,8 +120,8 @@ class TimeframeRequest extends BaseType
      */
     public function setEndDate($EndDate)
     {
-      $this->EndDate = $EndDate;
-      return $this;
+        $this->EndDate = $EndDate;
+        return $this;
     }
 
     /**
@@ -129,7 +129,7 @@ class TimeframeRequest extends BaseType
      */
     public function getHouseNr()
     {
-      return $this->HouseNr;
+        return $this->HouseNr;
     }
 
     /**
@@ -138,8 +138,8 @@ class TimeframeRequest extends BaseType
      */
     public function setHouseNr($HouseNr)
     {
-      $this->HouseNr = $HouseNr;
-      return $this;
+        $this->HouseNr = $HouseNr;
+        return $this;
     }
 
     /**
@@ -147,7 +147,7 @@ class TimeframeRequest extends BaseType
      */
     public function getHouseNrExt()
     {
-      return $this->HouseNrExt;
+        return $this->HouseNrExt;
     }
 
     /**
@@ -156,8 +156,8 @@ class TimeframeRequest extends BaseType
      */
     public function setHouseNrExt($HouseNrExt)
     {
-      $this->HouseNrExt = $HouseNrExt;
-      return $this;
+        $this->HouseNrExt = $HouseNrExt;
+        return $this;
     }
 
     /**
@@ -165,7 +165,7 @@ class TimeframeRequest extends BaseType
      */
     public function getOptions()
     {
-      return $this->Options;
+        return $this->Options;
     }
 
     /**
@@ -174,8 +174,8 @@ class TimeframeRequest extends BaseType
      */
     public function setOptions($Options)
     {
-      $this->Options = $Options;
-      return $this;
+        $this->Options = $Options;
+        return $this;
     }
 
     /**
@@ -183,7 +183,7 @@ class TimeframeRequest extends BaseType
      */
     public function getPostalCode()
     {
-      return $this->PostalCode;
+        return $this->PostalCode;
     }
 
     /**
@@ -192,8 +192,8 @@ class TimeframeRequest extends BaseType
      */
     public function setPostalCode($PostalCode)
     {
-      $this->PostalCode = $PostalCode;
-      return $this;
+        $this->PostalCode = $PostalCode;
+        return $this;
     }
 
     /**
@@ -201,7 +201,7 @@ class TimeframeRequest extends BaseType
      */
     public function getStartDate()
     {
-      return $this->StartDate;
+        return $this->StartDate;
     }
 
     /**
@@ -210,8 +210,8 @@ class TimeframeRequest extends BaseType
      */
     public function setStartDate($StartDate)
     {
-      $this->StartDate = $StartDate;
-      return $this;
+        $this->StartDate = $StartDate;
+        return $this;
     }
 
     /**
@@ -219,7 +219,7 @@ class TimeframeRequest extends BaseType
      */
     public function getStreet()
     {
-      return $this->Street;
+        return $this->Street;
     }
 
     /**
@@ -228,8 +228,8 @@ class TimeframeRequest extends BaseType
      */
     public function setStreet($Street)
     {
-      $this->Street = $Street;
-      return $this;
+        $this->Street = $Street;
+        return $this;
     }
 
     /**
@@ -237,7 +237,7 @@ class TimeframeRequest extends BaseType
      */
     public function getSundaySorting()
     {
-      return $this->SundaySorting;
+        return $this->SundaySorting;
     }
 
     /**
@@ -246,8 +246,7 @@ class TimeframeRequest extends BaseType
      */
     public function setSundaySorting($SundaySorting)
     {
-      $this->SundaySorting = $SundaySorting;
-      return $this;
+        $this->SundaySorting = $SundaySorting;
+        return $this;
     }
-
 }

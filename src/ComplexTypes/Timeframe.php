@@ -28,7 +28,7 @@ class Timeframe extends BaseType
      */
     public function getDate()
     {
-      return $this->Date;
+        return $this->Date;
     }
 
     /**
@@ -37,8 +37,8 @@ class Timeframe extends BaseType
      */
     public function setDate($Date)
     {
-      $this->Date = $Date;
-      return $this;
+        $this->Date = $Date;
+        return $this;
     }
 
     /**
@@ -46,7 +46,7 @@ class Timeframe extends BaseType
      */
     public function getTimeframes()
     {
-      return $this->Timeframes;
+        return $this->Timeframes;
     }
 
     /**
@@ -55,8 +55,7 @@ class Timeframe extends BaseType
      */
     public function setTimeframes($Timeframes)
     {
-      $this->Timeframes = $Timeframes;
-      return $this;
+        $this->Timeframes = $Timeframes;
+        return $this;
     }
-
 }

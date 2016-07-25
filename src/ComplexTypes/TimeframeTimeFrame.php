@@ -35,7 +35,7 @@ class TimeframeTimeFrame extends BaseType
      */
     public function getFrom()
     {
-      return $this->From;
+        return $this->From;
     }
 
     /**
@@ -44,8 +44,8 @@ class TimeframeTimeFrame extends BaseType
      */
     public function setFrom($From)
     {
-      $this->From = $From;
-      return $this;
+        $this->From = $From;
+        return $this;
     }
 
     /**
@@ -53,7 +53,7 @@ class TimeframeTimeFrame extends BaseType
      */
     public function getOptions()
     {
-      return $this->Options;
+        return $this->Options;
     }
 
     /**
@@ -62,8 +62,8 @@ class TimeframeTimeFrame extends BaseType
      */
     public function setOptions(array $Options)
     {
-      $this->Options = $Options;
-      return $this;
+        $this->Options = $Options;
+        return $this;
     }
 
     /**
@@ -71,7 +71,7 @@ class TimeframeTimeFrame extends BaseType
      */
     public function getTo()
     {
-      return $this->To;
+        return $this->To;
     }
 
     /**
@@ -80,8 +80,7 @@ class TimeframeTimeFrame extends BaseType
      */
     public function setTo($To)
     {
-      $this->To = $To;
-      return $this;
+        $this->To = $To;
+        return $this;
     }
-
 }
