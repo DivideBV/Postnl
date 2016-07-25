@@ -35,7 +35,7 @@ class Location extends BaseLocation
 
     /**
      * @param bool $PostalCode
-     * @param bool $AllowSundaySorting
+     * @param string $AllowSundaySorting
      * @param null $DeliveryDate
      * @param null $Coordinates
      * @param array $DeliveryOptions

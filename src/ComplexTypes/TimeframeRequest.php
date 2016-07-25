@@ -49,7 +49,7 @@ class TimeframeRequest extends BaseType
     protected $Street = null;
 
     /**
-     * @var bool $SundaySorting
+     * @var string $SundaySorting
      */
     protected $SundaySorting = null;
 
@@ -60,7 +60,7 @@ class TimeframeRequest extends BaseType
      * @param string $StartDate
      * @param string $EndDate
      * @param string $CountryCode
-     * @param bool $SundaySorting
+     * @param string $SundaySorting
      */
     public function __construct(
         $Postalcode,
@@ -243,7 +243,7 @@ class TimeframeRequest extends BaseType
     }
 
     /**
-     * @return bool
+     * @return string
      */
     public function getSundaySorting()
     {
@@ -251,7 +251,7 @@ class TimeframeRequest extends BaseType
     }
 
     /**
-     * @param bool $SundaySorting
+     * @param string $SundaySorting
      * @return TimeframeRequest
      */
     public function setSundaySorting($SundaySorting)

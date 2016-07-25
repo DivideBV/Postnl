@@ -331,14 +331,14 @@ class Postnl
 
     /**
      * @param $postalCode
-     * @param bool $allowSundaySorting
+     * @param string $allowSundaySorting
      * @param null|string $deliveryDate
      * @param string $countryCode
      * @return ComplexTypes\GetNearestLocationsResponse
      */
     public function getNearestLocation(
         $postalCode,
-        $allowSundaySorting = false,
+        $allowSundaySorting = 'false',
         $deliveryDate = null,
         $countryCode = 'NL'
     ) {
@@ -356,7 +356,7 @@ class Postnl
      * @param string $startDate
      * @param string $endDate
      * @param string $countryCode
-     * @param bool $allowSundaySorting
+     * @param string $allowSundaySorting
      * @return ComplexTypes\GetTimeframesResponse
      * @throws ComplexTypes\CifException
      * @throws SoapFault
@@ -368,7 +368,7 @@ class Postnl
         $startDate = null,
         $endDate = null,
         $countryCode = 'NL',
-        $allowSundaySorting = false
+        $allowSundaySorting = 'false'
     ) {
         $message = new ComplexTypes\Message;
         $timeframeRequest = new ComplexTypes\TimeframeRequest(

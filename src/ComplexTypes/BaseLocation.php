@@ -29,7 +29,7 @@ class BaseLocation extends BaseType
     protected $Options = null;
 
     /**
-     * @param bool $AllowSundaySorting
+     * @param string $AllowSundaySorting
      * @param string $DeliveryDate
      * @param array $DeliveryOptions
      * @param array $Options
