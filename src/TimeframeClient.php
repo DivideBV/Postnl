@@ -22,8 +22,22 @@ class TimeframeClient extends BaseClient
      */
     protected $classes = [
         'GetTimeframes',
+        'ArrayOfReasonNoTimeframe',
+        'ArrayOfTimeframe.php',
+        'ArrayOfTimeframeTimeFrame.php',
+        'GetTimeframesRequest',
+        'GetTimeframesResponse',
+        'Message',
+        'ReasonNoTimeframe',
+        'Timeframe',
+        'TimeframeRequest',
+        'TimeframeTimeFrame'
     ];
 
+    /**
+     * @param ComplexTypes\GetTimeframesRequest $getTimeframes
+     * @return mixed
+     */
     public function getTimeframes(ComplexTypes\GetTimeframesRequest $getTimeframes)
     {
         return $this->__soapCall('GetTimeframes', [$getTimeframes]);

@@ -9,19 +9,16 @@ class GetTimeframesRequest extends BaseType
     protected $Message = null;
 
     /**
-     * @var Timeframe $Location
+     * @var TimeframeRequest $Timeframe
      */
     protected $Timeframe = null;
 
     /**
-     * GetNearestLocationsRequest constructor.
      * @param Message $Message
-     * @param Timeframe $Timeframe
+     * @param TimeframeRequest $Timeframe
      */
-    public function __construct(
-        Message $Message,
-        Timeframe $Timeframe
-    ) {
+    public function __construct(Message $Message, TimeframeRequest $Timeframe)
+    {
         $this->setMessage($Message);
         $this->setTimeframe($Timeframe);
     }
@@ -43,7 +40,7 @@ class GetTimeframesRequest extends BaseType
     }
 
     /**
-     * @return Timeframe
+     * @return TimeframeRequest
      */
     public function getTimeframe()
     {
@@ -51,7 +48,7 @@ class GetTimeframesRequest extends BaseType
     }
 
     /**
-     * @param Timeframe $Timeframe
+     * @param TimeframeRequest $Timeframe
      */
     public function setTimeframe($Timeframe)
     {

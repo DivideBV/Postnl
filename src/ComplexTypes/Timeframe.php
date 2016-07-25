@@ -4,228 +4,59 @@ class Timeframe extends BaseType
 {
 
     /**
-     * @var string $Street
+     * @var string $Date
      */
-    protected $Street = null;
+    protected $Date = null;
 
     /**
-     * @var string $HouseNr
+     * @var ArrayOfTimeframeTimeFrame $Timeframes
      */
-    protected $HouseNr = null;
+    protected $Timeframes = null;
 
     /**
-     * @var string $HouseNrExt
+     * @param string $Date
+     * @param ArrayOfTimeframeTimeFrame $Timeframes
      */
-    protected $HouseNrExt = null;
-
-    /**
-     * @var string $City
-     */
-    protected $City = null;
-
-    /**
-     * @var array $CountryCode
-     */
-    protected $CountryCode = 'NL';
-
-    /**
-     * @var array $StartDate
-     */
-    protected $StartDate = null;
-
-    /**
-     * @var array $EndDate
-     */
-    protected $EndDate = null;
-
-    /**
-     * @var array $Options
-     */
-    protected $Options = null;
-
-    /**
-     * @var array $SundaySorting
-     */
-    protected $SundaySorting = null;
-
-    /**
-     * @var array $SundaySorting
-     */
-    protected $PostalCode = null;
-
-    /**
-     * @param string $Postalcode
-     * @param string $houseNr
-     * @param string[] $Options
-     * @param date $StartDate
-     */
-    public function __construct($Postalcode, $houseNr, $Options = ['Daytime'], $StartDate = null)
+    public function __construct($Date, ArrayOfTimeframeTimeFrame $Timeframes)
     {
-        $this->setSundaySorting('true');
-        $this->setStartDate($StartDate ?: date('d-m-Y'));
-        $this->setEndDate(date('d-m-Y', time() + 60 * 60 * 24 * 7));
-        $this->setPostalCode($Postalcode);
-        $this->setOptions($Options);
-        $this->setHouseNr($houseNr);
+        $this->setDate($Date);
+        $this->setTimeframes($Timeframes);
     }
 
     /**
      * @return string
      */
-    public function getStreet()
+    public function getDate()
     {
-        return $this->Street;
+      return $this->Date;
     }
 
     /**
-     * @param string $Street
+     * @param string $Date
+     * @return Timeframe
      */
-    public function setStreet($Street)
+    public function setDate($Date)
     {
-        $this->Street = $Street;
+      $this->Date = $Date;
+      return $this;
     }
 
     /**
-     * @return string
+     * @return ArrayOfTimeframeTimeFrame
      */
-    public function getHouseNr()
+    public function getTimeframes()
     {
-        return $this->HouseNr;
+      return $this->Timeframes;
     }
 
     /**
-     * @param string $HouseNr
+     * @param ArrayOfTimeframeTimeFrame $Timeframes
+     * @return Timeframe
      */
-    public function setHouseNr($HouseNr)
+    public function setTimeframes($Timeframes)
     {
-        $this->HouseNr = $HouseNr;
+      $this->Timeframes = $Timeframes;
+      return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getHouseNrExt()
-    {
-        return $this->HouseNrExt;
-    }
-
-    /**
-     * @param string $HouseNrExt
-     */
-    public function setHouseNrExt($HouseNrExt)
-    {
-        $this->HouseNrExt = $HouseNrExt;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCity()
-    {
-        return $this->City;
-    }
-
-    /**
-     * @param string $City
-     */
-    public function setCity($City)
-    {
-        $this->City = $City;
-    }
-
-    /**
-     * @return array
-     */
-    public function getCountryCode()
-    {
-        return $this->CountryCode;
-    }
-
-    /**
-     * @param array $CountryCode
-     */
-    public function setCountryCode($CountryCode)
-    {
-        $this->CountryCode = $CountryCode;
-    }
-
-    /**
-     * @return array
-     */
-    public function getStartDate()
-    {
-        return $this->StartDate;
-    }
-
-    /**
-     * @param array $StartDate
-     */
-    public function setStartDate($StartDate)
-    {
-        $this->StartDate = $StartDate;
-    }
-
-    /**
-     * @return array
-     */
-    public function getEndDate()
-    {
-        return $this->EndDate;
-    }
-
-    /**
-     * @param array $EndDate
-     */
-    public function setEndDate($EndDate)
-    {
-        $this->EndDate = $EndDate;
-    }
-
-    /**
-     * @return array
-     */
-    public function getOptions()
-    {
-        return $this->Options;
-    }
-
-    /**
-     * @param array $Options
-     */
-    public function setOptions($Options)
-    {
-        $this->Options = $Options;
-    }
-
-    /**
-     * @return array
-     */
-    public function getSundaySorting()
-    {
-        return $this->SundaySorting;
-    }
-
-    /**
-     * @param array $SundaySorting
-     */
-    public function setSundaySorting($SundaySorting)
-    {
-        $this->SundaySorting = $SundaySorting;
-    }
-
-    /**
-     * @return array
-     */
-    public function getPostalCode()
-    {
-        return $this->PostalCode;
-    }
-
-    /**
-     * @param array $PostalCode
-     */
-    public function setPostalCode($PostalCode)
-    {
-        $this->PostalCode = $PostalCode;
-    }
 }

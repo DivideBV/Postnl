@@ -357,8 +357,8 @@ class Postnl
     public function getTimeframes($postalCode, $houseNumber)
     {
         $message = new ComplexTypes\Message;
-        $timeframeRequest = new ComplexTypes\Timeframe($postalCode, $houseNumber);
 
+        $timeframeRequest = new ComplexTypes\TimeframeRequest($postalCode, $houseNumber);
         $request = new ComplexTypes\GetTimeframesRequest($message, $timeframeRequest);
         return $this->call('TimeframeClient', __FUNCTION__, $request);
     }
