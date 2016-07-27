@@ -71,8 +71,8 @@ class TimeframeRequest extends BaseType
         $CountryCode,
         $SundaySorting
     ) {
-        $this->setStartDate($StartDate ?: date('d-m-Y'));
-        $this->setEndDate($EndDate ?: date('d-m-Y', time() + 60 * 60 * 24 * 7));
+        $this->setStartDate($StartDate ?: (new \DateTime)->format('d-m-Y'));
+        $this->setEndDate($EndDate ?: (new \DateTime('+1 week'))->format('d-m-Y'));
         $this->setPostalCode($Postalcode);
         $this->setOptions($Options);
         $this->setHouseNr($HouseNr);

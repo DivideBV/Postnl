@@ -23,8 +23,8 @@ class TimeframeClient extends BaseClient
     protected $classes = [
         'GetTimeframes',
         'ArrayOfReasonNoTimeframe',
-        'ArrayOfTimeframe.php',
-        'ArrayOfTimeframeTimeFrame.php',
+        'ArrayOfTimeframe',
+        'ArrayOfTimeframeTimeFrame',
         'GetTimeframesRequest',
         'GetTimeframesResponse',
         'Message',

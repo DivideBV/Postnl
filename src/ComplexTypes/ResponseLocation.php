@@ -75,19 +75,19 @@ class ResponseLocation extends BaseType
 
     /**
      * @param Address $Address
-     * @param array $DeliveryOptions
-     * @param $Distance
-     * @param $Latitude
-     * @param $LocationCode
-     * @param $Longtitude
-     * @param $Name
+     * @param string[] $DeliveryOptions
+     * @param string $Distance
+     * @param string $Latitude
+     * @param string $LocationCode
+     * @param string $Longtitude
+     * @param string $Name
      * @param OpeningHours $OpeningHours
-     * @param $PartnerName
-     * @param $PhoneNumber
-     * @param $RetailFormulaName
-     * @param $RetailNetworkID
-     * @param $Saleschannel
-     * @param $TerminalType
+     * @param string $PartnerName
+     * @param string $PhoneNumber
+     * @param string $RetailFormulaName
+     * @param string $RetailNetworkID
+     * @param string $Saleschannel
+     * @param string $TerminalType
      */
     public function __construct(
         Address $Address,

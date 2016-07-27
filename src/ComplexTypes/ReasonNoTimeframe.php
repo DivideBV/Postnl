@@ -24,10 +24,10 @@ class ReasonNoTimeframe extends BaseType
     protected $Options = null;
 
     /**
-     * @param $Code
-     * @param $Date
-     * @param $Description
-     * @param array $Options
+     * @param string $Code
+     * @param string $Date
+     * @param string $Description
+     * @param string[] $Options
      */
     public function __construct($Code, $Date, $Description, array $Options)
     {
