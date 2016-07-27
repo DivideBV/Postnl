@@ -14,23 +14,23 @@ class GetSignatureRequest extends BaseType
     protected $Customer = null;
 
     /**
-     * @var RequestShipment $Shipment
+     * @var RequestSignature $Shipment
      */
     protected $Shipment = null;
 
     /**
      * @param Message $Message
      * @param RequestCustomer $Customer
-     * @param RequestShipment $Shipment
+     * @param RequestSignature $Shipment
      */
     public function __construct(
         Message $Message,
         RequestCustomer $Customer,
-        RequestShipment $Shipment
+        RequestSignature $Shipment
     ) {
         $this->setMessage($Message);
         $this->setCustomer($Customer);
-        $this->setShipment($Shipment);
+        $this->setSignature($Signature);
     }
 
     /**
@@ -70,7 +70,7 @@ class GetSignatureRequest extends BaseType
     }
 
     /**
-     * @return RequestShipment
+     * @return RequestSignature
      */
     public function getShipment()
     {
@@ -78,7 +78,7 @@ class GetSignatureRequest extends BaseType
     }
 
     /**
-     * @param RequestShipment $Shipment
+     * @param RequestSignature $Shipment
      * @return GetSignatureRequest
      */
     public function setShipment($Shipment)
