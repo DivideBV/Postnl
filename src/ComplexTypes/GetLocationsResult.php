@@ -17,10 +17,8 @@ class GetLocationsResult extends BaseType
      * @param ArrayOfResponseLocation $ResponseLocation
      * @param ArrayOfWarning $Warnings
      */
-    public function __construct(
-        ArrayOfResponseLocation $ResponseLocation,
-        ArrayOfWarning $Warnings
-    ) {
+    public function __construct(ArrayOfResponseLocation $ResponseLocation, ArrayOfWarning $Warnings)
+    {
         $this->setResponseLocation($ResponseLocation);
         $this->setWarnings($Warnings);
     }

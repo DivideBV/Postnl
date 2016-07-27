@@ -25,11 +25,8 @@ class GetSignatureResponseSignature extends BaseType
      * @param DateTime $SignatureDate
      * @param base64Binary $SignatureImage
      */
-    public function __construct(
-        $Barcode,
-        DateTime $SignatureDate,
-        $SignatureImage
-    ) {
+    public function __construct($Barcode, DateTime $SignatureDate, $SignatureImage)
+    {
         $this->setBarcode($Barcode);
         $this->setSignatureDate($SignatureDate);
         $this->setSignatureImage($SignatureImage);

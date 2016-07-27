@@ -9,25 +9,26 @@ class TimeframeTimeFrame extends BaseType
     protected $From = null;
 
     /**
+     * @var string $To
+     */
+    protected $To = null;
+
+
+    /**
      * @var string[] $Options
      */
     protected $Options = null;
 
     /**
-     * @var string $To
-     */
-    protected $To = null;
-
-    /**
      * @param string $From
-     * @param array $Options
      * @param string $To
+     * @param array $Options
      */
-    public function __construct($From, array $Options, $To)
+    public function __construct($From, $To, array $Options)
     {
         $this->setFrom($From);
-        $this->setOptions($Options);
         $this->setTo($To);
+        $this->setOptions($Options);
     }
 
     /**

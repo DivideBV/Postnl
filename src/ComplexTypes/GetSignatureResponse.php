@@ -17,10 +17,8 @@ class GetSignatureResponse extends BaseType
      * @param ArrayOfGetSignatureResponseSignature $Signature
      * @param ArrayOfWarning $Warnings
      */
-    public function __construct(
-        ArrayOfGetSignatureResponseSignature $Signature,
-        ArrayOfWarning $Warnings
-    ) {
+    public function __construct(ArrayOfGetSignatureResponseSignature $Signature, ArrayOfWarning $Warnings)
+    {
         $this->setSignature($Signature);
         $this->setWarnings($Warnings);
     }

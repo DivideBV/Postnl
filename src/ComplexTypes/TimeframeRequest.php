@@ -69,8 +69,8 @@ class TimeframeRequest extends BaseType
         $StartDate,
         $EndDate,
         $CountryCode,
-        $SundaySorting)
-    {
+        $SundaySorting
+    ) {
         $this->setStartDate($StartDate ?: date('d-m-Y'));
         $this->setEndDate($EndDate ?: date('d-m-Y', time() + 60 * 60 * 24 * 7));
         $this->setPostalCode($Postalcode);
