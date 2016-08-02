@@ -168,6 +168,14 @@ class Postnl
     }
 
     /**
+     * @param DeliveryDateClient $deliveryDateClient
+     */
+    public function setDeliveryDateClient(DeliveryDateClient $deliveryDateClient)
+    {
+        $this->clients['DeliveryDateClient'] = $deliveryDateClient;
+    }
+
+    /**
      * @param string $type
      * @param string $customerCode
      *     Defaults to the customer code used to instantiate this object.
@@ -389,6 +397,42 @@ class Postnl
         );
         $request = new ComplexTypes\GetTimeframesRequest($message, $timeframeRequest);
         return $this->call('TimeframeClient', __FUNCTION__, $request);
+    }
+
+    /**
+     * @param string $postalCode
+     * @param ComplexTypes\ArrayOfCutOffTime $cutOffTimes
+     * @param string $shippingDate
+     * @param int $shippingDuration
+     * @param string[] $options
+     * @param string $allowSundaySorting
+     * @param string $countryCode
+     */
+    public function getDeliveryDate(
+        $postalCode,
+        $cutOffTimes,
+        $shippingDate,
+        $shippingDuration = 1,
+        $options = ['Daytime'],
+        $allowSundaySorting = 'false',
+        $countryCode = 'NL'
+    ) {
+        /** @var ComplexTypes\GetDeliveryDate $GetDeliveryDate */
+        $GetDeliveryDate = ComplexTypes\GetDeliveryDate::create();
+        $GetDeliveryDate
+            ->setPostalCode($postalCode)
+            ->setCutOffTimes($cutOffTimes)
+            ->setShippingDate($shippingDate)
+            ->setShippingDuration($shippingDuration)
+            ->setOptions($options)
+            ->setAllowSundaySorting($allowSundaySorting)
+            ->setCountryCode($countryCode);
+
+        $message = new ComplexTypes\Message;
+        $request = new ComplexTypes\GetDeliveryDateRequest($message, $GetDeliveryDate);
+
+        // Query the webservice and return the result.
+        return $this->call('DeliveryDateClient', __FUNCTION__, $request);
     }
 
     /**
