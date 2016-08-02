@@ -160,6 +160,14 @@ class Postnl
     }
 
     /**
+     * @param TimeframeClient $timeframeClient
+     */
+    public function setTimeframeClient(TimeframeClient $timeframeClient)
+    {
+        $this->clients['TimeframeClient'] = $timeframeClient;
+    }
+
+    /**
      * @param string $type
      * @param string $customerCode
      *     Defaults to the customer code used to instantiate this object.
