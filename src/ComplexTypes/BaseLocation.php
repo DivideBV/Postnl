@@ -52,7 +52,7 @@ class BaseLocation extends BaseType
 
     /**
      * @param string $AllowSundaySorting
-     * @return BaseLocation
+     * @return $this
      */
     public function setAllowSundaySorting($AllowSundaySorting)
     {
@@ -70,7 +70,7 @@ class BaseLocation extends BaseType
 
     /**
      * @param string $DeliveryDate
-     * @return BaseLocation
+     * @return $this
      */
     public function setDeliveryDate($DeliveryDate)
     {
@@ -88,7 +88,7 @@ class BaseLocation extends BaseType
 
     /**
      * @param string[] $DeliveryOptions
-     * @return BaseLocation
+     * @return $this
      */
     public function setDeliveryOptions($DeliveryOptions)
     {
@@ -106,7 +106,7 @@ class BaseLocation extends BaseType
 
     /**
      * @param string $OpeningTime
-     * @return BaseLocation
+     * @return $this
      */
     public function setOpeningTime($OpeningTime)
     {
@@ -124,7 +124,7 @@ class BaseLocation extends BaseType
 
     /**
      * @param string[] $Options
-     * @return BaseLocation
+     * @return $this
      */
     public function setOptions($Options)
     {
