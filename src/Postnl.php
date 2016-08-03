@@ -160,6 +160,14 @@ class Postnl
     }
 
     /**
+     * @param TimeframeClient $timeframeClient
+     */
+    public function setTimeframeClient(TimeframeClient $timeframeClient)
+    {
+        $this->clients['TimeframeClient'] = $timeframeClient;
+    }
+
+    /**
      * @param string $type
      * @param string $customerCode
      *     Defaults to the customer code used to instantiate this object.
@@ -326,6 +334,61 @@ class Postnl
 
         // Query the webservice and return the result.
         return $this->call('ShippingStatusClient', __FUNCTION__, $request);
+    }
+
+    /**
+     * @param $postalCode
+     * @param string $allowSundaySorting
+     * @param null|string $deliveryDate
+     * @param string $countryCode
+     * @return ComplexTypes\GetNearestLocationsResponse
+     */
+    public function getNearestLocation(
+        $postalCode,
+        $allowSundaySorting = 'false',
+        $deliveryDate = null,
+        $countryCode = 'NL'
+    ) {
+        $message = new ComplexTypes\Message;
+        $location = new ComplexTypes\Location($postalCode, $allowSundaySorting, $deliveryDate);
+
+        $request = new ComplexTypes\GetNearestLocationsRequest($message, $location, $countryCode);
+        return $this->call('LocationClient', __FUNCTION__, $request);
+    }
+
+    /**
+     * @param string $postalCode
+     * @param string $houseNumber
+     * @param array $options
+     * @param string $startDate
+     * @param string $endDate
+     * @param string $countryCode
+     * @param string $allowSundaySorting
+     * @return ComplexTypes\GetTimeframesResponse
+     * @throws ComplexTypes\CifException
+     * @throws SoapFault
+     */
+    public function getTimeframes(
+        $postalCode,
+        $houseNumber,
+        $options = ['Daytime'],
+        $startDate = null,
+        $endDate = null,
+        $countryCode = 'NL',
+        $allowSundaySorting = 'false'
+    ) {
+        $message = new ComplexTypes\Message;
+        $timeframeRequest = new ComplexTypes\TimeframeRequest(
+            $postalCode,
+            $houseNumber,
+            $options,
+            $startDate,
+            $endDate,
+            $countryCode,
+            $allowSundaySorting
+        );
+        $request = new ComplexTypes\GetTimeframesRequest($message, $timeframeRequest);
+        return $this->call('TimeframeClient', __FUNCTION__, $request);
     }
 
     /**
