@@ -337,6 +337,24 @@ class Postnl
     }
 
     /**
+     * @param string $barcode
+     * @return CurrentStatusResponse
+     *
+     * @see ShippingStatusClient::getSignature()
+     */
+    public function getSignature($barcode)
+    {
+        // Prepare arguments.
+        $message = new ComplexTypes\Message;
+        $customer = new ComplexTypes\RequestCustomer($this->customerCode, $this->customerNumber);
+        $shipment = new ComplexTypes\RequestSignature($barcode);
+        $request = new ComplexTypes\GetSignatureRequest($message, $customer, $shipment);
+
+        // Query the webservice and return the result.
+        return $this->call('ShippingStatusClient', __FUNCTION__, $request);
+    }
+
+    /**
      * @param $postalCode
      * @param string $allowSundaySorting
      * @param null|string $deliveryDate
