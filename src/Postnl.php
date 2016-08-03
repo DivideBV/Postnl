@@ -338,7 +338,7 @@ class Postnl
 
     /**
      * @param string $barcode
-     * @return CurrentStatusResponse
+     * @return GetSignatureResponse
      *
      * @see ShippingStatusClient::getSignature()
      */
