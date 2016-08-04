@@ -407,6 +407,7 @@ class Postnl
      * @param string[] $options
      * @param string $allowSundaySorting
      * @param string $countryCode
+     * @return ComplexTypes\GetDeliveryDateResponse
      */
     public function getDeliveryDate(
         $postalCode,
