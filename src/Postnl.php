@@ -419,8 +419,7 @@ class Postnl
         $countryCode = 'NL'
     ) {
         /** @var ComplexTypes\GetDeliveryDate $GetDeliveryDate */
-        $GetDeliveryDate = ComplexTypes\GetDeliveryDate::create();
-        $GetDeliveryDate
+        $GetDeliveryDate = ComplexTypes\GetDeliveryDate::create()
             ->setPostalCode($postalCode)
             ->setCutOffTimes($cutOffTimes)
             ->setShippingDate($shippingDate)
