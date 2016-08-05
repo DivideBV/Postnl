@@ -436,7 +436,6 @@ class Postnl
         $allowSundaySorting = 'false',
         $countryCode = 'NL'
     ) {
-        /** @var ComplexTypes\GetDeliveryDate $GetDeliveryDate */
         $GetDeliveryDate = ComplexTypes\GetDeliveryDate::create()
             ->setPostalCode($postalCode)
             ->setCutOffTimes($cutOffTimes)
