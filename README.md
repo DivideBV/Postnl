@@ -18,7 +18,7 @@ composer require dividebv/postnl
 
 # Implementation Status
 
-This library is not complete. This table lists which services are Implemented
+This library is not complete. This table lists which services are implemented
 and which aren't.
 
 | Service                   | Implemented |
