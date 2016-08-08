@@ -19,7 +19,8 @@ composer require dividebv/postnl
 # Implementation Status
 
 This library is not complete. This table lists which services are implemented
-and which aren't.
+and which aren't. The list of provided services is taken from
+[PostNL's developer center](https://developer.postnl.nl/).
 
 | Service                   | Implemented |
 |---------------------------|:-----------:|
