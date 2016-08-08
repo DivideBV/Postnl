@@ -16,6 +16,24 @@ Install the latest version with
 composer require dividebv/postnl
 ```
 
+# Implementation Status
+
+This library is not complete. This table lists which services are Implemented
+and which aren't.
+
+| Service                   | Implemented |
+|---------------------------|:-----------:|
+| Adrescheck Nationaal      |      ✗      |
+| Geo Adrescheck Nationaal  |      ✗      |
+| Adrescheck Internationaal |      ✗      |
+| Barcode Webservice        |      ✓      |
+| Labelling Webservice      |      ✓      |
+| Confirming Webservice     |      ✓      |
+| Deliverydate Webservice   |      ✓      |
+| Timeframe Webservice      |      ✓      |
+| Location Webservice       |      ✓      |
+| Shippingstatus Webservice |      ✓      |
+
 # Example
 
 ```php
