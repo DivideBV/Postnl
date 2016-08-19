@@ -14,20 +14,31 @@ class GenerateLabelRequest extends BaseType
     protected $Customer = null;
 
     /**
-     * @var Shipment $Shipment
+     * @var ArrayOfShipment $Shipments
      */
-    protected $Shipment = null;
+    protected $Shipments = null;
+
+    /**
+     * @var base64Binary $LabelSignature
+     */
+    protected $LabelSignature;
 
     /**
      * @param LabellingMessage $Message
      * @param Customer $Customer
-     * @param Shipment $Shipment
+     * @param ArrayOfShipment $Shipments
+     * @param base64Binary $LabelSignature
      */
-    public function __construct(LabellingMessage $Message, Customer $Customer, Shipment $Shipment)
-    {
+    public function __construct(
+        LabellingMessage $Message,
+        Customer $Customer,
+        ArrayOfShipment $Shipments,
+        $LabelSignature = null
+    ) {
         $this->setMessage($Message);
         $this->setCustomer($Customer);
-        $this->setShipment($Shipment);
+        $this->setShipments($Shipments);
+        $this->setLabelSignature($LabelSignature);
     }
 
     /**
@@ -69,18 +80,36 @@ class GenerateLabelRequest extends BaseType
     /**
      * @return Shipment
      */
-    public function getShipment()
+    public function getShipments()
     {
         return $this->Shipment;
     }
 
     /**
-     * @param Shipment $Shipment
+     * @param ArrayOfShipment $Shipments
      * @return GenerateLabelRequest
      */
-    public function setShipment(Shipment $Shipment)
+    public function setShipments(ArrayOfShipment $Shipments)
     {
-        $this->Shipment = $Shipment;
+        $this->Shipments = $Shipments;
+        return $this;
+    }
+
+    /**
+     * @return base64Binary
+     */
+    public function getLabelSignature()
+    {
+        return $this->LabelSignature;
+    }
+
+    /**
+     * @param base64Binary $LabelSignature
+     * @return GenerateLabelRequest
+     */
+    public function setLabelSignature($LabelSignature)
+    {
+        $this->LabelSignature = $LabelSignature;
         return $this;
     }
 }

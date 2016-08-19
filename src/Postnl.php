@@ -307,7 +307,7 @@ class Postnl
         // Prepare arguments.
         $message = new ComplexTypes\LabellingMessage($printerType);
         $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
-        $request = new ComplexTypes\GenerateLabelRequest($message, $customer, $shipment);
+        $request = new ComplexTypes\GenerateLabelRequest($message, $customer, new ComplexTypes\ArrayOfShipment([$shipment]));
 
         // Query the webservice and return the result.
         return $this->call('LabellingClient', $confirm ? __FUNCTION__ : 'generateLabelWithoutConfirm', $request);
