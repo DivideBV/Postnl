@@ -22,18 +22,18 @@ This library is not complete. This table lists which services are implemented
 and which aren't. The list of existing services is taken from
 [PostNL's developer center](https://developer.postnl.nl/).
 
-| Service                   | Implemented |
-|---------------------------|:-----------:|
-| Adrescheck Nationaal      |      ✗      |
-| Geo Adrescheck Nationaal  |      ✗      |
-| Adrescheck Internationaal |      ✗      |
-| Barcode Webservice        |      ✓      |
-| Labelling Webservice      |      ✓      |
-| Confirming Webservice     |      ✓      |
-| Deliverydate Webservice   |      ✓      |
-| Timeframe Webservice      |      ✓      |
-| Location Webservice       |      ✓      |
-| Shippingstatus Webservice |      ✓      |
+| Service                   | Implemented | Version |
+|---------------------------|:-----------:|:-------:|
+| Adrescheck Nationaal      |      ✗      |   N/A   |
+| Geo Adrescheck Nationaal  |      ✗      |   N/A   |
+| Adrescheck Internationaal |      ✗      |   N/A   |
+| Barcode Webservice        |      ✓      |   1_1   |
+| Labelling Webservice      |      ✓      |   1_8   |
+| Confirming Webservice     |      ✓      |   1_9   |
+| Deliverydate Webservice   |      ✓      |   2_1   |
+| Timeframe Webservice      |      ✓      |   2_0   |
+| Location Webservice       |      ✓      |   2_0   |
+| Shippingstatus Webservice |      ✓      |   1_6   |
 
 # Example
 
