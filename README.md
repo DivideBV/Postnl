@@ -28,7 +28,7 @@ and which aren't. The list of existing services is taken from
 | Geo Adrescheck Nationaal  |      ✗      |   N/A   |
 | Adrescheck Internationaal |      ✗      |   N/A   |
 | Barcode Webservice        |      ✓      |   1_1   |
-| Labelling Webservice      |      ✓      |   1_8   |
+| Labelling Webservice      |      ✓      |   2_0   |
 | Confirming Webservice     |      ✓      |   1_9   |
 | Deliverydate Webservice   |      ✓      |   2_1   |
 | Timeframe Webservice      |      ✓      |   2_0   |
