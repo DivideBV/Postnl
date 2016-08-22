@@ -78,11 +78,11 @@ class GenerateLabelRequest extends BaseType
     }
 
     /**
-     * @return Shipment
+     * @return ArrayOfShipment
      */
     public function getShipments()
     {
-        return $this->Shipment;
+        return $this->Shipments;
     }
 
     /**
