@@ -453,17 +453,17 @@ class Postnl
     }
 
     /**
-     * Returns location information of the supplied location code
+     * Returns location information of the supplied location code.
      *
-     * @param string $locationCode LocationCode information
-     * @param string $retailNetworkID PNPNL-01 is the code that can be used for all Dutch locations
+     * @param string $locationCode LocationCode information.
+     * @param string $retailNetworkId PNPNL-01 is the code that can be used for all Dutch locations.
      * @return ComplexTypes\GetLocationsResponse
      */
-    public function getLocation($locationCode,$retailNetworkID = 'PNPNL-01')
+    public function getLocation($locationCode, $retailNetworkId = 'PNPNL-01')
     {
         $message = new ComplexTypes\Message;
 
-        $request = new ComplexTypes\GetLocationRequest($locationCode, $message, $retailNetworkID);
+        $request = new ComplexTypes\GetLocationRequest($locationCode, $message, $retailNetworkId);
         return $this->call('LocationClient', __FUNCTION__, $request);
     }
 
