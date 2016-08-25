@@ -304,13 +304,10 @@ class Postnl
      */
     public function generateLabel(ComplexTypes\Shipment $shipment, $printerType = 'GraphicFile|PDF', $confirm = true)
     {
-        // Prepare arguments.
-        $message = new ComplexTypes\LabellingMessage($printerType);
-        $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
-        $request = new ComplexTypes\GenerateLabelRequest($message, $customer, $shipment);
+        $result = $this->generateLabels(new ComplexTypes\ArrayOfShipment([$shipment]), $printerType, $confirm);
 
-        // Query the webservice and return the result.
-        return $this->call('LabellingClient', $confirm ? __FUNCTION__ : 'generateLabelWithoutConfirm', $request);
+        // Return only the first shipment (there should be only 1).
+        return reset($result->getResponseShipments());
     }
 
     /**
@@ -324,6 +321,45 @@ class Postnl
     public function generateLabelWithoutConfirm(ComplexTypes\Shipment $shipment, $printerType = 'GraphicFile|PDF')
     {
         return $this->generateLabel($shipment, $printerType, false);
+    }
+
+    /**
+     * @param ComplexTypes\ArrayOfShipment $shipments
+     * @param string $printerType
+     *     The file type used to generate the label. Defaults to PDF.
+     * @param bool $confirm
+     *     Defaults to true.
+     * @return ComplexTypes\GenerateLabelResponse
+     *
+     * @see LabellingClient::generateLabel()
+     */
+    public function generateLabels(
+        ComplexTypes\ArrayOfShipment $shipments,
+        $printerType = 'GraphicFile|PDF',
+        $confirm = true
+    ) {
+        // Prepare arguments.
+        $message = new ComplexTypes\LabellingMessage($printerType);
+        $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
+        $request = new ComplexTypes\GenerateLabelRequest($message, $customer, $shipments);
+
+        // Query the webservice and return the result.
+        return $this->call('LabellingClient', $confirm ? 'generateLabel' : 'generateLabelWithoutConfirm', $request);
+    }
+
+    /**
+     * @param ComplexTypes\ArrayOfShipment $shipments
+     * @param string $printerType
+     *     The file type used to generate the label. Defaults to PDF.
+     * @return ComplexTypes\GenerateLabelResponse
+     *
+     * @see LabellingClient::generateLabelWithoutConfirm()
+     */
+    public function generateLabelsWithoutConfirm(
+        ComplexTypes\ArrayOfShipment $shipments,
+        $printerType = 'GraphicFile|PDF'
+    ) {
+        return $this->generateLabels($shipments, $printerType, false);
     }
 
     /**

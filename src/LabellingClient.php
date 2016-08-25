@@ -9,12 +9,12 @@ class LabellingClient extends BaseClient
     /**
      * The URL of the production WSDL.
      */
-    const PRODUCTION_WSDL = 'https://service.postnl.com/CIF/LabellingWebService/1_8/?wsdl';
+    const PRODUCTION_WSDL = 'https://service.postnl.com/CIF/LabellingWebService/2_0/?wsdl';
 
     /**
      * The URL of the sandbox WSDL.
      */
-    const SANDBOX_WSDL = 'https://testservice.postnl.com/CIF_SB/LabellingWebService/1_8/?wsdl';
+    const SANDBOX_WSDL = 'https://testservice.postnl.com/CIF_SB/LabellingWebService/2_0/?wsdl';
 
     /**
      * @var array $classes
@@ -25,6 +25,7 @@ class LabellingClient extends BaseClient
         'Customer',
         'Address',
         'Message',
+        'ArrayOfShipment',
         'Shipment',
         'ArrayOfAddress',
         'ArrayOfAmount',
@@ -39,9 +40,13 @@ class LabellingClient extends BaseClient
         'Group',
         'ArrayOfProductOption',
         'ProductOption',
+        'GenerateLabelResponse',
+        'ArrayOfMergedLabel',
+        'MergedLabel',
         'ResponseShipment',
         'ArrayOfLabel',
         'Label',
+        'ArrayOfResponseShipment',
         'ArrayOfWarning',
         'Warning',
     ];
