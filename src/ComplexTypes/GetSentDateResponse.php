@@ -21,7 +21,7 @@ class GetSentDateResponse extends BaseType
      */
     public function getSentDate()
     {
-      return $this->SentDate;
+        return $this->SentDate;
     }
 
     /**
@@ -30,7 +30,7 @@ class GetSentDateResponse extends BaseType
      */
     public function setSentDate($SentDate)
     {
-      $this->SentDate = $SentDate;
-      return $this;
+        $this->SentDate = $SentDate;
+        return $this;
     }
 }

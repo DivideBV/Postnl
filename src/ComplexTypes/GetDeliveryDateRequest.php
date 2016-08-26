@@ -28,7 +28,7 @@ class GetDeliveryDateRequest extends BaseType
      */
     public function getGetDeliveryDate()
     {
-      return $this->GetDeliveryDate;
+        return $this->GetDeliveryDate;
     }
 
     /**
@@ -37,8 +37,8 @@ class GetDeliveryDateRequest extends BaseType
      */
     public function setGetDeliveryDate($GetDeliveryDate)
     {
-      $this->GetDeliveryDate = $GetDeliveryDate;
-      return $this;
+        $this->GetDeliveryDate = $GetDeliveryDate;
+        return $this;
     }
 
     /**
@@ -46,7 +46,7 @@ class GetDeliveryDateRequest extends BaseType
      */
     public function getMessage()
     {
-      return $this->Message;
+        return $this->Message;
     }
 
     /**
@@ -55,7 +55,7 @@ class GetDeliveryDateRequest extends BaseType
      */
     public function setMessage($Message)
     {
-      $this->Message = $Message;
-      return $this;
+        $this->Message = $Message;
+        return $this;
     }
 }

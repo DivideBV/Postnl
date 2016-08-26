@@ -26,7 +26,7 @@ class ArrayOfCutOffTime extends BaseArrayOfType
      */
     public function getCutOffTime()
     {
-      return $this->CutOffTime;
+        return $this->CutOffTime;
     }
 
     /**
@@ -35,7 +35,7 @@ class ArrayOfCutOffTime extends BaseArrayOfType
      */
     public function setCutOffTime(array $CutOffTime)
     {
-      $this->CutOffTime = $CutOffTime;
-      return $this;
+        $this->CutOffTime = $CutOffTime;
+        return $this;
     }
 }

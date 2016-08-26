@@ -46,7 +46,7 @@ class MergedLabel extends BaseType
      */
     public function getLabels()
     {
-      return $this->Labels;
+        return $this->Labels;
     }
 
     /**

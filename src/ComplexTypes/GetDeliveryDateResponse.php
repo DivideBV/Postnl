@@ -28,7 +28,7 @@ class GetDeliveryDateResponse extends BaseType
      */
     public function getDeliveryDate()
     {
-      return $this->DeliveryDate;
+        return $this->DeliveryDate;
     }
 
     /**
@@ -37,8 +37,8 @@ class GetDeliveryDateResponse extends BaseType
      */
     public function setDeliveryDate($DeliveryDate)
     {
-      $this->DeliveryDate = $DeliveryDate;
-      return $this;
+        $this->DeliveryDate = $DeliveryDate;
+        return $this;
     }
 
     /**
@@ -46,7 +46,7 @@ class GetDeliveryDateResponse extends BaseType
      */
     public function getOptions()
     {
-      return $this->Options;
+        return $this->Options;
     }
 
     /**
@@ -55,7 +55,7 @@ class GetDeliveryDateResponse extends BaseType
      */
     public function setOptions(array $Options)
     {
-      $this->Options = $Options;
-      return $this;
+        $this->Options = $Options;
+        return $this;
     }
 }

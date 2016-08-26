@@ -28,7 +28,7 @@ class CutOffTime extends BaseType
      */
     public function getDay()
     {
-      return $this->Day;
+        return $this->Day;
     }
 
     /**
@@ -37,8 +37,8 @@ class CutOffTime extends BaseType
      */
     public function setDay($Day)
     {
-      $this->Day = $Day;
-      return $this;
+        $this->Day = $Day;
+        return $this;
     }
 
     /**
@@ -46,7 +46,7 @@ class CutOffTime extends BaseType
      */
     public function getTime()
     {
-      return $this->Time;
+        return $this->Time;
     }
 
     /**
@@ -55,7 +55,7 @@ class CutOffTime extends BaseType
      */
     public function setTime($Time)
     {
-      $this->Time = $Time;
-      return $this;
+        $this->Time = $Time;
+        return $this;
     }
 }

@@ -39,7 +39,7 @@ class DeliveryDateClient extends BaseClient
      * @param ComplexTypes\GetDeliveryDateRequest $GetDeliveryDate
      * @return ComplexTypes\GetDeliveryDateResponse
      */
-    public function GetDeliveryDate(ComplexTypes\GetDeliveryDateRequest $GetDeliveryDate)
+    public function getDeliveryDate(ComplexTypes\GetDeliveryDateRequest $GetDeliveryDate)
     {
         return $this->__soapCall('GetDeliveryDate', array($GetDeliveryDate));
     }
@@ -48,7 +48,7 @@ class DeliveryDateClient extends BaseClient
      * @param ComplexTypes\GetSentDateRequest $GetSentDateRequest
      * @return ComplexTypes\GetSentDateResponse
      */
-    public function GetSentDate(ComplexTypes\GetSentDateRequest $GetSentDateRequest)
+    public function getSentDate(ComplexTypes\GetSentDateRequest $GetSentDateRequest)
     {
         return $this->__soapCall('GetSentDate', array($GetSentDateRequest));
     }

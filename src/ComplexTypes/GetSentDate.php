@@ -94,7 +94,7 @@ class GetSentDate extends BaseType
      */
     public function getAllowSundaySorting()
     {
-      return $this->AllowSundaySorting;
+        return $this->AllowSundaySorting;
     }
 
     /**
@@ -103,8 +103,8 @@ class GetSentDate extends BaseType
      */
     public function setAllowSundaySorting($AllowSundaySorting)
     {
-      $this->AllowSundaySorting = $AllowSundaySorting;
-      return $this;
+        $this->AllowSundaySorting = $AllowSundaySorting;
+        return $this;
     }
 
     /**
@@ -112,7 +112,7 @@ class GetSentDate extends BaseType
      */
     public function getCity()
     {
-      return $this->City;
+        return $this->City;
     }
 
     /**
@@ -121,8 +121,8 @@ class GetSentDate extends BaseType
      */
     public function setCity($City)
     {
-      $this->City = $City;
-      return $this;
+        $this->City = $City;
+        return $this;
     }
 
     /**
@@ -130,7 +130,7 @@ class GetSentDate extends BaseType
      */
     public function getCountryCode()
     {
-      return $this->CountryCode;
+        return $this->CountryCode;
     }
 
     /**
@@ -139,8 +139,8 @@ class GetSentDate extends BaseType
      */
     public function setCountryCode($CountryCode)
     {
-      $this->CountryCode = $CountryCode;
-      return $this;
+        $this->CountryCode = $CountryCode;
+        return $this;
     }
 
     /**
@@ -148,7 +148,7 @@ class GetSentDate extends BaseType
      */
     public function getDeliveryDate()
     {
-      return $this->DeliveryDate;
+        return $this->DeliveryDate;
     }
 
     /**
@@ -157,8 +157,8 @@ class GetSentDate extends BaseType
      */
     public function setDeliveryDate($DeliveryDate)
     {
-      $this->DeliveryDate = $DeliveryDate;
-      return $this;
+        $this->DeliveryDate = $DeliveryDate;
+        return $this;
     }
 
     /**
@@ -166,7 +166,7 @@ class GetSentDate extends BaseType
      */
     public function getHouseNr()
     {
-      return $this->HouseNr;
+        return $this->HouseNr;
     }
 
     /**
@@ -175,8 +175,8 @@ class GetSentDate extends BaseType
      */
     public function setHouseNr($HouseNr)
     {
-      $this->HouseNr = $HouseNr;
-      return $this;
+        $this->HouseNr = $HouseNr;
+        return $this;
     }
 
     /**
@@ -184,7 +184,7 @@ class GetSentDate extends BaseType
      */
     public function getHouseNrExt()
     {
-      return $this->HouseNrExt;
+        return $this->HouseNrExt;
     }
 
     /**
@@ -193,8 +193,8 @@ class GetSentDate extends BaseType
      */
     public function setHouseNrExt($HouseNrExt)
     {
-      $this->HouseNrExt = $HouseNrExt;
-      return $this;
+        $this->HouseNrExt = $HouseNrExt;
+        return $this;
     }
 
     /**
@@ -202,7 +202,7 @@ class GetSentDate extends BaseType
      */
     public function getOptions()
     {
-      return $this->Options;
+        return $this->Options;
     }
 
     /**
@@ -211,8 +211,8 @@ class GetSentDate extends BaseType
      */
     public function setOptions($Options)
     {
-      $this->Options = $Options;
-      return $this;
+        $this->Options = $Options;
+        return $this;
     }
 
     /**
@@ -220,7 +220,7 @@ class GetSentDate extends BaseType
      */
     public function getPostalCode()
     {
-      return $this->PostalCode;
+        return $this->PostalCode;
     }
 
     /**
@@ -229,8 +229,8 @@ class GetSentDate extends BaseType
      */
     public function setPostalCode($PostalCode)
     {
-      $this->PostalCode = $PostalCode;
-      return $this;
+        $this->PostalCode = $PostalCode;
+        return $this;
     }
 
     /**
@@ -238,7 +238,7 @@ class GetSentDate extends BaseType
      */
     public function getShippingDuration()
     {
-      return $this->ShippingDuration;
+        return $this->ShippingDuration;
     }
 
     /**
@@ -247,8 +247,8 @@ class GetSentDate extends BaseType
      */
     public function setShippingDuration($ShippingDuration)
     {
-      $this->ShippingDuration = $ShippingDuration;
-      return $this;
+        $this->ShippingDuration = $ShippingDuration;
+        return $this;
     }
 
     /**
@@ -256,7 +256,7 @@ class GetSentDate extends BaseType
      */
     public function getStreet()
     {
-      return $this->Street;
+        return $this->Street;
     }
 
     /**
@@ -265,7 +265,7 @@ class GetSentDate extends BaseType
      */
     public function setStreet($Street)
     {
-      $this->Street = $Street;
-      return $this;
+        $this->Street = $Street;
+        return $this;
     }
 }

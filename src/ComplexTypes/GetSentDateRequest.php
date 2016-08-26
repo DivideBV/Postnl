@@ -28,7 +28,7 @@ class GetSentDateRequest extends BaseType
      */
     public function getGetSentDate()
     {
-      return $this->GetSentDate;
+        return $this->GetSentDate;
     }
 
     /**
@@ -37,8 +37,8 @@ class GetSentDateRequest extends BaseType
      */
     public function setGetSentDate($GetSentDate)
     {
-      $this->GetSentDate = $GetSentDate;
-      return $this;
+        $this->GetSentDate = $GetSentDate;
+        return $this;
     }
 
     /**
@@ -46,7 +46,7 @@ class GetSentDateRequest extends BaseType
      */
     public function getMessage()
     {
-      return $this->Message;
+        return $this->Message;
     }
 
     /**
@@ -55,7 +55,7 @@ class GetSentDateRequest extends BaseType
      */
     public function setMessage($Message)
     {
-      $this->Message = $Message;
-      return $this;
+        $this->Message = $Message;
+        return $this;
     }
 }
