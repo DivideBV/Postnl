@@ -32,7 +32,7 @@ and which aren't. The list of existing services is taken from
 | Confirming Webservice     |      ✓      |   1_9   |
 | Deliverydate Webservice   |      ✓      |   2_1   |
 | Timeframe Webservice      |      ✓      |   2_0   |
-| Location Webservice       |      ✓      |   2_0   |
+| Location Webservice       |      ✓      |   2_1   |
 | Shippingstatus Webservice |      ✓      |   1_6   |
 
 # Example
