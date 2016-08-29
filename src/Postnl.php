@@ -305,10 +305,8 @@ class Postnl
     public function generateLabel(ComplexTypes\Shipment $shipment, $printerType = 'GraphicFile|PDF', $confirm = true)
     {
         $result = $this->generateLabels(new ComplexTypes\ArrayOfShipment([$shipment]), $printerType, $confirm);
-
-        $responseShipments = $result->getResponseShipments();
         // Return only the first shipment (there should be only 1).
-        return reset($responseShipments);
+        return $result->getResponseShipments()->getShipment()[0];
     }
 
     /**
