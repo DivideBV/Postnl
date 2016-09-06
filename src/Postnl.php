@@ -306,7 +306,7 @@ class Postnl
     {
         $result = $this->generateLabels(new ComplexTypes\ArrayOfShipment([$shipment]), $printerType, $confirm);
         // Return only the first shipment (there should be only 1).
-        return $result->getResponseShipments()->getShipment()[0];
+        return $result->getResponseShipments()->getResponseShipment();
     }
 
     /**
