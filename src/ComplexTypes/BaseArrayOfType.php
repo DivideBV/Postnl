@@ -19,9 +19,6 @@ abstract class BaseArrayOfType extends BaseType implements IteratorAggregate
      */
     public function getIterator()
     {
-        // When created by the SOAP stack, the property may not be an array.
-        $property = $this->{static::WRAPPED_PROPERTY};
-        $iterable = is_array($property) ? $property : [$property];
-        return new ArrayIterator($iterable);
+        return new ArrayIterator($this->{static::WRAPPED_PROPERTY});
     }
 }
