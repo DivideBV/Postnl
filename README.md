@@ -106,12 +106,9 @@ $shipment = ComplexTypes\Shipment::create()
 // Generate label and confirm shipment.
 $result = $client->generateLabel($shipment);
 
-// Save the label PDFs locally.
-$i = 0;
-foreach ($result->getLabels() as $label) {
-    $i++;
-    $file = new \SplFileObject("label{$i}.pdf", 'w');
-    $file->fwrite($label->getContent());
-}
+// Save the label PDF locally.
+$label = $result->getLabels()[0];
+$file = new \SplFileObject("label{$i}.pdf", 'w');
+$file->fwrite($label->getContent());
 
 ```
