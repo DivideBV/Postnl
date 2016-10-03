@@ -108,7 +108,7 @@ $result = $client->generateLabel($shipment);
 
 // Save the label PDF locally.
 $label = $result->getLabels()[0];
-$file = new \SplFileObject("label{$i}.pdf", 'w');
+$file = new \SplFileObject("label.pdf", 'w');
 $file->fwrite($label->getContent());
 
 ```
