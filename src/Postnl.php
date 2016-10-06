@@ -553,7 +553,7 @@ class Postnl
      *
      * @throws ComplexTypes\CifException
      */
-    protected function call($clientName, $method, $parameter)
+    public function call($clientName, $method, $parameter)
     {
         try {
             return $this->getClient($clientName)->{$method}($parameter);
