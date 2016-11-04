@@ -163,7 +163,7 @@ class GetDeliveryDate extends BaseType
      * @param ArrayOfCutOffTime $CutOffTimes
      * @return GetDeliveryDate
      */
-    public function setCutOffTimes($CutOffTimes)
+    public function setCutOffTimes(ArrayOfCutOffTime $CutOffTimes)
     {
         $this->CutOffTimes = $CutOffTimes;
         return $this;
