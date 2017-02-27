@@ -58,4 +58,13 @@ class LocationClient extends BaseClient
     {
         return $this->__soapCall('GetLocation', [$getLocations]);
     }
+    
+    /**
+     * @param ComplexTypes\GetNearestLocationsRequest $getLocationsInArea
+     * @return ComplexTypes\GetLocationsResult
+     */
+    public function getLocationsInArea(ComplexTypes\GetLocationsInAreaRequest $getLocationsInArea)
+    {
+        return $this->__soapCall('GetLocationsInArea', [$getLocationsInArea]);
+    }
 }
