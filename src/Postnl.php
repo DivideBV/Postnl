@@ -417,6 +417,35 @@ class Postnl
         $request = new ComplexTypes\GetNearestLocationsRequest($message, $location, $countryCode);
         return $this->call('LocationClient', __FUNCTION__, $request);
     }
+    
+    /**
+     * @param ComplexTypes\Coordinate $coordinatesNorthWest
+     * @param ComplexTypes\Coordinate $coordinatesSouthEast
+     * @param string $allowSundaySorting
+     * @param null|string $deliveryDate
+     * @param array $deliveryOptions
+     * @param array $options
+     * @param string $countryCode
+     * @return ComplexTypes\GetNearestLocationsResponse
+     */
+    public function getLocationsInArea(
+        $coordinatesNorthWest,
+        $coordinatesSouthEast,
+        $allowSundaySorting = 'false',
+        $deliveryDate = null,
+        $deliveryOptions = null,
+        $options = ['Daytime'],
+        $countryCode = 'NL'
+    ) {
+        $message = new ComplexTypes\Message;
+        $locationArea = new ComplexTypes\LocationArea($allowSundaySorting, $deliveryDate, $deliveryOptions, $options);
+        $locationArea
+                ->setCoordinatesNorthWest($coordinatesNorthWest)
+                ->setCoordinatesSouthEast($coordinatesSouthEast);
+
+        $request = new ComplexTypes\GetLocationsInAreaRequest($countryCode, $locationArea, $message);
+        return $this->call('LocationClient', __FUNCTION__, $request);
+    }
 
     /**
      * @param string $postalCode
