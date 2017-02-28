@@ -438,10 +438,15 @@ class Postnl
         $countryCode = 'NL'
     ) {
         $message = new ComplexTypes\Message;
-        $locationArea = new ComplexTypes\LocationArea($allowSundaySorting, $deliveryDate, $deliveryOptions, $options);
-        $locationArea
-                ->setCoordinatesNorthWest($coordinatesNorthWest)
-                ->setCoordinatesSouthEast($coordinatesSouthEast);
+        
+        $deliveryDate = $deliveryDate ?: (new \DateTime('next monday'))->format('d-m-Y');
+        $locationArea = ComplexTypes\LocationArea::create()
+            ->setAllowSundaySorting($allowSundaySorting)
+            ->setDeliveryDate($deliveryDate)
+            ->setDeliveryOptions($deliveryOptions)
+            ->setOptions($options)
+            ->setCoordinatesNorthWest($coordinatesNorthWest)
+            ->setCoordinatesSouthEast($coordinatesSouthEast);
 
         $request = new ComplexTypes\GetLocationsInAreaRequest($countryCode, $locationArea, $message);
         return $this->call('LocationClient', __FUNCTION__, $request);
