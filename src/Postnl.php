@@ -429,8 +429,8 @@ class Postnl
      * @return ComplexTypes\GetNearestLocationsResponse
      */
     public function getLocationsInArea(
-        $coordinatesNorthWest,
-        $coordinatesSouthEast,
+        ComplexTypes\Coordinate $coordinatesNorthWest,
+        ComplexTypes\Coordinate $coordinatesSouthEast,
         $allowSundaySorting = 'false',
         $deliveryDate = null,
         $deliveryOptions = null,
