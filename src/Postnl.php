@@ -324,6 +324,29 @@ class Postnl
     }
 
     /**
+     * @param ComplexTypes\Shipment $shipment
+     * @param string $contactPerson
+     * @param string $email
+     * @return ComplexTypes\GenerateReturnLabelResponse
+     *
+     * @see LabellingClient::generateLabel()
+     */
+    public function generateReturnLabel(
+        ComplexTypes\Shipment $shipment,
+        $contactPerson,
+        $email
+    ) {
+        // Prepare arguments.
+        $message = new ComplexTypes\Message();
+        $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation,
+            $contactPerson, $email, $this->customerName);
+        $request = new ComplexTypes\GenerateReturnLabelRequest($message, $customer, $shipment);
+
+        // Query the webservice and return the result.
+        return $this->call('EasyReturnServiceClient', __FUNCTION__, $request);
+    }    
+    
+    /**
      * @param ComplexTypes\ArrayOfShipment $shipments
      * @param string $printerType
      *     The file type used to generate the label. Defaults to PDF.
