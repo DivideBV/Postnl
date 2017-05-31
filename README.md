@@ -22,19 +22,26 @@ This library is not complete. This table lists which services are implemented
 and which aren't. The list of existing services is taken from
 [PostNL's developer center](https://developer.postnl.nl/).
 
-| Service                   | Implemented | Version |
-|---------------------------|:-----------:|:-------:|
-| Adrescheck Nationaal      |      ✗      |   N/A   |
-| Geo Adrescheck Nationaal  |      ✗      |   N/A   |
-| Adrescheck Internationaal |      ✗      |   N/A   |
-| IBANcheck Nationaal       |      ✗      |   N/A   |
-| Barcode Webservice        |      ✓      |   1_1   |
-| Labelling Webservice      |      ✓      |   2_0   |
-| Confirming Webservice     |      ✓      |   1_9   |
-| Deliverydate Webservice   |      ✓      |   2_1   |
-| Timeframe Webservice      |      ✓      |   2_0   |
-| Location Webservice       |      ✓      |   2_1   |
-| Shippingstatus Webservice |      ✓      |   1_6   |
+| Service                        | Implemented | Version |
+|--------------------------------|:-----------:|:-------:|
+| Adrescheck Basis Nationaal     |      ✗      |   N/A   |
+| Adrescheck Nationaal           |      ✗      |   N/A   |
+| Adrescheck Internationaal      |      ✗      |   N/A   |
+| Persoon op Adrescheck Basis    |      ✗      |   N/A   |
+| Geo Adrescheck Nationaal       |      ✗      |   N/A   |
+| IBANcheck Nationaal            |      ✗      |   N/A   |
+| Kredietcheck Consument Basis   |      ✗      |   N/A   |
+| Kredietcheck Consument Premium |      ✗      |   N/A   |
+| Kredietcheck Zakelijk          |      ✗      |   N/A   |
+| Barcode webservice             |      ✓      |   1_1   |
+| Labelling webservice           |      ✓      |   2_0   |
+| Confirming webservice          |      ✓      |   1_9   |
+| Shippingstatus webservice      |      ✗      |   N/A   |
+| Deliverydate webservice        |      ✓      |   2_1   |
+| Timeframe webservice           |      ✓      |   2_0   |
+| Location webservice            |      ✓      |   2_1   |
+| Fraudepreventie Check Basis    |      ✓      |   1_6   |
+| Bulkmail webservice            |      ✗      |   N/A   |
 
 # Example
 
