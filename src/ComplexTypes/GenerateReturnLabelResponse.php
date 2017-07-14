@@ -17,10 +17,8 @@ class GenerateReturnLabelResponse extends BaseType
      * @param ArrayOfLabel $Labels
      * @param ArrayOfWarning $Warnings
      */
-    public function __construct(
-        ArrayOfLabel $Labels = null,
-        ArrayOfWarning $Warnings = null
-    ) {
+    public function __construct(ArrayOfLabel $Labels = null, ArrayOfWarning $Warnings = null ) 
+    {
         $this->setLabels($Labels);
         $this->setWarnings($Warnings);
     }
