@@ -405,7 +405,7 @@ class Postnl
      * @param string $countryCode
      * @return ComplexTypes\GetNearestLocationsResponse
      */
-    public function getNearestLocation(
+    public function getNearestLocations(
         $postalCode,
         $allowSundaySorting = 'false',
         $deliveryDate = null,
@@ -416,6 +416,24 @@ class Postnl
 
         $request = new ComplexTypes\GetNearestLocationsRequest($message, $location, $countryCode);
         return $this->call('LocationClient', __FUNCTION__, $request);
+    }
+
+    /**
+     * @deprecated Use getNearestLocations() instead.
+     * @see getNearestLocations()
+     * @param $postalCode
+     * @param string $allowSundaySorting
+     * @param null|string $deliveryDate
+     * @param string $countryCode
+     * @return ComplexTypes\GetNearestLocationsResponse
+     */
+    public function getNearestLocation(
+        $postalCode,
+        $allowSundaySorting = 'false',
+        $deliveryDate = null,
+        $countryCode = 'NL'
+    ) {
+        return $this->getNearestLocations($postalCode, $allowSundaySorting, $deliveryDate, $countryCode);
     }
 
     /**
