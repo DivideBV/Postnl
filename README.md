@@ -35,6 +35,7 @@ and which aren't. The list of existing services is taken from
 | Timeframe Webservice      |      ✓      |   2_0   |
 | Location Webservice       |      ✓      |   2_1   |
 | Shippingstatus Webservice |      ✓      |   1_6   |
+| EasyReturn WebService     |      ✓      |   1_5   |
 
 # Example
 
