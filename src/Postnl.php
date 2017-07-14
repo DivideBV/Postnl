@@ -338,8 +338,11 @@ class Postnl
     ) {
         // Prepare arguments.
         $message = new ComplexTypes\Message();
-        $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation,
-            $contactPerson, $email, $this->customerName);
+        $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
+        $customer->setContactPerson($contactPerson);
+        $customer->setEmail($email);
+        $customer->setName($this->customerName);
+        
         $request = new ComplexTypes\GenerateReturnLabelRequest($message, $customer, $shipment);
 
         // Query the webservice and return the result.
