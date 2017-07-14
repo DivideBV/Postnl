@@ -30,7 +30,6 @@ class GenerateReturnLabelRequest extends BaseType
         $this->setShipment($Shipment);
     }
 
-
     /**
      * @return Message
      */
@@ -48,8 +47,6 @@ class GenerateReturnLabelRequest extends BaseType
         $this->Message = $Message;
         return $this;
     }
-
-
 
     /**
      * @return Customer
