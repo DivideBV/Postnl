@@ -331,11 +331,8 @@ class Postnl
      *
      * @see LabellingClient::generateLabel()
      */
-    public function generateReturnLabel(
-        ComplexTypes\Shipment $shipment,
-        $contactPerson,
-        $email
-    ) {
+    public function generateReturnLabel(ComplexTypes\Shipment $shipment, $contactPerson, $email) 
+    {
         // Prepare arguments.
         $message = new ComplexTypes\Message();
         $customer = new ComplexTypes\Customer($this->customerNumber, $this->customerCode, $this->collectionLocation);
