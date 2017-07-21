@@ -85,8 +85,6 @@ class Address extends BaseType
 
     /**
      * @var string $StreetHouseNrExt
-     *     This is not used. Use separate street, house number and house number
-     *     extension parameters.
      */
     protected $StreetHouseNrExt = null;
 
@@ -230,6 +228,31 @@ class Address extends BaseType
     public function setCompanyName($CompanyName)
     {
         $this->CompanyName = $CompanyName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStreetHouseNrExt()
+    {
+        return $this->StreetHouseNrExt;
+    }
+
+    /**
+     * Combination of Street, HouseNr and HouseNrExt.
+     *
+     * The PostNL webservice will calculate a split of street name, house number and extension for you, and will
+     * afterwards use the split values.
+     *
+     * Important: The conversion is only made for NL, BE and DE addresses.
+     *
+     * @param $streetHouseNrExt
+     * @return Address
+     */
+    public function setStreetHouseNrExt($streetHouseNrExt)
+    {
+        $this->StreetHouseNrExt = $streetHouseNrExt;
         return $this;
     }
 
