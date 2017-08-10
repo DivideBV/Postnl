@@ -249,7 +249,7 @@ class Address extends BaseType
      * - The conversion is only made for NL, BE and DE addresses.
      * - Use separate fields (street, houseNr and extension) when possible.
      *
-     * @param $streetHouseNrExt
+     * @param string $streetHouseNrExt
      * @return Address
      */
     public function setStreetHouseNrExt($streetHouseNrExt)
