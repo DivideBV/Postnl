@@ -483,7 +483,7 @@ class Postnl
      */
     public function getDeliveryDate(
         $postalCode,
-        ArrayOfCutOffTime $cutOffTimes,
+        ComplexTypes\ArrayOfCutOffTime $cutOffTimes,
         $shippingDate,
         $shippingDuration = 1,
         $options = ['Daytime'],
