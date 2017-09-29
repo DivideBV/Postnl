@@ -9,12 +9,12 @@ class LocationClient extends BaseClient
     /**
      * The URL of the production WSDL.
      */
-    const PRODUCTION_WSDL = 'https://service.postnl.com/CIF/LocationWebService/2_1/?wsdl';
+    const PRODUCTION_WSDL = 'https://api.postnl.nl/shipment/v2_1/locations/soap.wsdl';
 
     /**
      * The URL of the sandbox WSDL.
      */
-    const SANDBOX_WSDL = 'https://testservice.postnl.com/CIF_SB/LocationWebService/2_1/?wsdl';
+    const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2_1/locations/soap.wsdl';
 
     /**
      * @var array $classes
