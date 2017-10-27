@@ -1,5 +1,10 @@
-composer.phar
-composer.lock
+# Composer.
 vendor/
+composer.lock
+composer.phar
+
+# Node, NPM.
 node_modules/
+package-lock.json
+
 docs/
