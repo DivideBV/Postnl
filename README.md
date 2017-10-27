@@ -36,11 +36,11 @@ and which aren't. The list of existing services is taken from
 | Barcode webservice             |      ✓      |   1_1   |
 | Labelling webservice           |      ✓      |   2_0   |
 | Confirming webservice          |      ✓      |   1_9   |
-| Shippingstatus webservice      |      ✗      |   N/A   |
+| Shippingstatus webservice      |      ✓      |   1_6   |
 | Deliverydate webservice        |      ✓      |   2_1   |
 | Timeframe webservice           |      ✓      |   2_0   |
 | Location webservice            |      ✓      |   2_1   |
-| Fraudepreventie Check Basis    |      ✓      |   1_6   |
+| Fraudepreventie Check Basis    |      ✗      |   N/A   |
 | Bulkmail webservice            |      ✗      |   N/A   |
 
 # Example
