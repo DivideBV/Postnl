@@ -22,26 +22,32 @@ This library is not complete. This table lists which services are implemented
 and which aren't. The list of existing services is taken from
 [PostNL's developer center](https://developer.postnl.nl/).
 
-| Service                        | Implemented | Version |
-|--------------------------------|:-----------:|:-------:|
-| Adrescheck Basis Nationaal     |      ✗      |   N/A   |
-| Adrescheck Nationaal           |      ✗      |   N/A   |
-| Adrescheck Internationaal      |      ✗      |   N/A   |
-| Persoon op Adrescheck Basis    |      ✗      |   N/A   |
-| Geo Adrescheck Nationaal       |      ✗      |   N/A   |
-| IBANcheck Nationaal            |      ✗      |   N/A   |
-| Kredietcheck Consument Basis   |      ✗      |   N/A   |
-| Kredietcheck Consument Premium |      ✗      |   N/A   |
-| Kredietcheck Zakelijk          |      ✗      |   N/A   |
-| Barcode webservice             |      ✓      |   1_1   |
-| Labelling webservice           |      ✓      |   2_0   |
-| Confirming webservice          |      ✓      |   1_9   |
-| Shippingstatus webservice      |      ✓      |   1_6   |
-| Deliverydate webservice        |      ✓      |   2_1   |
-| Timeframe webservice           |      ✓      |   2_0   |
-| Location webservice            |      ✓      |   2_1   |
-| Fraudepreventie Check Basis    |      ✗      |   N/A   |
-| Bulkmail webservice            |      ✗      |   N/A   |
+| Service                                       | Implemented | Version |
+|-----------------------------------------------|:-----------:|:-------:|
+| **Addresses €**                                                     |||
+| Adrescheck Nationaal                          |      ✗      |   N/A   |
+| Adrescheck Basis Nationaal                    |      ✗      |   N/A   |
+| Adrescheck Internationaal                     |      ✗      |   N/A   |
+| Persoon op Adrescheck Basis                   |      ✗      |   N/A   |
+| Geo Adrescheck Nationaal                      |      ✗      |   N/A   |
+| **Creditworthiness & Business information €**                       |||
+| Bedrijfscheck Nationaal                       |      ✗      |   N/A   |
+| Fraudepreventie Check Basis                   |      ✗      |   N/A   |
+| IBANcheck Nationaal                           |      ✗      |   N/A   |
+| Kredietcheck Consument Basis                  |      ✗      |   N/A   |
+| Kredietcheck Consument Premium                |      ✗      |   N/A   |
+| Kredietcheck Zakelijk                         |      ✗      |   N/A   |
+| **Send & Track**                                                    |||
+| Barcode webservice                            |      ✓      |   1_1   |
+| Confirming webservice                         |      ✓      |   1_9   |
+| Labelling webservice                          |      ✓      |   2_0   |
+| Shippingstatus webservice                     |      ✓      |   1_6   |
+| **Delivery options**                                                |||
+| Deliverydate webservice                       |      ✓      |   2_1   |
+| Location webservice                           |      ✓      |   2_1   |
+| Timeframe webservice                          |      ✓      |   2_0   |
+| **Mail**                                                            |||
+| Bulkmail webservice                           |      ✗      |   N/A   |
 
 # Example
 
