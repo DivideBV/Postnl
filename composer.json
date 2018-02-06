@@ -1,7 +1,7 @@
 {
     "name": "dividebv/postnl",
     "description": "Library to connect to PostNL's SOAP service called CIF",
-    "license": "GPL-2",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
             "name": "Ameen Ross",
