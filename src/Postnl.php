@@ -25,9 +25,9 @@ class Postnl
     protected $customerName = null;
 
     /**
-     * @var ComplexTypes\SecurityHeader $securityHeader
+     * @var string $apikey
      */
-    protected $securityHeader = null;
+    protected $apikey = null;
 
     /**
      * @var string $collectionLocation
@@ -111,8 +111,7 @@ class Postnl
         $customerNumber,
         $customerCode,
         $customerName,
-        $username,
-        $password,
+        $apikey,
         $collectionLocation,
         $globalPack,
         $sandbox = false
@@ -120,7 +119,7 @@ class Postnl
         $this->customerNumber = $customerNumber;
         $this->customerCode = $customerCode;
         $this->customerName = $customerName;
-        $this->securityHeader = new ComplexTypes\SecurityHeader($username, $password);
+        $this->apikey = $apikey;
         $this->collectionLocation = $collectionLocation;
         $this->globalPackBarcodeType = preg_filter('/^(.{2})(.{4})$/', '$1', $globalPack);
         $this->globalPackCustomerCode = preg_filter('/^(.{2})(.{4})$/', '$2', $globalPack);
@@ -553,7 +552,7 @@ class Postnl
         // Instantiate the client if not set yet.
         if (!isset($this->clients[$clientName])) {
             $className = __NAMESPACE__ . "\\$clientName";
-            $this->clients[$clientName] = new $className($this->securityHeader, $this->sandbox);
+            $this->clients[$clientName] = new $className($this->apikey, $this->sandbox);
         }
 
         // Keep track of last used client for debugging purposes.

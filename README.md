@@ -60,8 +60,7 @@ $client = new Postnl(
     12345678,   // Customer number
     'ABCD',     // Customer code
     'Acme BV',  // Customer name
-    'Acme',     // Username
-    'Password', // Password
+    'xxxxxxxx', // API key
     123456,     // Collection location
     'CD1234',   // Globalpack
     true        // Whether to use PostNL's sandbox environment.
