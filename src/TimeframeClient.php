@@ -30,7 +30,7 @@ class TimeframeClient extends BaseClient
         'ReasonNoTimeframe',
         'Timeframe',
         'TimeframeRequest',
-        'TimeframeTimeFrame'
+        'TimeframeTimeFrame',
     ];
 
     /**

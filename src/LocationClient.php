@@ -37,7 +37,7 @@ class LocationClient extends BaseClient
         'Message',
         'OpeningHours',
         'ResponseLocation',
-        'Warning'
+        'Warning',
     ];
 
     /**
