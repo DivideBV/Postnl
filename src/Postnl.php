@@ -50,14 +50,12 @@ class Postnl
     protected $sandbox = false;
 
     /**
-     * @var array
-     *     An array with instantiated CIF clients.
+     * @var array An array with instantiated CIF clients.
      */
     protected $clients = [];
 
     /**
-     * @var string
-     *     Contains the property name of the last used SOAP client.
+     * @var string Contains the property name of the last used SOAP client.
      */
     private $lastClient = null;
 
@@ -489,8 +487,10 @@ class Postnl
     /**
      * Returns location information of the supplied location code.
      *
-     * @param string $locationCode LocationCode information.
-     * @param string $retailNetworkId PNPNL-01 is the code that can be used for all Dutch locations.
+     * @param string $locationCode
+     *     LocationCode information.
+     * @param string $retailNetworkId
+     *     PNPNL-01 is the code that can be used for all Dutch locations.
      * @return ComplexTypes\GetLocationsResponse
      */
     public function getLocation($locationCode, $retailNetworkId = 'PNPNL-01')

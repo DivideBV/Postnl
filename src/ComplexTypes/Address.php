@@ -104,20 +104,13 @@ class Address extends BaseType
      * @param string $Zipcode
      * @param string $City
      * @param string $Countrycode
-     * @param string $Area
-     *     Optional.
-     * @param string $Buildingname
-     *     Optional.
-     * @param string $Department
-     *     Optional.
-     * @param string $Doorcode
-     *     Optional.
-     * @param string $Floor
-     *     Optional.
-     * @param string $Region
-     *     Optional.
-     * @param string $Remark
-     *     Optional.
+     * @param string $Area Optional.
+     * @param string $Buildingname Optional.
+     * @param string $Department Optional.
+     * @param string $Doorcode Optional.
+     * @param string $Floor Optional.
+     * @param string $Region Optional.
+     * @param string $Remark Optional.
      */
     public function __construct(
         $AddressType,

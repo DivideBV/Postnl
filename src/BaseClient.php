@@ -9,7 +9,9 @@ abstract class BaseClient extends SoapClient
 {
 
     /**
-     * @var string The URL of the production WSDL. Actual clients must define this.
+     * @var string The URL of the production WSDL.
+     *
+     * Actual clients must define this.
      */
     const PRODUCTION_WSDL = '';
 
@@ -19,8 +21,7 @@ abstract class BaseClient extends SoapClient
     const SANDBOX_WSDL = '';
 
     /**
-     * @var array
-     *     A list of complex types used to generate a classmap for SoapClient.
+     * @var array A list of complex types for generating a SoapClient classmap.
      *
      * @see self::getClassmap()
      */
@@ -55,8 +56,7 @@ abstract class BaseClient extends SoapClient
     }
 
     /**
-     * @return array
-     *     The classmap generated from self::$classes.
+     * @return array The classmap generated from self::$classes.
      */
     protected function getClassmap()
     {

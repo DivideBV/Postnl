@@ -17,8 +17,7 @@ class TimeframeClient extends BaseClient
     const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2_0/calculate/timeframes/soap.wsdl';
 
     /**
-     * @var array
-     *     The complex types used by this client.
+     * @var array The complex types used by this client.
      */
     protected $classes = [
         'GetTimeframes',
