@@ -235,8 +235,9 @@ class Address extends BaseType
     /**
      * Combination of Street, HouseNr and HouseNrExt.
      *
-     * The PostNL webservice will calculate a split of street name, house number and extension for you, and will
-     * afterwards use the split values. This might result in incorrect behavior for which PostNL can’t be held liable.
+     * The PostNL webservice will calculate a split of street name, house number
+     * and extension for you, and will afterwards use the split values. This
+     * might result in incorrect behavior for which PostNL can’t be held liable.
      *
      * Important:
      * - The conversion is only made for NL, BE and DE addresses.
