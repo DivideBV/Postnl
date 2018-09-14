@@ -417,24 +417,6 @@ class Postnl
     }
 
     /**
-     * @deprecated Use getNearestLocations() instead.
-     * @see getNearestLocations()
-     * @param string $postalCode
-     * @param string $allowSundaySorting
-     * @param null|string $deliveryDate
-     * @param string $countryCode
-     * @return ComplexTypes\GetNearestLocationsResponse
-     */
-    public function getNearestLocation(
-        $postalCode,
-        $allowSundaySorting = 'false',
-        $deliveryDate = null,
-        $countryCode = 'NL'
-    ) {
-        return $this->getNearestLocations($postalCode, $allowSundaySorting, $deliveryDate, $countryCode);
-    }
-
-    /**
      * @param string $postalCode
      * @param string $houseNumber
      * @param array $options

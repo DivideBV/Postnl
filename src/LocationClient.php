@@ -51,17 +51,6 @@ class LocationClient extends BaseClient
     }
 
     /**
-     * @deprecated Use getNearestLocations() instead.
-     * @see getNearestLocations()
-     * @param ComplexTypes\GetNearestLocationsRequest $getNearestLocations
-     * @return ComplexTypes\GetLocationsResult
-     */
-    public function getNearestLocation(ComplexTypes\GetNearestLocationsRequest $getNearestLocations)
-    {
-        return $this->getNearestLocations($getNearestLocations);
-    }
-
-    /**
      * @param ComplexTypes\GetLocationRequest $getLocations
      * @return ComplexTypes\GetLocationsResponse
      */
