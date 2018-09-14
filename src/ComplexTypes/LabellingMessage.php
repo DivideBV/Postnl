@@ -31,7 +31,7 @@ class LabellingMessage extends Message
     }
 
     /**
-     * @param string $PrinterType
+     * @param string $Printertype
      */
     public function setPrintertype($Printertype)
     {

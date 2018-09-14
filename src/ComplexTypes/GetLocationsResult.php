@@ -33,7 +33,7 @@ class GetLocationsResult extends BaseType
 
     /**
      * @param ArrayOfResponseLocation $ResponseLocation
-     * @return GetLocationResult
+     * @return GetLocationsResult
      */
     public function setResponseLocation($ResponseLocation)
     {

@@ -171,7 +171,7 @@ class TimeframeRequest extends BaseType
     }
 
     /**
-     * @return ArrayOfstring
+     * @return string[]
      */
     public function getOptions()
     {
@@ -179,7 +179,7 @@ class TimeframeRequest extends BaseType
     }
 
     /**
-     * @param ArrayOfstring $Options
+     * @param string[] $Options
      * @return TimeframeRequest
      */
     public function setOptions($Options)

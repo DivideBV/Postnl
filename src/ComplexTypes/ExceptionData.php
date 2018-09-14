@@ -18,10 +18,6 @@ class ExceptionData extends BaseType
      */
     protected $ErrorNumber = null;
 
-    public function __construct()
-    {
-    }
-
     /**
      * @return string
      */

@@ -4,7 +4,7 @@ class Label extends BaseType
 {
 
     /**
-     * @var base64Binary $Content
+     * @var string $Content In base64 encoding.
      */
     protected $Content = null;
 
@@ -19,7 +19,7 @@ class Label extends BaseType
     protected $Labeltype = null;
 
     /**
-     * @param base64Binary $Content
+     * @param string $Content In base64 encoding.
      * @param string $Contenttype
      * @param string $Labeltype
      */
@@ -31,7 +31,7 @@ class Label extends BaseType
     }
 
     /**
-     * @return base64Binary
+     * @return string In base64 encoding.
      */
     public function getContent()
     {
@@ -39,7 +39,7 @@ class Label extends BaseType
     }
 
     /**
-     * @param base64Binary $Content
+     * @param string $Content In base64 encoding.
      * @return Label
      */
     public function setContent($Content)

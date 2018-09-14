@@ -153,56 +153,31 @@ class Shipment extends BaseType
      * @param string $Barcode
      * @param Dimension $Dimension
      * @param string $ProductCodeDelivery
-     * @param ArrayOfAmount $Amounts
-     *     Optional.
-     * @param string $CollectionTimeStampEnd
-     *     Optional.
-     * @param string $CollectionTimeStampStart
-     *     Optional.
-     * @param ArrayOfContact $Contacts
-     *     Optional.
-     * @param string $Content
-     *     Optional.
-     * @param string $CostCenter
-     *     Optional.
-     * @param string $CustomerOrderNumber
-     *     Optional.
-     * @param Customs $Customs
-     *     Optional.
-     * @param string $DeliveryAddress
-     *     Optional.
-     * @param string $DeliveryDate
-     *     Optional.
-     * @param string $DownPartnerBarcode
-     *     Optional.
-     * @param string $DownPartnerID
-     *     Optional.
-     * @param string $DownPartnerLocation
-     *     Optional.
-     * @param ArrayOfGroup $Groups
-     *     Optional.
-     * @param string $IDExpiration
-     *     Optional.
-     * @param string $IDNumber
-     *     Optional.
-     * @param string $IDType
-     *     Optional.
-     * @param string $ProductCodeCollect
-     *     Optional.
-     * @param ArrayOfProductOption $ProductOptions
-     *     Optional.
-     * @param string $ReceiverDateOfBirth
-     *     Optional.
-     * @param string $Reference
-     *     Optional.
-     * @param string $ReferenceCollect
-     *     Optional.
-     * @param string $Remark
-     *     Optional.
-     * @param string $ReturnBarcode
-     *     Optional.
-     * @param string $ReturnReference
-     *     Optional.
+     * @param ArrayOfAmount|null $Amounts Optional.
+     * @param string $CollectionTimeStampEnd Optional.
+     * @param string $CollectionTimeStampStart Optional.
+     * @param ArrayOfContact|null $Contacts Optional.
+     * @param string $Content Optional.
+     * @param string $CostCenter Optional.
+     * @param string $CustomerOrderNumber Optional.
+     * @param Customs|null $Customs Optional.
+     * @param string $DeliveryAddress Optional.
+     * @param string $DeliveryDate Optional.
+     * @param string $DownPartnerBarcode Optional.
+     * @param string $DownPartnerID Optional.
+     * @param string $DownPartnerLocation Optional.
+     * @param ArrayOfGroup|null $Groups Optional.
+     * @param string $IDExpiration Optional.
+     * @param string $IDNumber Optional.
+     * @param string $IDType Optional.
+     * @param string $ProductCodeCollect Optional.
+     * @param ArrayOfProductOption|null $ProductOptions Optional.
+     * @param string $ReceiverDateOfBirth Optional.
+     * @param string $Reference Optional.
+     * @param string $ReferenceCollect Optional.
+     * @param string $Remark Optional.
+     * @param string $ReturnBarcode Optional.
+     * @param string $ReturnReference Optional.
      */
     public function __construct(
         ArrayOfAddress $Addresses,

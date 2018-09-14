@@ -45,7 +45,7 @@ class Customer extends BaseType
      * @param string $ContactPerson
      * @param string $Email
      * @param string $Name
-     * @param Address $Address
+     * @param Address|null $Address
      */
     public function __construct(
         $CustomerNumber,

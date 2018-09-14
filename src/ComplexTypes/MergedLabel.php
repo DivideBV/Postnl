@@ -14,8 +14,8 @@ class MergedLabel extends BaseType
     protected $Labels = null;
 
     /**
-     * @var string[] $Barcodes
-     * @var ArrayOfLabel $Labels
+     * @param string[] $Barcodes
+     * @param ArrayOfLabel $Labels
      */
     public function __construct(array $Barcodes, ArrayOfLabel $Labels)
     {

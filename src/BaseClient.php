@@ -9,12 +9,12 @@ abstract class BaseClient extends SoapClient
 {
 
     /**
-     * The URL of the production WSDL. Actual clients must define this.
+     * @var string The URL of the production WSDL. Actual clients must define this.
      */
     const PRODUCTION_WSDL = '';
 
     /**
-     * The URL of the sandbox WSDL. Actual clients must define this.
+     * @var string The URL of the sandbox WSDL. Actual clients must define this.
      */
     const SANDBOX_WSDL = '';
 

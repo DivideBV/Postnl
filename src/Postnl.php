@@ -101,8 +101,7 @@ class Postnl
      * @param string $customerNumber
      * @param string $customerCode
      * @param string $customerName
-     * @param string $username
-     * @param string $password
+     * @param string $apikey
      * @param string $collectionLocation
      * @param string $globalPack
      * @param bool $sandbox
@@ -275,7 +274,7 @@ class Postnl
     }
 
     /**
-     * @param ComplexTypes\ConfirmingMessage $confirmingMessage
+     * @param ComplexTypes\ArrayOfShipment $shipments
      * @return ComplexTypes\ArrayOfConfirmingResponseShipment
      *
      * @see ConfirmingClient::confirming()
@@ -363,7 +362,7 @@ class Postnl
 
     /**
      * @param string $barcode
-     * @return CurrentStatusResponse
+     * @return ComplexTypes\CurrentStatusResponse
      *
      * @see ShippingStatusClient::currentStatus()
      */
@@ -381,7 +380,7 @@ class Postnl
 
     /**
      * @param string $barcode
-     * @return GetSignatureResponse
+     * @return ComplexTypes\GetSignatureResponse
      *
      * @see ShippingStatusClient::getSignature()
      */
@@ -398,7 +397,7 @@ class Postnl
     }
 
     /**
-     * @param $postalCode
+     * @param string $postalCode
      * @param string $allowSundaySorting
      * @param null|string $deliveryDate
      * @param string $countryCode
@@ -420,7 +419,7 @@ class Postnl
     /**
      * @deprecated Use getNearestLocations() instead.
      * @see getNearestLocations()
-     * @param $postalCode
+     * @param string $postalCode
      * @param string $allowSundaySorting
      * @param null|string $deliveryDate
      * @param string $countryCode

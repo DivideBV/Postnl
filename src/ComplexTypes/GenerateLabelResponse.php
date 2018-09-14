@@ -14,8 +14,8 @@ class GenerateLabelResponse extends BaseType
     protected $ResponseShipments = null;
 
     /**
-     * @param ArrayOfMergedLabel $MergedLabels
-     * @param ArrayOfResponseShipment $ResponseShipments
+     * @param ArrayOfMergedLabel|null $MergedLabels
+     * @param ArrayOfResponseShipment|null $ResponseShipments
      */
     public function __construct(
         ArrayOfMergedLabel $MergedLabels = null,

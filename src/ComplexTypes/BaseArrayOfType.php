@@ -9,48 +9,32 @@ abstract class BaseArrayOfType extends BaseType implements IteratorAggregate, Ar
 {
 
     /**
-     * The name of the array property to use when iterating the class.
+     * @var string The name of the array property to use for iterating.
      *
      * Actual wrapper classes must define this.
      */
     const WRAPPED_PROPERTY = '';
 
-    /**
-     * Implements IteratorAggregate::getIterator().
-     * @return ArrayIterator
-     */
     public function getIterator()
     {
         return new ArrayIterator($this->getWrappedProperty());
     }
 
-    /**
-     * Implements ArrayAcces::offsetExists().
-     */
     public function offsetExists($offset)
     {
         return isset($this->getWrappedProperty()[$offset]);
     }
 
-    /**
-     * Implements ArrayAcces::offsetGet().
-     */
     public function offsetGet($offset)
     {
         return $this->offsetExists($offset) ? $this->getWrappedProperty()[$offset] : null;
     }
 
-    /**
-     * Implements ArrayAcces::offsetSet().
-     */
     public function offsetSet($offset, $value)
     {
         throw new Exception('Writing to ArrayOf types using ArrayAccess not supported.');
     }
 
-    /**
-     * Implements ArrayAcces::unsetOffset().
-     */
     public function offsetUnset($offset)
     {
         throw new Exception('Writing to ArrayOf types using ArrayAccess not supported.');
