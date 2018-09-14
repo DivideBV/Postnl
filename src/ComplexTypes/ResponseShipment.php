@@ -4,37 +4,37 @@ class ResponseShipment extends BaseType
 {
 
     /**
-     * @var string $Barcode
+     * @var string
      */
     protected $Barcode = null;
 
     /**
-     * @var string $DownPartnerBarcode
+     * @var string
      */
     protected $DownPartnerBarcode = null;
 
     /**
-     * @var string $DownPartnerID
+     * @var string
      */
     protected $DownPartnerID = null;
 
     /**
-     * @var string $DownPartnerLocation
+     * @var string
      */
     protected $DownPartnerLocation = null;
 
     /**
-     * @var ArrayOfLabel $Labels
+     * @var ArrayOfLabel
      */
     protected $Labels = null;
 
     /**
-     * @var string $ProductCodeDelivery
+     * @var string
      */
     protected $ProductCodeDelivery = null;
 
     /**
-     * @var ArrayOfWarning $Warnings
+     * @var ArrayOfWarning
      */
     protected $Warnings = null;
 

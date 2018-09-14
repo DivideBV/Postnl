@@ -9,7 +9,7 @@ class ArrayOfCompleteStatusResponseOldStatus extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'CompleteStatusResponseOldStatus';
 
     /**
-     * @var CompleteStatusResponseOldStatus[] $CompleteStatusResponseOldStatus
+     * @var CompleteStatusResponseOldStatus[]
      */
     protected $CompleteStatusResponseOldStatus = null;
 

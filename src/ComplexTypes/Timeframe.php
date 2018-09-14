@@ -4,12 +4,12 @@ class Timeframe extends BaseType
 {
 
     /**
-     * @var string $Date
+     * @var string
      */
     protected $Date = null;
 
     /**
-     * @var ArrayOfTimeframeTimeFrame $Timeframes
+     * @var ArrayOfTimeframeTimeFrame
      */
     protected $Timeframes = null;
 

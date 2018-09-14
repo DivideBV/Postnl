@@ -6,12 +6,12 @@ class ResponseExpectation extends BaseType
 {
 
     /**
-     * @var DateTime $ETAFrom
+     * @var DateTime
      */
     protected $ETAFrom = null;
 
     /**
-     * @var DateTime $ETATo
+     * @var DateTime
      */
     protected $ETATo = null;
 

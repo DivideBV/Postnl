@@ -4,72 +4,72 @@ class ResponseLocation extends BaseType
 {
 
     /**
-     * @var Address $Address
+     * @var Address
      */
     protected $Address = null;
 
     /**
-     * @var string[] $DeliveryOptions
+     * @var string[]
      */
     protected $DeliveryOptions = null;
 
     /**
-     * @var string $Distance
+     * @var string
      */
     protected $Distance = null;
 
     /**
-     * @var string $Latitude
+     * @var string
      */
     protected $Latitude = null;
 
     /**
-     * @var string $LocationCode
+     * @var string
      */
     protected $LocationCode = null;
 
     /**
-     * @var string $Longitude
+     * @var string
      */
     protected $Longitude = null;
 
     /**
-     * @var string $Name
+     * @var string
      */
     protected $Name = null;
 
     /**
-     * @var OpeningHours $OpeningHours
+     * @var OpeningHours
      */
     protected $OpeningHours = null;
 
     /**
-     * @var string $PartnerName
+     * @var string
      */
     protected $PartnerName = null;
 
     /**
-     * @var string $PhoneNumber
+     * @var string
      */
     protected $PhoneNumber = null;
 
     /**
-     * @var string $RetailFormulaName
+     * @var string
      */
     protected $RetailFormulaName = null;
 
     /**
-     * @var string $RetailNetworkID
+     * @var string
      */
     protected $RetailNetworkID = null;
 
     /**
-     * @var string $Saleschannel
+     * @var string
      */
     protected $Saleschannel = null;
 
     /**
-     * @var string $TerminalType
+     * @var string
      */
     protected $TerminalType = null;
 

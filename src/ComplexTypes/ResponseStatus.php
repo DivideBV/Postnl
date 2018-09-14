@@ -4,27 +4,27 @@ class ResponseStatus extends BaseType
 {
 
     /**
-     * @var string $CurrentPhaseCode
+     * @var string
      */
     protected $CurrentPhaseCode = null;
 
     /**
-     * @var string $CurrentPhaseDescription
+     * @var string
      */
     protected $CurrentPhaseDescription = null;
 
     /**
-     * @var string $CurrentStatusCode
+     * @var string
      */
     protected $CurrentStatusCode = null;
 
     /**
-     * @var string $CurrentStatusDescription
+     * @var string
      */
     protected $CurrentStatusDescription = null;
 
     /**
-     * @var string $CurrentStatusTimeStamp
+     * @var string
      */
     protected $CurrentStatusTimeStamp = null;
 

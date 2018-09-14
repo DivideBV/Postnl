@@ -4,32 +4,32 @@ class Location extends BaseLocation
 {
 
     /**
-     * @var string $City
+     * @var string
      */
     protected $City = null;
 
     /**
-     * @var Coordinate $Coordinates
+     * @var Coordinate
      */
     protected $Coordinates = null;
 
     /**
-     * @var string $HouseNr
+     * @var string
      */
     protected $HouseNr = null;
 
     /**
-     * @var string $HouseNrExt
+     * @var string
      */
     protected $HouseNrExt = null;
 
     /**
-     * @var string $Postalcode
+     * @var string
      */
     protected $Postalcode = null;
 
     /**
-     * @var string $Street
+     * @var string
      */
     protected $Street = null;
 

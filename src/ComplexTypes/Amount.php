@@ -4,42 +4,42 @@ class Amount extends BaseType
 {
 
     /**
-     * @var string $AccountName
+     * @var string
      */
     protected $AccountName = null;
 
     /**
-     * @var string $AmountType
+     * @var string
      */
     protected $AmountType = null;
 
     /**
-     * @var string $BIC
+     * @var string
      */
     protected $BIC = null;
 
     /**
-     * @var string $Currency
+     * @var string
      */
     protected $Currency = null;
 
     /**
-     * @var string $IBAN
+     * @var string
      */
     protected $IBAN = null;
 
     /**
-     * @var string $Reference
+     * @var string
      */
     protected $Reference = null;
 
     /**
-     * @var string $TransactionNumber
+     * @var string
      */
     protected $TransactionNumber = null;
 
     /**
-     * @var string $Value
+     * @var string
      */
     protected $Value = null;
 

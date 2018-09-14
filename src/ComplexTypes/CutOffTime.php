@@ -4,12 +4,12 @@ class CutOffTime extends BaseType
 {
 
     /**
-     * @var string $Day
+     * @var string
      */
     protected $Day = null;
 
     /**
-     * @var string $Time
+     * @var string
      */
     protected $Time = null;
 

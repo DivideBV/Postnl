@@ -4,7 +4,7 @@ class ArrayOfExceptionData extends BaseType
 {
 
     /**
-     * @var ExceptionData[] $ExceptionData
+     * @var ExceptionData[]
      */
     protected $ExceptionData = null;
 

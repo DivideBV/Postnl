@@ -4,92 +4,92 @@ class Address extends BaseType
 {
 
     /**
-     * @var string $AddressType
+     * @var string
      */
     protected $AddressType = null;
 
     /**
-     * @var string $Area
+     * @var string
      */
     protected $Area = null;
 
     /**
-     * @var string $Buildingname
+     * @var string
      */
     protected $Buildingname = null;
 
     /**
-     * @var string $City
+     * @var string
      */
     protected $City = null;
 
     /**
-     * @var string $CompanyName
+     * @var string
      */
     protected $CompanyName = null;
 
     /**
-     * @var string $Countrycode
+     * @var string
      */
     protected $Countrycode = null;
 
     /**
-     * @var string $Department
+     * @var string
      */
     protected $Department = null;
 
     /**
-     * @var string $Doorcode
+     * @var string
      */
     protected $Doorcode = null;
 
     /**
-     * @var string $FirstName
+     * @var string
      */
     protected $FirstName = null;
 
     /**
-     * @var string $Floor
+     * @var string
      */
     protected $Floor = null;
 
     /**
-     * @var string $HouseNr
+     * @var string
      */
     protected $HouseNr = null;
 
     /**
-     * @var string $HouseNrExt
+     * @var string
      */
     protected $HouseNrExt = null;
 
     /**
-     * @var string $Name
+     * @var string
      */
     protected $Name = null;
 
     /**
-     * @var string $Region
+     * @var string
      */
     protected $Region = null;
 
     /**
-     * @var string $Remark
+     * @var string
      */
     protected $Remark = null;
 
     /**
-     * @var string $Street
+     * @var string
      */
     protected $Street = null;
 
     /**
-     * @var string $StreetHouseNrExt
+     * @var string
      */
     protected $StreetHouseNrExt = null;
 
     /**
-     * @var string $Zipcode
+     * @var string
      */
     protected $Zipcode = null;
 

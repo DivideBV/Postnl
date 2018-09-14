@@ -9,7 +9,7 @@ class ArrayOfGroup extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'Group';
 
     /**
-     * @var Group[] $Group
+     * @var Group[]
      */
     protected $Group = null;
 

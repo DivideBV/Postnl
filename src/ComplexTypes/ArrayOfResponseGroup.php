@@ -9,7 +9,7 @@ class ArrayOfResponseGroup extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'ResponseGroup';
 
     /**
-     * @var ResponseGroup[] $ResponseGroup
+     * @var ResponseGroup[]
      */
     protected $ResponseGroup = null;
 

@@ -4,17 +4,17 @@ class GetSignatureRequest extends BaseType
 {
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 
     /**
-     * @var RequestCustomer $Customer
+     * @var RequestCustomer
      */
     protected $Customer = null;
 
     /**
-     * @var RequestSignature $Shipment
+     * @var RequestSignature
      */
     protected $Shipment = null;
 

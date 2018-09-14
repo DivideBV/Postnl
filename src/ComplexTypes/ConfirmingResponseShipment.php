@@ -4,12 +4,12 @@ class ConfirmingResponseShipment extends BaseType
 {
 
     /**
-     * @var string $Barcode
+     * @var string
      */
     protected $Barcode = null;
 
     /**
-     * @var ArrayOfWarning $Warnings
+     * @var ArrayOfWarning
      */
     protected $Warnings = null;
 

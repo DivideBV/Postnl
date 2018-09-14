@@ -4,17 +4,17 @@ class GetNearestLocationsRequest extends BaseType
 {
 
     /**
-     * @var string $Countrycode
+     * @var string
      */
     protected $Countrycode = null;
 
     /**
-     * @var Location $Location
+     * @var Location
      */
     protected $Location = null;
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 

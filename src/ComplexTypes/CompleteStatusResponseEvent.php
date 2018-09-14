@@ -4,37 +4,37 @@ class CompleteStatusResponseEvent extends BaseType
 {
 
     /**
-     * @var string $Code
+     * @var string
      */
     protected $Code = null;
 
     /**
-     * @var string $Description
+     * @var string
      */
     protected $Description = null;
 
     /**
-     * @var string $DestinationLocationCode
+     * @var string
      */
     protected $DestinationLocationCode = null;
 
     /**
-     * @var string $LocationCode
+     * @var string
      */
     protected $LocationCode = null;
 
     /**
-     * @var string $RouteCode
+     * @var string
      */
     protected $RouteCode = null;
 
     /**
-     * @var string $RouteName
+     * @var string
      */
     protected $RouteName = null;
 
     /**
-     * @var string $TimeStamp
+     * @var string
      */
     protected $TimeStamp = null;
 

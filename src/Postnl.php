@@ -10,53 +10,53 @@ class Postnl
 {
 
     /**
-     * @var string $customerNumber
+     * @var string
      */
     protected $customerNumber = null;
 
     /**
-     * @var string $customerCode
+     * @var string
      */
     protected $customerCode = null;
 
     /**
-     * @var string $customerName
+     * @var string
      */
     protected $customerName = null;
 
     /**
-     * @var string $apikey
+     * @var string
      */
     protected $apikey = null;
 
     /**
-     * @var string $collectionLocation
+     * @var string
      */
     protected $collectionLocation = null;
 
     /**
-     * @var string $globalPackBarcodeType
+     * @var string
      */
     protected $globalPackBarcodeType = null;
 
     /**
-     * @var string $globalPackCustomerCode
+     * @var string
      */
     protected $globalPackCustomerCode = null;
 
     /**
-     * @var bool $sandbox
+     * @var bool
      */
     protected $sandbox = false;
 
     /**
-     * @var array $clients
+     * @var array
      *     An array with instantiated CIF clients.
      */
     protected $clients = [];
 
     /**
-     * @var string $lastClient
+     * @var string
      *     Contains the property name of the last used SOAP client.
      */
     private $lastClient = null;

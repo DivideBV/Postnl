@@ -4,7 +4,7 @@ class CifException extends \Exception
 {
 
     /**
-     * @var ArrayOfExceptionData $Errors
+     * @var ArrayOfExceptionData
      */
     protected $Errors = null;
 

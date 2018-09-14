@@ -4,92 +4,92 @@ class ResponseAddress extends BaseType
 {
 
     /**
-     * @var string $AddressType
+     * @var string
      */
     protected $AddressType = null;
 
     /**
-     * @var string $Building
+     * @var string
      */
     protected $Building = null;
 
     /**
-     * @var string $City
+     * @var string
      */
     protected $City = null;
 
     /**
-     * @var string $CompanyName
+     * @var string
      */
     protected $CompanyName = null;
 
     /**
-     * @var string $CountryCode
+     * @var string
      */
     protected $CountryCode = null;
 
     /**
-     * @var string $DepartmentName
+     * @var string
      */
     protected $DepartmentName = null;
 
     /**
-     * @var string $District
+     * @var string
      */
     protected $District = null;
 
     /**
-     * @var string $DoorCode
+     * @var string
      */
     protected $DoorCode = null;
 
     /**
-     * @var string $FirstName
+     * @var string
      */
     protected $FirstName = null;
 
     /**
-     * @var string $Floor
+     * @var string
      */
     protected $Floor = null;
 
     /**
-     * @var string $HouseNumber
+     * @var string
      */
     protected $HouseNumber = null;
 
     /**
-     * @var string $HouseNumberSuffix
+     * @var string
      */
     protected $HouseNumberSuffix = null;
 
     /**
-     * @var string $LastName
+     * @var string
      */
     protected $LastName = null;
 
     /**
-     * @var string $Region
+     * @var string
      */
     protected $Region = null;
 
     /**
-     * @var string $RegistrationDate
+     * @var string
      */
     protected $RegistrationDate = null;
 
     /**
-     * @var string $Remark
+     * @var string
      */
     protected $Remark = null;
 
     /**
-     * @var string $Street
+     * @var string
      */
     protected $Street = null;
 
     /**
-     * @var string $Zipcode
+     * @var string
      */
     protected $Zipcode = null;
 

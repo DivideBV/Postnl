@@ -4,12 +4,12 @@ class ProductOption extends BaseType
 {
 
     /**
-     * @var string $Characteristic
+     * @var string
      */
     protected $Characteristic = null;
 
     /**
-     * @var string $Option
+     * @var string
      */
     protected $Option = null;
 

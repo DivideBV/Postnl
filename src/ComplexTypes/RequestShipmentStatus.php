@@ -4,17 +4,17 @@ class RequestShipmentStatus extends BaseType
 {
 
     /**
-     * @var string $StatusCode
+     * @var string
      */
     protected $StatusCode = null;
 
     /**
-     * @var string $DateFrom
+     * @var string
      */
     protected $DateFrom = null;
 
     /**
-     * @var string $DateTo
+     * @var string
      */
     protected $DateTo = null;
 

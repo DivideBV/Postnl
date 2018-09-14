@@ -9,7 +9,7 @@ class ArrayOfConfirmingResponseShipment extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'ConfirmingResponseShipment';
 
     /**
-     * @var ConfirmingResponseShipment[] $ConfirmingResponseShipment
+     * @var ConfirmingResponseShipment[]
      */
     protected $ConfirmingResponseShipment = null;
 

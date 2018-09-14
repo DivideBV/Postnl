@@ -4,7 +4,7 @@ class CurrentStatusResponse extends BaseType
 {
 
     /**
-     * @var ArrayOfCurrentStatusResponseShipment $Shipments
+     * @var ArrayOfCurrentStatusResponseShipment
      */
     protected $Shipments = null;
 

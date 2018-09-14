@@ -9,7 +9,7 @@ class ArrayOfAddress extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'Address';
 
     /**
-     * @var Address[] $Address
+     * @var Address[]
      */
     protected $Address = null;
 

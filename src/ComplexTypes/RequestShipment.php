@@ -4,18 +4,18 @@ class RequestShipment extends BaseType
 {
 
     /**
-     * @var string $Barcode
+     * @var string
      */
     protected $Barcode = null;
 
     /**
-     * @var string $Reference
+     * @var string
      *     Optional.
      */
     protected $Reference = null;
 
     /**
-     * @var string $Zipcode
+     * @var string
      *     Optional.
      */
     protected $Zipcode = null;

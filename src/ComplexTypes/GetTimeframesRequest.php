@@ -4,12 +4,12 @@ class GetTimeframesRequest extends BaseType
 {
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 
     /**
-     * @var TimeframeRequest $Timeframe
+     * @var TimeframeRequest
      */
     protected $Timeframe = null;
 

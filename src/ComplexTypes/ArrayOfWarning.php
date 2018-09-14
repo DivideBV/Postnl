@@ -9,7 +9,7 @@ class ArrayOfWarning extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'Warning';
 
     /**
-     * @var Warning[] $Warning
+     * @var Warning[]
      */
     protected $Warning = null;
 

@@ -9,7 +9,7 @@ class ArrayOfResponseLocation extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'ResponseLocation';
 
     /**
-     * @var ResponseLocation[] $ResponseLocation
+     * @var ResponseLocation[]
      */
     protected $ResponseLocation = null;
 

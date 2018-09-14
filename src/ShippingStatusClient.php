@@ -17,7 +17,7 @@ class ShippingStatusClient extends BaseClient
     const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v1_6/status/soap.wsdl';
 
     /**
-     * @var array $classes
+     * @var array
      *     The complex types used by this client.
      */
     protected $classes = [

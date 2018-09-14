@@ -4,52 +4,52 @@ class TimeframeRequest extends BaseType
 {
 
     /**
-     * @var string $City
+     * @var string
      */
     protected $City = null;
 
     /**
-     * @var string $CountryCode
+     * @var string
      */
     protected $CountryCode = null;
 
     /**
-     * @var string $EndDate
+     * @var string
      */
     protected $EndDate = null;
 
     /**
-     * @var string $HouseNr
+     * @var string
      */
     protected $HouseNr = null;
 
     /**
-     * @var string $HouseNrExt
+     * @var string
      */
     protected $HouseNrExt = null;
 
     /**
-     * @var string[] $Options
+     * @var string[]
      */
     protected $Options = null;
 
     /**
-     * @var string $PostalCode
+     * @var string
      */
     protected $PostalCode = null;
 
     /**
-     * @var string $StartDate
+     * @var string
      */
     protected $StartDate = null;
 
     /**
-     * @var string $Street
+     * @var string
      */
     protected $Street = null;
 
     /**
-     * @var string $SundaySorting
+     * @var string
      */
     protected $SundaySorting = null;
 

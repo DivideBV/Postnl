@@ -4,12 +4,12 @@ class GetDeliveryDateResponse extends BaseType
 {
 
     /**
-     * @var string $DeliveryDate
+     * @var string
      */
     protected $DeliveryDate = null;
 
     /**
-     * @var string[] $Options
+     * @var string[]
      */
     protected $Options = null;
 

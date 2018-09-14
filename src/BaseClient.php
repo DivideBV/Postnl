@@ -19,7 +19,7 @@ abstract class BaseClient extends SoapClient
     const SANDBOX_WSDL = '';
 
     /**
-     * @var array $classes
+     * @var array
      *     A list of complex types used to generate a classmap for SoapClient.
      *
      * @see self::getClassmap()

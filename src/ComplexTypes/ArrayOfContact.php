@@ -9,7 +9,7 @@ class ArrayOfContact extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'Contact';
 
     /**
-     * @var Contact[] $Contact
+     * @var Contact[]
      */
     protected $Contact = null;
 

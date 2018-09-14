@@ -4,27 +4,27 @@ class CompleteStatusResponseOldStatus extends BaseType
 {
 
     /**
-     * @var string $Code
+     * @var string
      */
     protected $Code = null;
 
     /**
-     * @var string $Description
+     * @var string
      */
     protected $Description = null;
 
     /**
-     * @var string $PhaseCode
+     * @var string
      */
     protected $PhaseCode = null;
 
     /**
-     * @var string $PhaseDescription
+     * @var string
      */
     protected $PhaseDescription = null;
 
     /**
-     * @var string $TimeStamp
+     * @var string
      */
     protected $TimeStamp = null;
 

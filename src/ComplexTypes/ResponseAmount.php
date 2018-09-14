@@ -4,37 +4,37 @@ class ResponseAmount extends BaseType
 {
 
     /**
-     * @var string $AccountName
+     * @var string
      */
     protected $AccountName = null;
 
     /**
-     * @var string $AccountNr
+     * @var string
      */
     protected $AccountNr = null;
 
     /**
-     * @var string $AmountType
+     * @var string
      */
     protected $AmountType = null;
 
     /**
-     * @var string $Currency
+     * @var string
      */
     protected $Currency = null;
 
     /**
-     * @var string $Reference
+     * @var string
      */
     protected $Reference = null;
 
     /**
-     * @var string $TransactionNumber
+     * @var string
      */
     protected $TransactionNumber = null;
 
     /**
-     * @var string $Value
+     * @var string
      */
     protected $Value = null;
 

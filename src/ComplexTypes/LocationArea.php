@@ -4,12 +4,12 @@ class LocationArea extends BaseLocation
 {
 
     /**
-     * @var Coordinate $CoordinatesNorthWest
+     * @var Coordinate
      */
     protected $CoordinatesNorthWest = null;
 
     /**
-     * @var Coordinate $CoordinatesSouthEast
+     * @var Coordinate
      */
     protected $CoordinatesSouthEast = null;
 

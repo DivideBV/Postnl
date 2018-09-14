@@ -4,32 +4,32 @@ class Content extends BaseType
 {
 
     /**
-     * @var string $CountryOfOrigin
+     * @var string
      */
     protected $CountryOfOrigin = null;
 
     /**
-     * @var string $Description
+     * @var string
      */
     protected $Description = null;
 
     /**
-     * @var string $HSTariffNr
+     * @var string
      */
     protected $HSTariffNr = null;
 
     /**
-     * @var string $Quantity
+     * @var string
      */
     protected $Quantity = null;
 
     /**
-     * @var string $Value
+     * @var string
      */
     protected $Value = null;
 
     /**
-     * @var string $Weight
+     * @var string
      */
     protected $Weight = null;
 

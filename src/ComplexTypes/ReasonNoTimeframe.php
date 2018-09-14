@@ -4,22 +4,22 @@ class ReasonNoTimeframe extends BaseType
 {
 
     /**
-     * @var string $Code
+     * @var string
      */
     protected $Code = null;
 
     /**
-     * @var string $Date
+     * @var string
      */
     protected $Date = null;
 
     /**
-     * @var string $Description
+     * @var string
      */
     protected $Description = null;
 
     /**
-     * @var string[] $Options
+     * @var string[]
      */
     protected $Options = null;
 

@@ -4,18 +4,18 @@ class TimeframeTimeFrame extends BaseType
 {
 
     /**
-     * @var string $From
+     * @var string
      */
     protected $From = null;
 
     /**
-     * @var string $To
+     * @var string
      */
     protected $To = null;
 
 
     /**
-     * @var string[] $Options
+     * @var string[]
      */
     protected $Options = null;
 

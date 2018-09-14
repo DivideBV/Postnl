@@ -17,7 +17,7 @@ class DeliveryDateClient extends BaseClient
     const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2_1/calculate/date/soap.wsdl';
 
     /**
-     * @var array $classes
+     * @var array
      *     The complex types used by this client.
      */
     protected $classes = [

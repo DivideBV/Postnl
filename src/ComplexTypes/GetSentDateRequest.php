@@ -4,12 +4,12 @@ class GetSentDateRequest extends BaseType
 {
 
     /**
-     * @var GetSentDate $GetSentDate
+     * @var GetSentDate
      */
     protected $GetSentDate = null;
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 

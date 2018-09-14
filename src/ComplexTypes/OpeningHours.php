@@ -4,37 +4,37 @@ class OpeningHours extends BaseType
 {
 
     /**
-     * @var string $Monday
+     * @var string
      */
     protected $Monday = null;
 
     /**
-     * @var string $Tuesday
+     * @var string
      */
     protected $Tuesday = null;
 
     /**
-     * @var string $Wednesday
+     * @var string
      */
     protected $Wednesday = null;
 
     /**
-     * @var string $Thursday
+     * @var string
      */
     protected $Thursday = null;
 
     /**
-     * @var string $Friday
+     * @var string
      */
     protected $Friday = null;
 
     /**
-     * @var string $Saturday
+     * @var string
      */
     protected $Saturday = null;
 
     /**
-     * @var string $Sunday
+     * @var string
      */
     protected $Sunday = null;
 

@@ -4,12 +4,12 @@ class MergedLabel extends BaseType
 {
 
     /**
-     * @var string[] $Barcodes
+     * @var string[]
      */
     protected $Barcodes = null;
 
     /**
-     * @var ArrayOfLabel $Labels
+     * @var ArrayOfLabel
      */
     protected $Labels = null;
 

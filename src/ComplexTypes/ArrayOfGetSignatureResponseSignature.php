@@ -9,7 +9,7 @@ class ArrayOfGetSignatureResponseSignature extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'GetSignatureResponseSignature';
 
     /**
-     * @var GetSignatureResponseSignature[] $GetSignatureResponseSignature
+     * @var GetSignatureResponseSignature[]
      */
     protected $GetSignatureResponseSignature = null;
 

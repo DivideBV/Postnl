@@ -4,12 +4,12 @@ class GetDeliveryDateRequest extends BaseType
 {
 
     /**
-     * @var GetDeliveryDate $GetDeliveryDate
+     * @var GetDeliveryDate
      */
     protected $GetDeliveryDate = null;
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 

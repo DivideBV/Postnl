@@ -4,12 +4,12 @@ class GenerateLabelResponse extends BaseType
 {
 
     /**
-     * @var ArrayOfMergedLabel $MergedLabels
+     * @var ArrayOfMergedLabel
      */
     protected $MergedLabels = null;
 
     /**
-     * @var ArrayOfResponseShipment $ResponseShipments
+     * @var ArrayOfResponseShipment
      */
     protected $ResponseShipments = null;
 

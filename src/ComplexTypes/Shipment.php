@@ -4,147 +4,147 @@ class Shipment extends BaseType
 {
 
     /**
-     * @var ArrayOfAddress $Addresses
+     * @var ArrayOfAddress
      */
     protected $Addresses = null;
 
     /**
-     * @var string $Barcode
+     * @var string
      */
     protected $Barcode = null;
 
     /**
-     * @var Dimension $Dimension
+     * @var Dimension
      */
     protected $Dimension = null;
 
     /**
-     * @var string $ProductCodeDelivery
+     * @var string
      */
     protected $ProductCodeDelivery = null;
 
     /**
-     * @var ArrayOfAmount $Amounts
+     * @var ArrayOfAmount
      */
     protected $Amounts = null;
 
     /**
-     * @var string $CollectionTimeStampEnd
+     * @var string
      */
     protected $CollectionTimeStampEnd = null;
 
     /**
-     * @var string $CollectionTimeStampStart
+     * @var string
      */
     protected $CollectionTimeStampStart = null;
 
     /**
-     * @var ArrayOfContact $Contacts
+     * @var ArrayOfContact
      */
     protected $Contacts = null;
 
     /**
-     * @var string $Content
+     * @var string
      */
     protected $Content = null;
 
     /**
-     * @var string $CostCenter
+     * @var string
      */
     protected $CostCenter = null;
 
     /**
-     * @var string $CustomerOrderNumber
+     * @var string
      */
     protected $CustomerOrderNumber = null;
 
     /**
-     * @var Customs $Customs
+     * @var Customs
      */
     protected $Customs = null;
 
     /**
-     * @var string $DeliveryAddress
+     * @var string
      */
     protected $DeliveryAddress = null;
 
     /**
-     * @var string $DeliveryDate
+     * @var string
      */
     protected $DeliveryDate = null;
 
     /**
-     * @var string $DownPartnerBarcode
+     * @var string
      */
     protected $DownPartnerBarcode = null;
 
     /**
-     * @var string $DownPartnerID
+     * @var string
      */
     protected $DownPartnerID = null;
 
     /**
-     * @var string $DownPartnerLocation
+     * @var string
      */
     protected $DownPartnerLocation = null;
 
     /**
-     * @var ArrayOfGroup $Groups
+     * @var ArrayOfGroup
      */
     protected $Groups = null;
 
     /**
-     * @var string $IDExpiration
+     * @var string
      */
     protected $IDExpiration = null;
 
     /**
-     * @var string $IDNumber
+     * @var string
      */
     protected $IDNumber = null;
 
     /**
-     * @var string $IDType
+     * @var string
      */
     protected $IDType = null;
 
     /**
-     * @var string $ProductCodeCollect
+     * @var string
      */
     protected $ProductCodeCollect = null;
 
     /**
-     * @var ArrayOfProductOption $ProductOptions
+     * @var ArrayOfProductOption
      */
     protected $ProductOptions = null;
 
     /**
-     * @var string $ReceiverDateOfBirth
+     * @var string
      */
     protected $ReceiverDateOfBirth = null;
 
     /**
-     * @var string $Reference
+     * @var string
      */
     protected $Reference = null;
 
     /**
-     * @var string $ReferenceCollect
+     * @var string
      */
     protected $ReferenceCollect = null;
 
     /**
-     * @var string $Remark
+     * @var string
      */
     protected $Remark = null;
 
     /**
-     * @var string $ReturnBarcode
+     * @var string
      */
     protected $ReturnBarcode = null;
 
     /**
-     * @var string $ReturnReference
+     * @var string
      */
     protected $ReturnReference = null;
 

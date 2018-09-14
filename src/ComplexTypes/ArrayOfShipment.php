@@ -9,7 +9,7 @@ class ArrayOfShipment extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'Shipment';
 
     /**
-     * @var Shipment[] $Shipment
+     * @var Shipment[]
      */
     protected $Shipment = null;
 

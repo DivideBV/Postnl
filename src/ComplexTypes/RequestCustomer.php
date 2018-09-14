@@ -4,12 +4,12 @@ class RequestCustomer extends BaseType
 {
 
     /**
-     * @var string $CustomerCode
+     * @var string
      */
     protected $CustomerCode = null;
 
     /**
-     * @var string $CustomerNumber
+     * @var string
      */
     protected $CustomerNumber = null;
 

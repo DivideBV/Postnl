@@ -4,12 +4,12 @@ class Coordinate extends BaseType
 {
 
     /**
-     * @var string $Latitude
+     * @var string
      */
     protected $Latitude = null;
 
     /**
-     * @var string $Longitude
+     * @var string
      */
     protected $Longitude = null;
 

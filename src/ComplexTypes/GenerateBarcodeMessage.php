@@ -7,17 +7,17 @@ class GenerateBarcodeMessage extends BaseType
 {
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 
     /**
-     * @var GenerateBarcodeCustomer $Customer
+     * @var GenerateBarcodeCustomer
      */
     protected $Customer = null;
 
     /**
-     * @var Barcode $Barcode
+     * @var Barcode
      */
     protected $Barcode = null;
 

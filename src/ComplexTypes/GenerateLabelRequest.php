@@ -4,22 +4,22 @@ class GenerateLabelRequest extends BaseType
 {
 
     /**
-     * @var LabellingMessage $Message
+     * @var LabellingMessage
      */
     protected $Message = null;
 
     /**
-     * @var Customer $Customer
+     * @var Customer
      */
     protected $Customer = null;
 
     /**
-     * @var ArrayOfShipment $Shipments
+     * @var ArrayOfShipment
      */
     protected $Shipments = null;
 
     /**
-     * @var string $LabelSignature In base64 encoding.
+     * @var string In base64 encoding.
      */
     protected $LabelSignature;
 

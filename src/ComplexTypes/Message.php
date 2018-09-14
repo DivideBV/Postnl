@@ -9,12 +9,12 @@ class Message extends BaseType
 {
 
     /**
-     * @var string $MessageID
+     * @var string
      */
     protected $MessageID = null;
 
     /**
-     * @var string $MessageTimeStamp
+     * @var string
      */
     protected $MessageTimeStamp = null;
 

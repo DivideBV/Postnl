@@ -4,7 +4,7 @@ class RequestSignature extends BaseType
 {
 
     /**
-     * @var string $Barcode
+     * @var string
      */
     protected $Barcode = null;
 

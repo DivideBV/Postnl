@@ -9,7 +9,7 @@ class ArrayOfCompleteStatusResponseShipment extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'CompleteStatusResponseShipment';
 
     /**
-     * @var CompleteStatusResponseShipment[] $CompleteStatusResponseShipment
+     * @var CompleteStatusResponseShipment[]
      */
     protected $CompleteStatusResponseShipment = null;
 

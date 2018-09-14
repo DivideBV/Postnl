@@ -4,12 +4,12 @@ class GetSignatureResponse extends BaseType
 {
 
     /**
-     * @var ArrayOfGetSignatureResponseSignature $Signature
+     * @var ArrayOfGetSignatureResponseSignature
      */
     protected $Signature = null;
 
     /**
-     * @var ArrayOfWarning $Warnings
+     * @var ArrayOfWarning
      */
     protected $Warnings = null;
 

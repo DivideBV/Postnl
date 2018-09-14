@@ -9,7 +9,7 @@ class ArrayOfCurrentStatusResponseShipment extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'CurrentStatusResponseShipment';
 
     /**
-     * @var CurrentStatusResponseShipment[] $CurrentStatusResponseShipment
+     * @var CurrentStatusResponseShipment[]
      */
     protected $CurrentStatusResponseShipment = null;
 

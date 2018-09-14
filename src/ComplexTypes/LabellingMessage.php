@@ -4,7 +4,7 @@ class LabellingMessage extends Message
 {
 
     /**
-     * @var string $Printertype
+     * @var string
      */
     protected $Printertype = null;
 

@@ -4,12 +4,12 @@ class GetLocationsResponse extends BaseType
 {
 
     /**
-     * @var ArrayOfResponseLocation $GetLocationsResult
+     * @var ArrayOfResponseLocation
      */
     protected $GetLocationsResult = null;
 
     /**
-     * @var ArrayOfWarning $Warnings
+     * @var ArrayOfWarning
      */
     protected $Warnings = null;
 

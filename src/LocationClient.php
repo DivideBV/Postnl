@@ -17,7 +17,7 @@ class LocationClient extends BaseClient
     const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2_1/locations/soap.wsdl';
 
     /**
-     * @var array $classes
+     * @var array
      *     The complex types used by this client.
      */
     protected $classes = [

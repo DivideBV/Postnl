@@ -9,7 +9,7 @@ class ArrayOfMergedLabel extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'MergedLabel';
 
     /**
-     * @var MergedLabel[] $MergedLabel
+     * @var MergedLabel[]
      */
     protected $MergedLabel = null;
 

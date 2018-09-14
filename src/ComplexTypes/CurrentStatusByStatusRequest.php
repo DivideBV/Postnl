@@ -4,17 +4,17 @@ class CurrentStatusByStatusRequest extends BaseType
 {
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 
     /**
-     * @var RequestCustomer $Customer
+     * @var RequestCustomer
      */
     protected $Customer = null;
 
     /**
-     * @var RequestShipmentStatus $Shipment
+     * @var RequestShipmentStatus
      */
     protected $Shipment = null;
 

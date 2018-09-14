@@ -9,7 +9,7 @@ class ArrayOfReasonNoTimeframe extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'ReasonNoTimeframe';
 
     /**
-     * @var ReasonNoTimeframe[] $ReasonNoTimeframe
+     * @var ReasonNoTimeframe[]
      */
     protected $ReasonNoTimeframe = null;
 

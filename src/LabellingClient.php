@@ -17,7 +17,7 @@ class LabellingClient extends BaseClient
     const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2_0/label/soap.wsdl';
 
     /**
-     * @var array $classes
+     * @var array
      *     The complex types used by this client.
      */
     protected $classes = [

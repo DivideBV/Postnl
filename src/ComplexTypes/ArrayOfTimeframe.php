@@ -9,7 +9,7 @@ class ArrayOfTimeframe extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'Timeframe';
 
     /**
-     * @var Timeframe[] $Timeframe
+     * @var Timeframe[]
      */
     protected $Timeframe = null;
 

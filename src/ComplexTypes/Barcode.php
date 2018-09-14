@@ -7,17 +7,17 @@ class Barcode extends BaseType
 {
 
     /**
-     * @var string $Type
+     * @var string
      */
     protected $Type = null;
 
     /**
-     * @var string $Range
+     * @var string
      */
     protected $Range = null;
 
     /**
-     * @var string $Serie
+     * @var string
      */
     protected $Serie = null;
 

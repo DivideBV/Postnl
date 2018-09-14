@@ -4,17 +4,17 @@ class ExceptionData extends BaseType
 {
 
     /**
-     * @var string $Description
+     * @var string
      */
     protected $Description = null;
 
     /**
-     * @var string $ErrorMsg
+     * @var string
      */
     protected $ErrorMsg = null;
 
     /**
-     * @var string $ErrorNumber
+     * @var string
      */
     protected $ErrorNumber = null;
 

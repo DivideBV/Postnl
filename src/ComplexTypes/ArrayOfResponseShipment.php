@@ -9,7 +9,7 @@ class ArrayOfResponseShipment extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'ResponseShipment';
 
     /**
-     * @var ResponseShipment[] $ResponseShipment
+     * @var ResponseShipment[]
      */
     protected $ResponseShipment = null;
 

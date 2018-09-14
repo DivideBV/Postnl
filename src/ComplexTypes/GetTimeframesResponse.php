@@ -4,12 +4,12 @@ class GetTimeframesResponse extends BaseType
 {
 
     /**
-     * @var ArrayOfReasonNoTimeframe $ReasonNoTimeframes
+     * @var ArrayOfReasonNoTimeframe
      */
     protected $ReasonNoTimeframes = null;
 
     /**
-     * @var ArrayOfTimeframe $Timeframes
+     * @var ArrayOfTimeframe
      */
     protected $Timeframes = null;
 

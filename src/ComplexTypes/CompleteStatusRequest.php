@@ -4,17 +4,17 @@ class CompleteStatusRequest extends BaseType
 {
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 
     /**
-     * @var RequestCustomer $Customer
+     * @var RequestCustomer
      */
     protected $Customer = null;
 
     /**
-     * @var RequestShipment $Shipment
+     * @var RequestShipment
      */
     protected $Shipment = null;
 

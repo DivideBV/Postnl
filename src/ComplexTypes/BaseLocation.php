@@ -4,27 +4,27 @@ class BaseLocation extends BaseType
 {
 
     /**
-     * @var string $AllowSundaySorting
+     * @var string
      */
     protected $AllowSundaySorting = null;
 
     /**
-     * @var string $DeliveryDate
+     * @var string
      */
     protected $DeliveryDate = null;
 
     /**
-     * @var string[] $DeliveryOptions
+     * @var string[]
      */
     protected $DeliveryOptions = null;
 
     /**
-     * @var string $OpeningTime
+     * @var string
      */
     protected $OpeningTime = null;
 
     /**
-     * @var string[] $Options
+     * @var string[]
      */
     protected $Options = null;
 

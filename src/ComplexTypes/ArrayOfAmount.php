@@ -9,7 +9,7 @@ class ArrayOfAmount extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'Amount';
 
     /**
-     * @var Amount[] $Amount
+     * @var Amount[]
      */
     protected $Amount = null;
 

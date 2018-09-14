@@ -9,7 +9,7 @@ class ArrayOfGetLocationsResult extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'GetLocationsResult';
 
     /**
-     * @var GetLocationsResult[] $LocationsResult
+     * @var GetLocationsResult[]
      */
     protected $LocationsResult = null;
 

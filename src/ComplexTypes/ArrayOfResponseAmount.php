@@ -9,7 +9,7 @@ class ArrayOfResponseAmount extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'ResponseAmount';
 
     /**
-     * @var ResponseAmount[] $ResponseAmount
+     * @var ResponseAmount[]
      */
     protected $ResponseAmount = null;
 

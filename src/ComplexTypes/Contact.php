@@ -4,22 +4,22 @@ class Contact extends BaseType
 {
 
     /**
-     * @var string $ContactType
+     * @var string
      */
     protected $ContactType = null;
 
     /**
-     * @var string $Email
+     * @var string
      */
     protected $Email = null;
 
     /**
-     * @var string $SMSNr
+     * @var string
      */
     protected $SMSNr = null;
 
     /**
-     * @var string $TelNr
+     * @var string
      */
     protected $TelNr = null;
 

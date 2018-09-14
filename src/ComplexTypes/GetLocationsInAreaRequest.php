@@ -4,17 +4,17 @@ class GetLocationsInAreaRequest extends BaseType
 {
 
     /**
-     * @var string $Countrycode
+     * @var string
      */
     protected $Countrycode = null;
 
     /**
-     * @var LocationArea $Location
+     * @var LocationArea
      */
     protected $Location = null;
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 

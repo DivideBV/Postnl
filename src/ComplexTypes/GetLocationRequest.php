@@ -4,17 +4,17 @@ class GetLocationRequest extends BaseType
 {
 
     /**
-     * @var string $LocationCode
+     * @var string
      */
     protected $LocationCode = null;
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 
     /**
-     * @var string $RetailNetworkID
+     * @var string
      */
     protected $RetailNetworkID = null;
 

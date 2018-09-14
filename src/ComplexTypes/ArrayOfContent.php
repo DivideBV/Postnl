@@ -9,7 +9,7 @@ class ArrayOfContent extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'Content';
 
     /**
-     * @var Content[] $Content
+     * @var Content[]
      */
     protected $Content = null;
 

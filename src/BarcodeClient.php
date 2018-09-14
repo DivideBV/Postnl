@@ -21,7 +21,7 @@ class BarcodeClient extends BaseClient
     const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v1_1/barcode/soap.wsdl';
 
     /**
-     * @var array $classes
+     * @var array
      *     The complex types used by this client.
      */
     protected $classes = [

@@ -11,14 +11,14 @@ class Group extends BaseType
     /**
      * Amount of shipments in the group.
      *
-     * @var string $GroupCount
+     * @var string
      */
     protected $GroupCount = null;
 
     /**
      * Sequence number.
      *
-     * @var string $GroupSequence
+     * @var string
      */
     protected $GroupSequence = null;
 
@@ -31,14 +31,14 @@ class Group extends BaseType
      * - `03`: Multiple parcels in one shipment (multi-colli)
      * - `04`: Single parcel in one shipment
      *
-     * @var string $GroupType
+     * @var string
      */
     protected $GroupType = null;
 
     /**
      * Main barcode for the shipment.
      *
-     * @var string $MainBarcode
+     * @var string
      */
     protected $MainBarcode = null;
 

@@ -4,22 +4,22 @@ class ResponseGroup extends BaseType
 {
 
     /**
-     * @var string $GroupType
+     * @var string
      */
     protected $GroupType = null;
 
     /**
-     * @var string $MainBarcode
+     * @var string
      */
     protected $MainBarcode = null;
 
     /**
-     * @var string $ShipmentAmount
+     * @var string
      */
     protected $ShipmentAmount = null;
 
     /**
-     * @var string $ShipmentCounter
+     * @var string
      */
     protected $ShipmentCounter = null;
 

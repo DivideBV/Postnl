@@ -4,17 +4,17 @@ class ConfirmingMessage extends BaseType
 {
 
     /**
-     * @var Customer $Customer
+     * @var Customer
      */
     protected $Customer = null;
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 
     /**
-     * @var ArrayOfShipment $Shipments
+     * @var ArrayOfShipment
      */
     protected $Shipments = null;
 

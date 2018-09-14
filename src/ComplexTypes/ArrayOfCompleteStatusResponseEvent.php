@@ -9,7 +9,7 @@ class ArrayOfCompleteStatusResponseEvent extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'CompleteStatusResponseEvent';
 
     /**
-     * @var CompleteStatusResponseEvent[] $CompleteStatusResponseEvent
+     * @var CompleteStatusResponseEvent[]
      */
     protected $CompleteStatusResponseEvent = null;
 

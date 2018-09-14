@@ -4,12 +4,12 @@ class Warning extends BaseType
 {
 
     /**
-     * @var string $Code
+     * @var string
      */
     protected $Code = null;
 
     /**
-     * @var string $Description
+     * @var string
      */
     protected $Description = null;
 

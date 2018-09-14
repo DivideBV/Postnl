@@ -4,57 +4,57 @@ class GetDeliveryDate extends BaseType
 {
 
     /**
-     * @var string $AllowSundaySorting
+     * @var string
      */
     protected $AllowSundaySorting = null;
 
     /**
-     * @var string $City
+     * @var string
      */
     protected $City = null;
 
     /**
-     * @var string $CountryCode
+     * @var string
      */
     protected $CountryCode = null;
 
     /**
-     * @var ArrayOfCutOffTime $CutOffTimes
+     * @var ArrayOfCutOffTime
      */
     protected $CutOffTimes = null;
 
     /**
-     * @var string $HouseNr
+     * @var string
      */
     protected $HouseNr = null;
 
     /**
-     * @var string $HouseNrExt
+     * @var string
      */
     protected $HouseNrExt = null;
 
     /**
-     * @var string[] $Options
+     * @var string[]
      */
     protected $Options = null;
 
     /**
-     * @var string $PostalCode
+     * @var string
      */
     protected $PostalCode = null;
 
     /**
-     * @var string $ShippingDate
+     * @var string
      */
     protected $ShippingDate = null;
 
     /**
-     * @var string $ShippingDuration
+     * @var string
      */
     protected $ShippingDuration = null;
 
     /**
-     * @var string $Street
+     * @var string
      */
     protected $Street = null;
 

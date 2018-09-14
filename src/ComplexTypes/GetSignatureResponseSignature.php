@@ -6,17 +6,17 @@ class GetSignatureResponseSignature extends BaseType
 {
 
     /**
-     * @var string $Barcode
+     * @var string
      */
     protected $Barcode = null;
 
     /**
-     * @var DateTime $SignatureDate
+     * @var DateTime
      */
     protected $SignatureDate = null;
 
     /**
-     * @var string $SignatureImage In base64 encoding.
+     * @var string In base64 encoding.
      */
     protected $SignatureImage = null;
 

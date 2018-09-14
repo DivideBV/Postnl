@@ -4,17 +4,17 @@ class CurrentStatusByPhaseRequest extends BaseType
 {
 
     /**
-     * @var Message $Message
+     * @var Message
      */
     protected $Message = null;
 
     /**
-     * @var RequestCustomer $Customer
+     * @var RequestCustomer
      */
     protected $Customer = null;
 
     /**
-     * @var RequestShipmentPhase $Shipment
+     * @var RequestShipmentPhase
      */
     protected $Shipment = null;
 

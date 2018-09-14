@@ -4,7 +4,7 @@ class GetSentDateResponse extends BaseType
 {
 
     /**
-     * @var string $SentDate
+     * @var string
      */
     protected $SentDate = null;
 

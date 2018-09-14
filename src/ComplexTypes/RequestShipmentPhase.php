@@ -4,17 +4,17 @@ class RequestShipmentPhase extends BaseType
 {
 
     /**
-     * @var string $PhaseCode
+     * @var string
      */
     protected $PhaseCode = null;
 
     /**
-     * @var string $DateFrom
+     * @var string
      */
     protected $DateFrom = null;
 
     /**
-     * @var string $DateTo
+     * @var string
      */
     protected $DateTo = null;
 

@@ -9,7 +9,7 @@ class ArrayOfCutOffTime extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'CutOffTime';
 
     /**
-     * @var CutOffTime[] $CutOffTime
+     * @var CutOffTime[]
      */
     protected $CutOffTime = null;
 

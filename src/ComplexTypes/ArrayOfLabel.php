@@ -9,7 +9,7 @@ class ArrayOfLabel extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'Label';
 
     /**
-     * @var Label[] $Label
+     * @var Label[]
      */
     protected $Label = null;
 

@@ -9,7 +9,7 @@ class ArrayOfResponseProductOption extends BaseArrayOfType
     const WRAPPED_PROPERTY = 'ResponseProductOption';
 
     /**
-     * @var ResponseProductOption[] $ResponseProductOption
+     * @var ResponseProductOption[]
      */
     protected $ResponseProductOption = null;
 

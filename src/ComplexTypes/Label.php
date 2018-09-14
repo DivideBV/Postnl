@@ -4,17 +4,17 @@ class Label extends BaseType
 {
 
     /**
-     * @var string $Content In base64 encoding.
+     * @var string In base64 encoding.
      */
     protected $Content = null;
 
     /**
-     * @var string $Contenttype
+     * @var string
      */
     protected $Contenttype = null;
 
     /**
-     * @var string $Labeltype
+     * @var string
      */
     protected $Labeltype = null;
 

@@ -6,62 +6,62 @@ class CurrentStatusResponseShipment extends BaseType
 {
 
     /**
-     * @var ArrayOfResponseAddress $Addresses
+     * @var ArrayOfResponseAddress
      */
     protected $Addresses = null;
 
     /**
-     * @var ArrayOfResponseAmount $Amounts
+     * @var ArrayOfResponseAmount
      */
     protected $Amounts = null;
 
     /**
-     * @var string $Barcode
+     * @var string
      */
     protected $Barcode = null;
 
     /**
-     * @var DateTime $DeliveryDate
+     * @var DateTime
      */
     protected $DeliveryDate = null;
 
     /**
-     * @var ResponseDimension $Dimension
+     * @var ResponseDimension
      */
     protected $Dimension = null;
 
     /**
-     * @var ResponseExpectation $Expectation
+     * @var ResponseExpectation
      */
     protected $Expectation = null;
 
     /**
-     * @var ArrayOfResponseGroup $Groups
+     * @var ArrayOfResponseGroup
      */
     protected $Groups = null;
 
     /**
-     * @var string $ProductCode
+     * @var string
      */
     protected $ProductCode = null;
 
     /**
-     * @var ArrayOfResponseProductOption $ProductOptions
+     * @var ArrayOfResponseProductOption
      */
     protected $ProductOptions = null;
 
     /**
-     * @var string $Reference
+     * @var string
      */
     protected $Reference = null;
 
     /**
-     * @var ResponseStatus $Status
+     * @var ResponseStatus
      */
     protected $Status = null;
 
     /**
-     * @var ArrayOfWarning $Warnings
+     * @var ArrayOfWarning
      */
     protected $Warnings = null;
 

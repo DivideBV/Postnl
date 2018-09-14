@@ -4,52 +4,52 @@ class Customs extends BaseType
 {
 
     /**
-     * @var string $Certificate
+     * @var string
      */
     protected $Certificate = null;
 
     /**
-     * @var string $CertificateNr
+     * @var string
      */
     protected $CertificateNr = null;
 
     /**
-     * @var ArrayOfContent $Content
+     * @var ArrayOfContent
      */
     protected $Content = null;
 
     /**
-     * @var string $Currency
+     * @var string
      */
     protected $Currency = null;
 
     /**
-     * @var string $HandleAsNonDeliverable
+     * @var string
      */
     protected $HandleAsNonDeliverable = null;
 
     /**
-     * @var string $Invoice
+     * @var string
      */
     protected $Invoice = null;
 
     /**
-     * @var string $InvoiceNr
+     * @var string
      */
     protected $InvoiceNr = null;
 
     /**
-     * @var string $License
+     * @var string
      */
     protected $License = null;
 
     /**
-     * @var string $LicenseNr
+     * @var string
      */
     protected $LicenseNr = null;
 
     /**
-     * @var string $ShipmentType
+     * @var string
      */
     protected $ShipmentType = null;
 
