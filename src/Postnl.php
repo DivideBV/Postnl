@@ -561,7 +561,10 @@ class Postnl
 
                 // Assemble exception data from the response.
                 $exceptionData = [];
-                foreach ($exception->detail->CifException->Errors->ExceptionData as $error) {
+                $errors = $exception->detail->CifException->Errors->ExceptionData;
+                // Make sure `$errors` is an array.
+                $errors = is_array($errors) ? $errors : [$errors];
+                foreach ($errors as $error) {
                     $exceptionData[] = ComplexTypes\ExceptionData::create()
                         ->setDescription($error->Description)
                         ->setErrorMsg($error->ErrorMsg)
