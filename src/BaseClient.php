@@ -48,9 +48,10 @@ abstract class BaseClient extends SoapClient
             'trace' => true,
             'stream_context' => stream_context_create([
                 'http' => [
-                    'header' => "apikey: $apikey"
+                    'header' => "apikey: $apikey",
                 ],
             ]),
+            'features' => SOAP_SINGLE_ELEMENT_ARRAYS,
         ]);
     }
 

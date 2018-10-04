@@ -41,12 +41,10 @@ abstract class BaseArrayOfType extends BaseType implements IteratorAggregate, Ar
     }
 
     /**
-     * Get wrapped property and make sure it is an array.
+     * Get wrapped property.
      */
     private function getWrappedProperty()
     {
-        // When created by the SOAP stack, the property may not be an array.
-        $property = $this->{static::WRAPPED_PROPERTY};
-        return is_array($property) ? $property : [$property];
+        return $this->{static::WRAPPED_PROPERTY};
     }
 }
