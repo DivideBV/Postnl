@@ -550,6 +550,9 @@ class Postnl
      * @param mixed $parameter
      *
      * @throws ComplexTypes\CifException
+     * @throws SoapFault
+     *
+     * @todo Possibility to let SoapClient handle class mapping for SoapFaults?
      */
     public function call($clientName, $method, $parameter)
     {
@@ -563,7 +566,6 @@ class Postnl
                 $exceptionData = [];
                 $errors = $exception->detail->CifException->Errors->ExceptionData;
                 // Make sure `$errors` is an array.
-                // Needed because proper xsd is not provided, so SOAP_SINGLE_ELEMENT_ARRAYS cannot be applied.
                 $errors = is_array($errors) ? $errors : [$errors];
                 foreach ($errors as $error) {
                     $exceptionData[] = ComplexTypes\ExceptionData::create()
