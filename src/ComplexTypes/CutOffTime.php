@@ -26,7 +26,7 @@ class CutOffTime extends BaseType
     {
         $this->setDay($Day);
         $this->setTime($Time);
-        $this->setAvailable($Available)
+        $this->setAvailable($Available);
     }
 
     /**
