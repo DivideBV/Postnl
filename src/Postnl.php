@@ -413,6 +413,40 @@ class Postnl
         $request = new ComplexTypes\GetNearestLocationsRequest($message, $location, $countryCode);
         return $this->call('LocationClient', __FUNCTION__, $request);
     }
+    
+    /**
+     * @param ComplexTypes\Coordinate $coordinatesNorthWest
+     * @param ComplexTypes\Coordinate $coordinatesSouthEast
+     * @param string $allowSundaySorting
+     * @param null|string $deliveryDate
+     * @param array $deliveryOptions
+     * @param array $options
+     * @param string $countryCode
+     * @return ComplexTypes\GetNearestLocationsResponse
+     */
+    public function getLocationsInArea(
+        ComplexTypes\Coordinate $coordinatesNorthWest,
+        ComplexTypes\Coordinate $coordinatesSouthEast,
+        $allowSundaySorting = 'false',
+        $deliveryDate = null,
+        $deliveryOptions = null,
+        $options = ['Daytime'],
+        $countryCode = 'NL'
+    ) {
+        $message = new ComplexTypes\Message;
+        
+        $deliveryDate = $deliveryDate ?: (new \DateTime('next monday'))->format('d-m-Y');
+        $locationArea = ComplexTypes\LocationArea::create()
+            ->setAllowSundaySorting($allowSundaySorting)
+            ->setDeliveryDate($deliveryDate)
+            ->setDeliveryOptions($deliveryOptions)
+            ->setOptions($options)
+            ->setCoordinatesNorthWest($coordinatesNorthWest)
+            ->setCoordinatesSouthEast($coordinatesSouthEast);
+
+        $request = new ComplexTypes\GetLocationsInAreaRequest($countryCode, $locationArea, $message);
+        return $this->call('LocationClient', __FUNCTION__, $request);
+    }
 
     /**
      * @param string $postalCode
