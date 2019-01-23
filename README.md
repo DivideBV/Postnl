@@ -8,6 +8,11 @@
 This is a library to interface with the SOAP services offered by
 [PostNL](http://postnl.nl/), called CIF.
 
+# New authorization
+
+Since version 2.0 of this library, the new authorization method (using tokens
+instead of username/password) is used.
+
 # Installation
 
 Install the latest version with
