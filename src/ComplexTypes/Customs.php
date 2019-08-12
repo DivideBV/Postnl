@@ -26,6 +26,11 @@ class Customs extends BaseType
     /**
      * @var string
      */
+    protected $EAN = null;
+
+    /**
+     * @var string
+     */
     protected $HandleAsNonDeliverable = null;
 
     /**
@@ -51,6 +56,11 @@ class Customs extends BaseType
     /**
      * @var string
      */
+    protected $ProductURL = null;
+
+    /**
+     * @var string
+     */
     protected $ShipmentType = null;
 
     /**
@@ -58,11 +68,13 @@ class Customs extends BaseType
      * @param string $CertificateNr
      * @param ArrayOfContent $Content
      * @param string $Currency
+     * @param string $EAN
      * @param string $HandleAsNonDeliverable
      * @param string $Invoice
      * @param string $InvoiceNr
      * @param string $License
      * @param string $LicenseNr
+     * @param string $ProductURL
      * @param string $ShipmentType
      */
     public function __construct(
@@ -70,22 +82,26 @@ class Customs extends BaseType
         $CertificateNr,
         ArrayOfContent $Content,
         $Currency,
+        $EAN,
         $HandleAsNonDeliverable,
         $Invoice,
         $InvoiceNr,
         $License,
         $LicenseNr,
+        $ProductURL,
         $ShipmentType
     ) {
         $this->setCertificate($Certificate);
         $this->setCertificateNr($CertificateNr);
         $this->setContent($Content);
         $this->setCurrency($Currency);
+        $this->setEAN($EAN);
         $this->setHandleAsNonDeliverable($HandleAsNonDeliverable);
         $this->setInvoice($Invoice);
         $this->setInvoiceNr($InvoiceNr);
         $this->setLicense($License);
         $this->setLicenseNr($LicenseNr);
+        $this->setProductURL($ProductURL);
         $this->setShipmentType($ShipmentType);
     }
 
@@ -164,6 +180,24 @@ class Customs extends BaseType
     /**
      * @return string
      */
+    public function getEAN()
+    {
+        return $this->EAN;
+    }
+
+    /**
+     * @param string $EAN
+     * @return Customs
+     */
+    public function setEAN($EAN)
+    {
+        $this->EAN = $EAN;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
     public function getHandleAsNonDeliverable()
     {
         return $this->HandleAsNonDeliverable;
@@ -212,6 +246,24 @@ class Customs extends BaseType
     public function setInvoiceNr($InvoiceNr)
     {
         $this->InvoiceNr = $InvoiceNr;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProductURL()
+    {
+        return $this->ProductURL;
+    }
+
+    /**
+     * @param string $ProductURL
+     * @return Customs
+     */
+    public function setProductURL($ProductURL)
+    {
+        $this->ProductURL = $ProductURL;
         return $this;
     }
 
