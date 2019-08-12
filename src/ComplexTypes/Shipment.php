@@ -148,15 +148,15 @@ class Shipment extends BaseType
      */
     protected $ReturnReference = null;
 
-	/**
-	 * @var string
-	 */
-	protected $DeliveryTimeStampStart = null;
+    /**
+     * @var string
+     */
+    protected $DeliveryTimestampStart = null;
 
-	/**
-	 * @var string
-	 */
-	protected $DeliveryTimeStampEnd = null;
+    /**
+     * @var string
+     */
+    protected $DeliveryTimestampEnd = null;
 
     /**
      * @param ArrayOfAddress $Addresses
@@ -188,8 +188,8 @@ class Shipment extends BaseType
      * @param string $Remark Optional.
      * @param string $ReturnBarcode Optional.
      * @param string $ReturnReference Optional.
-	 * @param string $DeliveryTimeStampStart Optional.
-	 * @param string $DeliveryTimeStampEnd Optional.
+     * @param string $DeliveryTimestampStart Optional.
+     * @param string $DeliveryTimestampEnd Optional.
      */
     public function __construct(
         ArrayOfAddress $Addresses,
@@ -221,8 +221,8 @@ class Shipment extends BaseType
         $Remark = null,
         $ReturnBarcode = null,
         $ReturnReference = null,
-		$DeliveryTimeStampStart = null,
-		$DeliveryTimeStampEnd = null
+        $DeliveryTimestampStart = null,
+        $DeliveryTimestampEnd = null
     ) {
         $this->setAddresses($Addresses);
         $this->setBarcode($Barcode);
@@ -255,8 +255,8 @@ class Shipment extends BaseType
         $this->setRemark($Remark);
         $this->setReturnBarcode($ReturnBarcode);
         $this->setReturnReference($ReturnReference);
-		$this->setDeliveryTimeStampStart($DeliveryTimeStampStart);
-		$this->setDeliveryTimeStampEnd($DeliveryTimeStampEnd);
+        $this->setDeliveryTimestampStart($DeliveryTimestampStart);
+        $this->setDeliveryTimestampEnd($DeliveryTimestampEnd);
     }
 
     /**
@@ -781,39 +781,39 @@ class Shipment extends BaseType
         return $this;
     }
 
-	/**
-	 * @return string
-	 */
-	public function getDeliveryTimeStampStart()
-	{
-		return $this->DeliveryTimeStampStart;
-	}
+    /**
+     * @return string
+     */
+    public function getDeliveryTimestampStart()
+    {
+        return $this->DeliveryTimestampStart;
+    }
 
-	/**
-	 * @param string $DeliveryTimeStampStart
-	 * @return Shipment
-	 */
-	public function setDeliveryTimeStampStart($DeliveryTimeStampStart)
-	{
-		$this->DeliveryTimeStampStart = $DeliveryTimeStampStart;
-		return $this;
-	}
+    /**
+     * @param string $DeliveryTimestampStart
+     * @return Shipment
+     */
+    public function setDeliveryTimestampStart($DeliveryTimestampStart)
+    {
+        $this->DeliveryTimestampStart = $DeliveryTimestampStart;
+        return $this;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getDeliveryTimeStampEnd()
-	{
-		return $this->DeliveryTimeStampEnd;
-	}
+    /**
+     * @return string
+     */
+    public function getDeliveryTimestampEnd()
+    {
+        return $this->DeliveryTimestampEnd;
+    }
 
-	/**
-	 * @param string $DeliveryTimeStampEnd
-	 * @return Shipment
-	 */
-	public function setDeliveryTimeStampEnd($DeliveryTimeStampEnd)
-	{
-		$this->DeliveryTimeStampEnd = $DeliveryTimeStampEnd;
-		return $this;
-	}
+    /**
+     * @param string $DeliveryTimestampEnd
+     * @return Shipment
+     */
+    public function setDeliveryTimestampEnd($DeliveryTimestampEnd)
+    {
+        $this->DeliveryTimestampEnd = $DeliveryTimestampEnd;
+        return $this;
+    }
 }
