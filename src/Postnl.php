@@ -193,7 +193,7 @@ class Postnl
         $eps = false
     ) {
         // Validate $type parameter.
-        if (!in_array($type, ['2S', '3S', 'CC', 'CP', 'CD', 'CF', 'CV'])) {
+        if (!in_array($type, ['2S', '3S', 'CC', 'CP', 'CD', 'CF', 'CV', 'CL'])) {
             throw new Exceptions\InvalidBarcodeTypeException($type);
         }
 
