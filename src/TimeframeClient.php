@@ -9,12 +9,12 @@ class TimeframeClient extends BaseClient
     /**
      * @var string The URL of the production WSDL.
      */
-    const PRODUCTION_WSDL = 'https://api.postnl.nl/shipment/v2_0/calculate/timeframes/soap.wsdl';
+    const PRODUCTION_WSDL = 'https://api.postnl.nl/shipment/v2_1/calculate/timeframes/soap.wsdl';
 
     /**
      * @var string The URL of the sandbox WSDL.
      */
-    const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2_0/calculate/timeframes/soap.wsdl';
+    const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2_1/calculate/timeframes/soap.wsdl';
 
     /**
      * @var array The complex types used by this client.

@@ -21,7 +21,7 @@ class BaseLocation extends BaseType
     /**
      * @var string
      */
-    protected $OpeningTime = null;
+    protected $OpeningTime = '00:00:00';
 
     /**
      * @var string[]
