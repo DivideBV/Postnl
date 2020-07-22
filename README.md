@@ -44,8 +44,8 @@ and which aren't. The list of existing services is taken from
 | Kredietcheck Zakelijk                         |      ✗      |   N/A   |
 | **Send & Track**                                                    |||
 | Barcode webservice                            |      ✓      |   1_1   |
-| Confirming webservice                         |      ✓      |   1_9   |
-| Labelling webservice                          |      ✓      |   2_0   |
+| Confirming webservice                         |      ✓      |   2_0   |
+| Labelling webservice                          |      ✓      |   2_2   |
 | Shippingstatus webservice                     |      ✓      |   1_6   |
 | **Delivery options**                                                |||
 | Deliverydate webservice                       |      ✓      |   2_1   |
