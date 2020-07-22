@@ -54,6 +54,26 @@ class Customs extends BaseType
     protected $ShipmentType = null;
 
     /**
+     * @var string
+     */
+    protected $TrustedShipperID = null;
+
+    /**
+     * @var string
+     */
+    protected $ImporterReferenceCode = null;
+
+    /**
+     * @var string
+     */
+    protected $TransactionCode = null;
+
+    /**
+     * @var string
+     */
+    protected $TransactionDescription = null;
+
+    /**
      * @param string $Certificate
      * @param string $CertificateNr
      * @param ArrayOfContent $Content
@@ -64,6 +84,10 @@ class Customs extends BaseType
      * @param string $License
      * @param string $LicenseNr
      * @param string $ShipmentType
+     * @param string $TrustedShipperID
+     * @param string $ImporterReferenceCode
+     * @param string $TransactionCode
+     * @param string $TransactionDescription
      */
     public function __construct(
         $Certificate,
@@ -75,7 +99,11 @@ class Customs extends BaseType
         $InvoiceNr,
         $License,
         $LicenseNr,
-        $ShipmentType
+        $ShipmentType,
+        $TrustedShipperID,
+        $ImporterReferenceCode,
+        $TransactionCode,
+        $TransactionDescription
     ) {
         $this->setCertificate($Certificate);
         $this->setCertificateNr($CertificateNr);
@@ -87,6 +115,10 @@ class Customs extends BaseType
         $this->setLicense($License);
         $this->setLicenseNr($LicenseNr);
         $this->setShipmentType($ShipmentType);
+        $this->setTrustedShipperID($TrustedShipperID);
+        $this->setImporterReferenceCode($ImporterReferenceCode);
+        $this->setTransactionCode($TransactionCode);
+        $this->setTransactionDescription($TransactionDescription);
     }
 
     /**
@@ -268,4 +300,77 @@ class Customs extends BaseType
         $this->ShipmentType = $ShipmentType;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getTrustedShipperID()
+    {
+        return $this->TrustedShipperID;
+    }
+
+    /**
+     * @param string $TrustedShipperID
+     * @return Customs
+     */
+    public function setTrustedShipperID($TrustedShipperID)
+    {
+        $this->TrustedShipperID = $TrustedShipperID;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImporterReferenceCode()
+    {
+        return $this->ImporterReferenceCode;
+    }
+
+    /**
+     * @param string $ImporterReferenceCode
+     * @return Customs
+     */
+    public function setImporterReferenceCode($ImporterReferenceCode)
+    {
+        $this->ImporterReferenceCode = $ImporterReferenceCode;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTransactionCode()
+    {
+        return $this->TransactionCode;
+    }
+
+    /**
+     * @param string $TransactionCode
+     * @return Customs
+     */
+    public function setTransactionCode($TransactionCode)
+    {
+        $this->TransactionCode = $TransactionCode;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTransactionDescription()
+    {
+        return $this->TransactionDescription;
+    }
+
+    /**
+     * @param string $TransactionDescription
+     * @return Customs
+     */
+    public function setTransactionDescription($TransactionDescription)
+    {
+        $this->TransactionDescription = $TransactionDescription;
+        return $this;
+    }
+
 }
