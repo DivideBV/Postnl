@@ -26,6 +26,11 @@ class Customs extends BaseType
     /**
      * @var string
      */
+    protected $EAN = null;
+
+    /**
+     * @var string
+     */
     protected $HandleAsNonDeliverable = null;
 
     /**
@@ -42,6 +47,11 @@ class Customs extends BaseType
      * @var string
      */
     protected $License = null;
+
+    /**
+     * @var string
+     */
+    protected $ProductURL = null;
 
     /**
      * @var string
@@ -78,11 +88,13 @@ class Customs extends BaseType
      * @param string $CertificateNr
      * @param ArrayOfContent $Content
      * @param string $Currency
+     * @param string $EAN
      * @param string $HandleAsNonDeliverable
      * @param string $Invoice
      * @param string $InvoiceNr
      * @param string $License
      * @param string $LicenseNr
+     * @param string $ProductURL
      * @param string $ShipmentType
      * @param string $TrustedShipperID
      * @param string $ImporterReferenceCode
@@ -94,11 +106,13 @@ class Customs extends BaseType
         $CertificateNr,
         ArrayOfContent $Content,
         $Currency,
+        $EAN,
         $HandleAsNonDeliverable,
         $Invoice,
         $InvoiceNr,
         $License,
         $LicenseNr,
+        $ProductURL,
         $ShipmentType,
         $TrustedShipperID,
         $ImporterReferenceCode,
@@ -109,11 +123,13 @@ class Customs extends BaseType
         $this->setCertificateNr($CertificateNr);
         $this->setContent($Content);
         $this->setCurrency($Currency);
+        $this->setEAN($EAN);
         $this->setHandleAsNonDeliverable($HandleAsNonDeliverable);
         $this->setInvoice($Invoice);
         $this->setInvoiceNr($InvoiceNr);
         $this->setLicense($License);
         $this->setLicenseNr($LicenseNr);
+        $this->setProductURL($ProductURL);
         $this->setShipmentType($ShipmentType);
         $this->setTrustedShipperID($TrustedShipperID);
         $this->setImporterReferenceCode($ImporterReferenceCode);
@@ -192,6 +208,25 @@ class Customs extends BaseType
         $this->Currency = $Currency;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getEAN()
+    {
+        return $this->EAN;
+    }
+
+    /**
+     * @param string $EAN
+     * @return Customs
+     */
+    public function setEAN($EAN)
+    {
+        $this->EAN = $EAN;
+        return $this;
+    }
+
 
     /**
      * @return string
@@ -280,6 +315,24 @@ class Customs extends BaseType
     public function setLicenseNr($LicenseNr)
     {
         $this->LicenseNr = $LicenseNr;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getProductURL()
+    {
+        return $this->ProductURL;
+    }
+
+    /**
+     * @param string $ProductURL
+     * @return Customs
+     */
+    public function setProductURL($ProductURL)
+    {
+        $this->ProductURL = $ProductURL;
         return $this;
     }
 

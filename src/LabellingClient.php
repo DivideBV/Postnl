@@ -6,7 +6,7 @@
 class LabellingClient extends BaseClient
 {
 
-    /**
+     /**
      * @var string The URL of the production WSDL.
      */
     const PRODUCTION_WSDL = 'https://api.postnl.nl/shipment/v2_2/label/soap.wsdl';
