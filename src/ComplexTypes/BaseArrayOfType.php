@@ -4,7 +4,6 @@ use IteratorAggregate;
 use ArrayIterator;
 use ArrayAccess;
 use Exception;
-use Traversable;
 
 abstract class BaseArrayOfType extends BaseType implements IteratorAggregate, ArrayAccess
 {
@@ -16,27 +15,32 @@ abstract class BaseArrayOfType extends BaseType implements IteratorAggregate, Ar
      */
     const WRAPPED_PROPERTY = '';
 
-    public function getIterator(): Traversable
+    #[\ReturnTypeWillChange]
+    public function getIterator()
     {
         return new ArrayIterator($this->getWrappedProperty());
     }
 
-    public function offsetExists($offset): bool
+    #[\ReturnTypeWillChange]
+    public function offsetExists($offset)
     {
         return isset($this->getWrappedProperty()[$offset]);
     }
 
-    public function offsetGet($offset): mixed
+    #[\ReturnTypeWillChange]
+    public function offsetGet($offset)
     {
         return $this->offsetExists($offset) ? $this->getWrappedProperty()[$offset] : null;
     }
 
-    public function offsetSet($offset, $value): void
+    #[\ReturnTypeWillChange]
+    public function offsetSet($offset, $value)
     {
         throw new Exception('Writing to ArrayOf types using ArrayAccess not supported.');
     }
 
-    public function offsetUnset($offset): void
+    #[\ReturnTypeWillChange]
+    public function offsetUnset($offset)
     {
         throw new Exception('Writing to ArrayOf types using ArrayAccess not supported.');
     }
