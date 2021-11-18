@@ -6,15 +6,15 @@
 class LabellingClient extends BaseClient
 {
 
-    /**
+     /**
      * @var string The URL of the production WSDL.
      */
-    const PRODUCTION_WSDL = 'https://api.postnl.nl/shipment/v2_0/label/soap.wsdl';
+    const PRODUCTION_WSDL = 'https://api.postnl.nl/shipment/v2_2/label/soap.wsdl';
 
     /**
      * @var string The URL of the sandbox WSDL.
      */
-    const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2_0/label/soap.wsdl';
+    const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2_2/label/soap.wsdl';
 
     /**
      * @var array The complex types used by this client.
