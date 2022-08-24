@@ -59,6 +59,11 @@ class GetDeliveryDate extends BaseType
     protected $Street = null;
 
     /**
+    * @var string
+    */
+    protected $OriginCountryCode = null;
+
+    /**
      * @param string $AllowSundaySorting
      * @param string $City
      * @param string $CountryCode
@@ -70,6 +75,7 @@ class GetDeliveryDate extends BaseType
      * @param string $ShippingDate
      * @param string $ShippingDuration
      * @param string $Street
+     * @param string $OriginCountryCode
      */
     public function __construct(
         $AllowSundaySorting,
@@ -82,7 +88,8 @@ class GetDeliveryDate extends BaseType
         $PostalCode,
         $ShippingDate,
         $ShippingDuration,
-        $Street
+        $Street,
+        $OriginCountryCode
     ) {
         $this->setAllowSundaySorting($AllowSundaySorting);
         $this->setCity($City);
@@ -95,6 +102,7 @@ class GetDeliveryDate extends BaseType
         $this->setShippingDate($ShippingDate);
         $this->setShippingDuration($ShippingDuration);
         $this->setStreet($Street);
+        $this->setOriginCountryCode($OriginCountryCode);
     }
 
     /**
@@ -294,4 +302,22 @@ class GetDeliveryDate extends BaseType
         $this->Street = $Street;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getOriginCountryCode()
+    {
+        return $this->OriginCountryCode;
+    }
+
+    /**
+     * @param string $OriginCountryCode
+     * @return GetDeliveryDate
+     */
+    public function setOriginCountryCode($OriginCountryCode)
+    {
+        $this->OriginCountryCode = $OriginCountryCode;
+        return $this;
+    }    
 }

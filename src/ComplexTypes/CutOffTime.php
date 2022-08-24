@@ -14,13 +14,19 @@ class CutOffTime extends BaseType
     protected $Time = null;
 
     /**
+     * @var boolean
+     */
+    protected $Available = false;    
+
+    /**
      * @param string $Day
      * @param string $Time
      */
-    public function __construct($Day, $Time)
+    public function __construct($Day, $Time, $Available)
     {
         $this->setDay($Day);
         $this->setTime($Time);
+        $this->setAvailable($Available);
     }
 
     /**
@@ -56,6 +62,24 @@ class CutOffTime extends BaseType
     public function setTime($Time)
     {
         $this->Time = $Time;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getAvailable()
+    {
+        return $this->Available;
+    }
+
+    /**
+     * @param boolean $Available
+     * @return CutOffTime
+     */
+    public function setAvailable($Available)
+    {
+        $this->Available = $Available;
         return $this;
     }
 }
