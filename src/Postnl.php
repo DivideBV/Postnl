@@ -78,6 +78,7 @@ class Postnl
         'FR' => '3S',
         'DE' => '3S',
         'GR' => '3S',
+        'HR' => '3S',
         'HU' => '3S',
         'IE' => '3S',
         'IT' => '3S',
