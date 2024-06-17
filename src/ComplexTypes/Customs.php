@@ -26,6 +26,11 @@ class Customs extends BaseType
     /**
      * @var string
      */
+    protected $EAN = null;
+
+    /**
+     * @var string
+     */
     protected $HandleAsNonDeliverable = null;
 
     /**
@@ -46,6 +51,11 @@ class Customs extends BaseType
     /**
      * @var string
      */
+    protected $ProductURL = null;
+
+    /**
+     * @var string
+     */
     protected $LicenseNr = null;
 
     /**
@@ -54,39 +64,77 @@ class Customs extends BaseType
     protected $ShipmentType = null;
 
     /**
+     * @var string
+     */
+    protected $TrustedShipperID = null;
+
+    /**
+     * @var string
+     */
+    protected $ImporterReferenceCode = null;
+
+    /**
+     * @var string
+     */
+    protected $TransactionCode = null;
+
+    /**
+     * @var string
+     */
+    protected $TransactionDescription = null;
+
+    /**
      * @param string $Certificate
      * @param string $CertificateNr
      * @param ArrayOfContent $Content
      * @param string $Currency
+     * @param string $EAN
      * @param string $HandleAsNonDeliverable
      * @param string $Invoice
      * @param string $InvoiceNr
      * @param string $License
      * @param string $LicenseNr
+     * @param string $ProductURL
      * @param string $ShipmentType
+     * @param string $TrustedShipperID
+     * @param string $ImporterReferenceCode
+     * @param string $TransactionCode
+     * @param string $TransactionDescription
      */
     public function __construct(
         $Certificate,
         $CertificateNr,
         ArrayOfContent $Content,
         $Currency,
+        $EAN,
         $HandleAsNonDeliverable,
         $Invoice,
         $InvoiceNr,
         $License,
         $LicenseNr,
-        $ShipmentType
+        $ProductURL,
+        $ShipmentType,
+        $TrustedShipperID,
+        $ImporterReferenceCode,
+        $TransactionCode,
+        $TransactionDescription
     ) {
         $this->setCertificate($Certificate);
         $this->setCertificateNr($CertificateNr);
         $this->setContent($Content);
         $this->setCurrency($Currency);
+        $this->setEAN($EAN);
         $this->setHandleAsNonDeliverable($HandleAsNonDeliverable);
         $this->setInvoice($Invoice);
         $this->setInvoiceNr($InvoiceNr);
         $this->setLicense($License);
         $this->setLicenseNr($LicenseNr);
+        $this->setProductURL($ProductURL);
         $this->setShipmentType($ShipmentType);
+        $this->setTrustedShipperID($TrustedShipperID);
+        $this->setImporterReferenceCode($ImporterReferenceCode);
+        $this->setTransactionCode($TransactionCode);
+        $this->setTransactionDescription($TransactionDescription);
     }
 
     /**
@@ -160,6 +208,25 @@ class Customs extends BaseType
         $this->Currency = $Currency;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getEAN()
+    {
+        return $this->EAN;
+    }
+
+    /**
+     * @param string $EAN
+     * @return Customs
+     */
+    public function setEAN($EAN)
+    {
+        $this->EAN = $EAN;
+        return $this;
+    }
+
 
     /**
      * @return string
@@ -254,6 +321,24 @@ class Customs extends BaseType
     /**
      * @return string
      */
+    public function getProductURL()
+    {
+        return $this->ProductURL;
+    }
+
+    /**
+     * @param string $ProductURL
+     * @return Customs
+     */
+    public function setProductURL($ProductURL)
+    {
+        $this->ProductURL = $ProductURL;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
     public function getShipmentType()
     {
         return $this->ShipmentType;
@@ -268,4 +353,77 @@ class Customs extends BaseType
         $this->ShipmentType = $ShipmentType;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getTrustedShipperID()
+    {
+        return $this->TrustedShipperID;
+    }
+
+    /**
+     * @param string $TrustedShipperID
+     * @return Customs
+     */
+    public function setTrustedShipperID($TrustedShipperID)
+    {
+        $this->TrustedShipperID = $TrustedShipperID;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImporterReferenceCode()
+    {
+        return $this->ImporterReferenceCode;
+    }
+
+    /**
+     * @param string $ImporterReferenceCode
+     * @return Customs
+     */
+    public function setImporterReferenceCode($ImporterReferenceCode)
+    {
+        $this->ImporterReferenceCode = $ImporterReferenceCode;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTransactionCode()
+    {
+        return $this->TransactionCode;
+    }
+
+    /**
+     * @param string $TransactionCode
+     * @return Customs
+     */
+    public function setTransactionCode($TransactionCode)
+    {
+        $this->TransactionCode = $TransactionCode;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTransactionDescription()
+    {
+        return $this->TransactionDescription;
+    }
+
+    /**
+     * @param string $TransactionDescription
+     * @return Customs
+     */
+    public function setTransactionDescription($TransactionDescription)
+    {
+        $this->TransactionDescription = $TransactionDescription;
+        return $this;
+    }
+
 }

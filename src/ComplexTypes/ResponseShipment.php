@@ -11,6 +11,11 @@ class ResponseShipment extends BaseType
     /**
      * @var string
      */
+    protected $CodingText = null;
+
+    /**
+     * @var string
+     */
     protected $DownPartnerBarcode = null;
 
     /**
@@ -40,6 +45,7 @@ class ResponseShipment extends BaseType
 
     /**
     * @param string $Barcode
+    * @param string $CodingText
     * @param string $DownPartnerBarcode
     * @param string $DownPartnerID
     * @param string $DownPartnerLocation
@@ -49,6 +55,7 @@ class ResponseShipment extends BaseType
      */
     public function __construct(
         $Barcode,
+        $CodingText,
         $DownPartnerBarcode,
         $DownPartnerID,
         $DownPartnerLocation,
@@ -57,6 +64,7 @@ class ResponseShipment extends BaseType
         ArrayOfWarning $Warnings
     ) {
         $this->setBarcode($Barcode);
+        $this->setCodingText($CodingText);
         $this->setDownPartnerBarcode($DownPartnerBarcode);
         $this->setDownPartnerID($DownPartnerID);
         $this->setDownPartnerLocation($DownPartnerLocation);
@@ -82,6 +90,25 @@ class ResponseShipment extends BaseType
         $this->Barcode = $Barcode;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getCodingText()
+    {
+        return $this->CodingText;
+    }
+
+    /**
+     * @param string $CodingText
+     * @return ResponseShipment
+     */
+    public function setCodingText($CodingText)
+    {
+        $this->CodingText = $CodingText;
+        return $this;
+    }
+
 
     /**
      * @return string

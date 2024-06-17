@@ -9,12 +9,12 @@ class ConfirmingClient extends BaseClient
     /**
      * @var string The URL of the production WSDL.
      */
-    const PRODUCTION_WSDL = 'https://api.postnl.nl/shipment/v1_9/confirm/soap.wsdl';
+    const PRODUCTION_WSDL = 'https://api.postnl.nl/shipment/v2/confirm/soap.wsdl';
 
     /**
      * @var string The URL of the sandbox WSDL.
      */
-    const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v1_9/confirm/soap.wsdl';
+    const SANDBOX_WSDL = 'https://api-sandbox.postnl.nl/shipment/v2/confirm/soap.wsdl';
 
     /**
      * @var array The complex types used by this client.
