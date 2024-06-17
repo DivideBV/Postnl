@@ -398,16 +398,18 @@ class Postnl
      * @param string $allowSundaySorting
      * @param null|string $deliveryDate
      * @param string $countryCode
+     * @param array $deliveryOptions
      * @return ComplexTypes\GetNearestLocationsResponse
      */
     public function getNearestLocations(
         $postalCode,
         $allowSundaySorting = 'false',
         $deliveryDate = null,
-        $countryCode = 'NL'
+        $countryCode = 'NL',
+        $deliveryOptions = ['PG']
     ) {
         $message = new ComplexTypes\Message;
-        $location = new ComplexTypes\Location($postalCode, $allowSundaySorting, $deliveryDate);
+        $location = new ComplexTypes\Location($postalCode, $allowSundaySorting, $deliveryDate, $deliveryOptions);
 
         $request = new ComplexTypes\GetNearestLocationsRequest($message, $location, $countryCode);
         return $this->call('LocationClient', __FUNCTION__, $request);
